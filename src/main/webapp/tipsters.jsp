@@ -25,12 +25,12 @@
 <script src="/moment-timezone-with-data.js"></script>
 <script src="/moment-data.js"></script>
 <script src="/bootstrap/js/bootstrap.bundle.js" ></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/nav.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
 <script src="/bootstrap/js/bootstrap-select.js"></script>
 <script src="/bootstrap/js/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="/bootstrap/css/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-multiselect.css" />
 <style>
 html, body {
   height: 100%;
@@ -259,13 +259,13 @@ $(document).ready(function(){
 			  $(".selectedcurrency").html(currency.toUpperCase()+"<i class='fa fa-angle-down'></i>");
 			  $(".currency_selection").html("");
 				if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 					}
 					if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 						}
 					if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 						}
 			  
 			  $(".currency_selection a").click(function(){
@@ -293,13 +293,13 @@ $(document).ready(function(){
 				
 				  $(".currency_selection").html("");
 					if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 						}
 						if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-							$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+							$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 							}
 						if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-							$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+							$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 							}
 				 $(".currency_selection a").click(function(){
 					  $.ajax({
@@ -356,13 +356,13 @@ $(document).ready(function(){
 			  
 			  $(".odds_selection").html("");
 				if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 					}
 					if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 						}
 					if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 						}
 			  
 			  
@@ -388,13 +388,13 @@ $(document).ready(function(){
 				$(".selectedodds").html(odds+"<i class='fa fa-angle-down'></i>");
 				  $(".odds_selection").html("");
 					if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 						}
 						if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-							$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+							$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 							}
 						if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-							$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+							$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 							}
 				  
 				  
@@ -772,7 +772,7 @@ $(document).ready(function(){
 			 if(res.length-1!=index){
 				 
 		     	 
-				 $('div.tipsters-row').append('<div class="card col-xs-12 col-sm-6 col-md-4 col-lg-2"><div class="card-header text-center"><img class="image-fluid rounded-circle mb-2 tipsterimage" style="width:100px;height:100px" src="/images/tipsters/'+value[1]+'.jpg" onerror="imgError(this)"/><div class="text-nowrap"><img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/'+value[2]+'.svg" /><p class="text-info"><em>'+value[1]+'</em></p></div></div><div class="card-body d-flex flex-column align-items-center"><div class="mb-2 text-nowrap"><span class="text-info text-left">Tips  :  <span class="text-warning font-weight-bold">'+value[5]+'</span></div><div class="mb-2 text-nowrap pl-3"><span class="text-info mb-2">Win  :  </span><span class="text-warning font-weight-bold">'+value[8]+' %</span></div><div class="text-nowrap pl-2 mb-2"><span class="text-info mb-2">Profit  :  </span><span class="text-warning font-weight-bold">'+value[4]+'</span></div><div><a class="btn btn-dark text-warning" href="/tipster/activetips?name='+value[1]+'">More..</a></div></div>');
+				 $('div.tipsters-row').append('<div class="card col-xs-12 col-sm-6 col-md-4 col-lg-2"><div class="card-header text-center"><img class="image-fluid rounded-circle mb-2 tipsterimage" style="width:100px;height:100px" src="/images/tipsters/'+value[1]+'.jpg" onerror="imgError(this)"/><div class="text-nowrap"><img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/'+value[2]+'.svg" /><p class="text-info"><em>'+value[1]+'</em></p></div></div><div class="card-body d-flex flex-column align-items-center"><div class="mb-2 text-nowrap"><span class="text-info text-left">Tips  :  <span class="text-warning font-weight-bold">'+value[5]+'</span></div><div class="mb-2 text-nowrap pl-3"><span class="text-info mb-2">Win  :  </span><span class="text-warning font-weight-bold">'+value[8]+' %</span></div><div class="text-nowrap pl-2 mb-2"><span class="text-info mb-2">Profit  :  </span><span class="text-warning font-weight-bold">'+value[4]+'</span></div><div><a class="btn btn-dark text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name='+value[1]+'">More..</a></div></div>');
 			 dataset.push(value[2]);
 			 } 
 			 else{
@@ -839,7 +839,7 @@ $(document).ready(function(){
 					var res=JSON.parse(response);
 					$.each(res,function(index,value){
 						if(res.length-1!=index){
-							 $('div.tipsters-row').append('<div class="card col-xs-12 col-sm-6 col-md-4 col-lg-2"><div class="card-header text-center"><img class="image-fluid rounded-circle mb-2 tipsterimage" style="width:100px;height:100px" src="/images/tipsters/'+value[1]+'.jpg" onerror="imgError(this)"/><div class="text-nowrap"><img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/'+value[2]+'.svg" /><p class="text-info"><em>'+value[1]+'</em></p></div></div><div class="card-body d-flex flex-column align-items-center"><div class="mb-2 text-nowrap"><span class="text-info text-left">Tips  :  <span class="text-warning font-weight-bold">'+value[5]+'</span></div><div class="mb-2 text-nowrap pl-3"><span class="text-info mb-2">Win  :  </span><span class="text-warning font-weight-bold">'+value[8]+' %</span></div><div class="text-nowrap pl-2 mb-2"><span class="text-info mb-2">Profit  :  </span><span class="text-warning font-weight-bold">'+value[4]+'</span></div><div><a class="btn btn-dark text-warning" href="/tipster/activetips?name='+value[1]+'">More..</a></div></div>');
+							 $('div.tipsters-row').append('<div class="card col-xs-12 col-sm-6 col-md-4 col-lg-2"><div class="card-header text-center"><img class="image-fluid rounded-circle mb-2 tipsterimage" style="width:100px;height:100px" src="/images/tipsters/'+value[1]+'.jpg" onerror="imgError(this)"/><div class="text-nowrap"><img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/'+value[2]+'.svg" /><p class="text-info"><em>'+value[1]+'</em></p></div></div><div class="card-body d-flex flex-column align-items-center"><div class="mb-2 text-nowrap"><span class="text-info text-left">Tips  :  <span class="text-warning font-weight-bold">'+value[5]+'</span></div><div class="mb-2 text-nowrap pl-3"><span class="text-info mb-2">Win  :  </span><span class="text-warning font-weight-bold">'+value[8]+' %</span></div><div class="text-nowrap pl-2 mb-2"><span class="text-info mb-2">Profit  :  </span><span class="text-warning font-weight-bold">'+value[4]+'</span></div><div><a class="btn btn-dark text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name='+value[1]+'">More..</a></div></div>');
 						}
 						else{
 							numtipsters=value[0];
@@ -872,7 +872,7 @@ $(document).ready(function(){
 					var res=JSON.parse(response);
 					$.each(res,function(index,value){
 						if(index!=res.length-1){
-							 $('div.tipsters-row').append('<div class="card col-xs-12 col-sm-6 col-md-4 col-lg-2"><div class="card-header text-center"><img class="image-fluid rounded-circle mb-2 tipsterimage" style="width:100px;height:100px" src="/images/tipsters/'+value[1]+'.jpg" onerror="imgError(this)"/><div class="text-nowrap"><img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/'+value[2]+'.svg" /><p class="text-info"><em>'+value[1]+'</em></p></div></div><div class="card-body d-flex flex-column align-items-center"><div class="mb-2 text-nowrap"><span class="text-info text-left">Tips  :  <span class="text-warning font-weight-bold">'+value[5]+'</span></div><div class="mb-2 text-nowrap pl-3"><span class="text-info mb-2">Win  :  </span><span class="text-warning font-weight-bold">'+value[8]+' %</span></div><div class="text-nowrap pl-2 mb-2"><span class="text-info mb-2">Profit  :  </span><span class="text-warning font-weight-bold">'+value[4]+'</span></div><div><a class="btn btn-dark text-warning" href="/tipster/activetips?name='+value[1]+'">More..</a></div></div>');
+							 $('div.tipsters-row').append('<div class="card col-xs-12 col-sm-6 col-md-4 col-lg-2"><div class="card-header text-center"><img class="image-fluid rounded-circle mb-2 tipsterimage" style="width:100px;height:100px" src="/images/tipsters/'+value[1]+'.jpg" onerror="imgError(this)"/><div class="text-nowrap"><img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/'+value[2]+'.svg" /><p class="text-info"><em>'+value[1]+'</em></p></div></div><div class="card-body d-flex flex-column align-items-center"><div class="mb-2 text-nowrap"><span class="text-info text-left">Tips  :  <span class="text-warning font-weight-bold">'+value[5]+'</span></div><div class="mb-2 text-nowrap pl-3"><span class="text-info mb-2">Win  :  </span><span class="text-warning font-weight-bold">'+value[8]+' %</span></div><div class="text-nowrap pl-2 mb-2"><span class="text-info mb-2">Profit  :  </span><span class="text-warning font-weight-bold">'+value[4]+'</span></div><div><a class="btn btn-dark text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name='+value[1]+'">More..</a></div></div>');
 						}
 						else{
 							numtipsters=value[0];
@@ -1100,7 +1100,7 @@ function executeajaxandbuildbuttons(myval){
 				 if(res.length-1!=index){
 					 
 				 
-				 $('div.tipsters-row').append('<div class="card col-xs-12 col-sm-6 col-md-4 col-lg-2"><div class="card-header text-center"><img class="image-fluid rounded-circle mb-2 tipsterimage" style="width:100px;height:100px" src="/images/tipsters/'+value[1]+'.jpg" onerror="imgError(this)"/><div class="text-nowrap"><img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/'+value[2]+'.svg" /><p class="text-info"><em>'+value[1]+'</em></p></div></div><div class="card-body d-flex flex-column align-items-center"><div class="mb-2 text-nowrap"><span class="text-info text-left">Tips  :  <span class="text-warning font-weight-bold">'+value[5]+'</span></div><div class="mb-2 text-nowrap pl-3"><span class="text-info mb-2">Win  :  </span><span class="text-warning font-weight-bold">'+value[8]+' %</span></div><div class="text-nowrap pl-2 mb-2"><span class="text-info mb-2">Profit  :  </span><span class="text-warning font-weight-bold">'+value[4]+'</span></div><div><a class="btn btn-dark text-warning" href="/tipster/activetips?name='+value[1]+'">More..</a></div></div>');
+				 $('div.tipsters-row').append('<div class="card col-xs-12 col-sm-6 col-md-4 col-lg-2"><div class="card-header text-center"><img class="image-fluid rounded-circle mb-2 tipsterimage" style="width:100px;height:100px" src="/images/tipsters/'+value[1]+'.jpg" onerror="imgError(this)"/><div class="text-nowrap"><img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/'+value[2]+'.svg" /><p class="text-info"><em>'+value[1]+'</em></p></div></div><div class="card-body d-flex flex-column align-items-center"><div class="mb-2 text-nowrap"><span class="text-info text-left">Tips  :  <span class="text-warning font-weight-bold">'+value[5]+'</span></div><div class="mb-2 text-nowrap pl-3"><span class="text-info mb-2">Win  :  </span><span class="text-warning font-weight-bold">'+value[8]+' %</span></div><div class="text-nowrap pl-2 mb-2"><span class="text-info mb-2">Profit  :  </span><span class="text-warning font-weight-bold">'+value[4]+'</span></div><div><a class="btn btn-dark text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name='+value[1]+'">More..</a></div></div>');
 			
 			    }
 				 else{

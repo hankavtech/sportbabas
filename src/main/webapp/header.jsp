@@ -12,65 +12,65 @@
 								<!-- Currency / odds / My Account -->
 								
 								 <li class="nav-item dropdown timezone">
-									<a class='nav-link selectedtimezone text-nowrap' href="#" data-min="0">
+									<a class='nav-link selectedtimezone text-nowrap' href="${pageContext.request.contextPath}#" data-min="0">
 										GMT+00:00
 									<i class="fa fa-angle-down"></i>	
 									</a>
 									
 									<ul class="dropdown-menu timezone_selection scrollable-menu">	
-										    <li id="GMT-12:00" data-min="-720"><a href="#" data-min="-720">GMT-12:00</a></li>
-											<li id="GMT-11:00" data-min="-660"><a href="#" data-min="-660">GMT-11:00</a></li>
-											<li id="GMT-10:00" data-min="-600" ><a href="#" data-min="-600">GMT-10:00</a></li>
-											<li id="GMT-09:00" data-min="-540"><a href="#" data-min="-540">GMT-09:00</a></li>
-											<li id="GMT-08:00" data-min="-480"><a href="#" data-min="-480">GMT-08:00</a></li>
-											<li id="GMT-07:00" data-min="-420"><a href="#" data-min="-420">GMT-07:00</a></li>
-											<li id="GMT-06:00" data-min="-360"><a href="#" data-min="-360">GMT-06:00</a></li>
-											<li id="GMT-05:00" data-min="-300"><a href="#" data-min="-300">GMT-05:00</a></li>
-											<li id="GMT-04:00" data-min="-240"><a href="#" data-min="-240">GMT-04:00</a></li>
-											<li id="GMT-03:00" data-min="-180"><a href="#" data-min="-180">GMT-03:00</a></li>
-											<li id="GMT-03:30" data-min="-210"><a href="#" data-min="-210">GMT-03:30</a></li>
-											<li id="GMT-02:00" data-min="-120"><a href="#" data-min="-120">GMT-02:00</a></li>
-											<li id="GMT-01:00" data-min="-60"><a href="#" data-min="-60">GMT-01:00</a></li>
-											<li id="GMT+00:00" data-min="0"><a href="#" data-min="0">GMT+00:00</a></li>
-											<li id="GMT+01:00" data-min="60"><a href="#" data-min="60">GMT+01:00</a></li>
-											<li id="GMT+02:00" data-min="120"><a href="#" data-min="120">GMT+02:00</a></li>
-											<li id="GMT+03:00" data-min="180"><a href="#" data-min="180">GMT+03:00</a></li>
-											<li id="GMT+03:07" data-min="187"><a href="#" data-min="187">GMT+03:07</a></li>
-											<li id="GMT+03:30" data-min="210"><a href="#" data-min="210">GMT+03:30</a></li>
-											<li id="GMT+04:00" data-min="240"><a href="#" data-min="240">GMT+04:00</a></li>
-											<li id="GMT+04:30" data-min="270"><a href="#" data-min="270">GMT+04:30</a></li>
-											<li id="GMT+05:00" data-min="300"><a href="#" data-min="300">GMT+05:00</a></li>
-											<li id="GMT+05:30" data-min="330"><a href="#" data-min="330">GMT+05:30</a></li>
-											<li id="GMT+05:45" data-min="345"><a href="#" data-min="345">GMT+05:45</a></li>
-											<li id="GMT+06:00" data-min="360"><a href="#" data-min="360">GMT+06:00</a></li>
-											<li id="GMT+06:30" data-min="390"><a href="#" data-min="390">GMT+06:30</a></li>
-											<li id="GMT+07:00" data-min="420"><a href="#" data-min="420">GMT+07:00</a></li>
-											<li id="GMT+08:00" data-min="480"><a href="#" data-min="480">GMT+08:00</a></li>
-											<li id="GMT+08:45" data-min="525"><a href="#" data-min="525">GMT+08:45</a></li>
-											<li id="GMT+09:00" data-min="540"><a href="#" data-min="540">GMT+09:00</a></li>
-											<li id="GMT+09:30" data-min="570"><a href="#" data-min="570">GMT+09:30</a></li>
-											<li id="GMT+10:00" data-min="600"><a href="#" data-min="600">GMT+10:00</a></li>
-											<li id="GMT+10:30" data-min="630"><a href="#" data-min="630">GMT+10:30</a></li>
-											<li id="GMT+11:00" data-min="660"><a href="#" data-min="660">GMT+11:00</a></li>
-											<li id="GMT+11:30" data-min="690"><a href="#" data-min="690">GMT+11:30</a></li>
-											<li id="GMT+12:00" data-min="720"><a href="#" data-min="720">GMT+12:00</a></li>
-											<li id="GMT+12:45" data-min="765"><a href="#" data-min="765">GMT+12:45</a></li>
-											<li id="GMT+13:00" data-min="780"><a href="#" data-min="780">GMT+13:00</a></li>	
-											<li id="GMT+14:00" data-min="840"><a href="#" data-min="840">GMT+14:00</a></li>	
+										    <li id="GMT-12:00" data-min="-720"><a href="${pageContext.request.contextPath}#" data-min="-720">GMT-12:00</a></li>
+											<li id="GMT-11:00" data-min="-660"><a href="${pageContext.request.contextPath}#" data-min="-660">GMT-11:00</a></li>
+											<li id="GMT-10:00" data-min="-600" ><a href="${pageContext.request.contextPath}#" data-min="-600">GMT-10:00</a></li>
+											<li id="GMT-09:00" data-min="-540"><a href="${pageContext.request.contextPath}#" data-min="-540">GMT-09:00</a></li>
+											<li id="GMT-08:00" data-min="-480"><a href="${pageContext.request.contextPath}#" data-min="-480">GMT-08:00</a></li>
+											<li id="GMT-07:00" data-min="-420"><a href="${pageContext.request.contextPath}#" data-min="-420">GMT-07:00</a></li>
+											<li id="GMT-06:00" data-min="-360"><a href="${pageContext.request.contextPath}#" data-min="-360">GMT-06:00</a></li>
+											<li id="GMT-05:00" data-min="-300"><a href="${pageContext.request.contextPath}#" data-min="-300">GMT-05:00</a></li>
+											<li id="GMT-04:00" data-min="-240"><a href="${pageContext.request.contextPath}#" data-min="-240">GMT-04:00</a></li>
+											<li id="GMT-03:00" data-min="-180"><a href="${pageContext.request.contextPath}#" data-min="-180">GMT-03:00</a></li>
+											<li id="GMT-03:30" data-min="-210"><a href="${pageContext.request.contextPath}#" data-min="-210">GMT-03:30</a></li>
+											<li id="GMT-02:00" data-min="-120"><a href="${pageContext.request.contextPath}#" data-min="-120">GMT-02:00</a></li>
+											<li id="GMT-01:00" data-min="-60"><a href="${pageContext.request.contextPath}#" data-min="-60">GMT-01:00</a></li>
+											<li id="GMT+00:00" data-min="0"><a href="${pageContext.request.contextPath}#" data-min="0">GMT+00:00</a></li>
+											<li id="GMT+01:00" data-min="60"><a href="${pageContext.request.contextPath}#" data-min="60">GMT+01:00</a></li>
+											<li id="GMT+02:00" data-min="120"><a href="${pageContext.request.contextPath}#" data-min="120">GMT+02:00</a></li>
+											<li id="GMT+03:00" data-min="180"><a href="${pageContext.request.contextPath}#" data-min="180">GMT+03:00</a></li>
+											<li id="GMT+03:07" data-min="187"><a href="${pageContext.request.contextPath}#" data-min="187">GMT+03:07</a></li>
+											<li id="GMT+03:30" data-min="210"><a href="${pageContext.request.contextPath}#" data-min="210">GMT+03:30</a></li>
+											<li id="GMT+04:00" data-min="240"><a href="${pageContext.request.contextPath}#" data-min="240">GMT+04:00</a></li>
+											<li id="GMT+04:30" data-min="270"><a href="${pageContext.request.contextPath}#" data-min="270">GMT+04:30</a></li>
+											<li id="GMT+05:00" data-min="300"><a href="${pageContext.request.contextPath}#" data-min="300">GMT+05:00</a></li>
+											<li id="GMT+05:30" data-min="330"><a href="${pageContext.request.contextPath}#" data-min="330">GMT+05:30</a></li>
+											<li id="GMT+05:45" data-min="345"><a href="${pageContext.request.contextPath}#" data-min="345">GMT+05:45</a></li>
+											<li id="GMT+06:00" data-min="360"><a href="${pageContext.request.contextPath}#" data-min="360">GMT+06:00</a></li>
+											<li id="GMT+06:30" data-min="390"><a href="${pageContext.request.contextPath}#" data-min="390">GMT+06:30</a></li>
+											<li id="GMT+07:00" data-min="420"><a href="${pageContext.request.contextPath}#" data-min="420">GMT+07:00</a></li>
+											<li id="GMT+08:00" data-min="480"><a href="${pageContext.request.contextPath}#" data-min="480">GMT+08:00</a></li>
+											<li id="GMT+08:45" data-min="525"><a href="${pageContext.request.contextPath}#" data-min="525">GMT+08:45</a></li>
+											<li id="GMT+09:00" data-min="540"><a href="${pageContext.request.contextPath}#" data-min="540">GMT+09:00</a></li>
+											<li id="GMT+09:30" data-min="570"><a href="${pageContext.request.contextPath}#" data-min="570">GMT+09:30</a></li>
+											<li id="GMT+10:00" data-min="600"><a href="${pageContext.request.contextPath}#" data-min="600">GMT+10:00</a></li>
+											<li id="GMT+10:30" data-min="630"><a href="${pageContext.request.contextPath}#" data-min="630">GMT+10:30</a></li>
+											<li id="GMT+11:00" data-min="660"><a href="${pageContext.request.contextPath}#" data-min="660">GMT+11:00</a></li>
+											<li id="GMT+11:30" data-min="690"><a href="${pageContext.request.contextPath}#" data-min="690">GMT+11:30</a></li>
+											<li id="GMT+12:00" data-min="720"><a href="${pageContext.request.contextPath}#" data-min="720">GMT+12:00</a></li>
+											<li id="GMT+12:45" data-min="765"><a href="${pageContext.request.contextPath}#" data-min="765">GMT+12:45</a></li>
+											<li id="GMT+13:00" data-min="780"><a href="${pageContext.request.contextPath}#" data-min="780">GMT+13:00</a></li>	
+											<li id="GMT+14:00" data-min="840"><a href="${pageContext.request.contextPath}#" data-min="840">GMT+14:00</a></li>	
 									</ul>
 								</li>
 									  
 
 								<li class="nav-item dropdown currency">
-									<a class='nav-link selectedcurrency text-nowrap' href="#">
+									<a class='nav-link selectedcurrency text-nowrap' href="${pageContext.request.contextPath}#">
 										USD
 									<i class="fa fa-angle-down"></i>	
 									</a>
 									
 									<ul class="dropdown-menu currency_selection">
 									
-										<li style="vertical-align:center"><a href="#">EUR</a></li>
-										<li><a href="#">GBP</a></li>
+										<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>
+										<li><a href="${pageContext.request.contextPath}#">GBP</a></li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown odds">
@@ -79,14 +79,14 @@
 										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu odds_selection">
-										<li><a href="#">FRACTIONAL</a></li>
-										<li><a href="#">AMERICAN</a></li>
+										<li><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>
+										<li><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>
 									</ul>
 								</li>
 								
 								<c:if test="${sessionScope.username==null}">
 								<li class="nav-item dropdown account">
-									<a href="#" class='nav-link text-nowrap'>
+									<a href="${pageContext.request.contextPath}#" class='nav-link text-nowrap'>
 										Account
 										<i class="fa fa-angle-down"></i>
 									</a>
@@ -101,17 +101,17 @@
 								
 								
 								<c:if test="${sessionScope.user_type =='tipster'}">
-							       <li class="nav-item accountloggedin p-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
+							       <li class="nav-item accountloggedin p-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
 							      </c:if>
 							       <c:if test="${sessionScope.user_type !='tipster'}">
-							      <li class="nav-item accountloggedin p-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/user.svg'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
+							      <li class="nav-item accountloggedin p-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/user.svg'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
 							      </c:if>
 								
 								</c:if>
 								
 								
 								<li class="nav-item checkout ml-0 pt-3">
-									<a href="#" class='nav-link' data-toggle="modal" data-target="#cartdiv">
+									<a href="${pageContext.request.contextPath}#" class='nav-link' data-toggle="modal" data-target="#cartdiv">
 										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 										<span id="checkout_items" class="checkout_items">0</span>
 						
@@ -147,13 +147,13 @@
 	
 			  
 			  <li class="nav-item dropdown">
-                <a id="toptipsterslink" class="dropdown-toggle text-nowrap" href="/paidtips" data-toggle="dropdown">Tips</a>
+                <a id="toptipsterslink" class="dropdown-toggle text-nowrap" href="${pageContext.request.contextPath}/paidtips" data-toggle="dropdown">Tips</a>
 			  
 			  
 			  
 			         <ul class="dropdown-menu tips">
-					    <li><a id="paidtipslink" href="/paidtips">PAID TIPS</a></li>
-					    <li><a id="freetipslink" href="/freetips">FREE TIPS</a></li>
+					    <li><a id="paidtipslink" href="${pageContext.request.contextPath}/paidtips">PAID TIPS</a></li>
+					    <li><a id="freetipslink" href="${pageContext.request.contextPath}/freetips">FREE TIPS</a></li>
                      </ul>
                      
                 </li>     
@@ -172,38 +172,38 @@
 		
 			
 			  <li class="nav-item dropdown">
-                <a id="tipsterslink" class="dropdown-toggle text-nowrap" href="/tipsters" data-toggle="dropdown">Tipsters</a>
+                <a id="tipsterslink" class="dropdown-toggle text-nowrap" href="${pageContext.request.contextPath}/tipsters" data-toggle="dropdown">Tipsters</a>
 			  
 			  
 			  
 			         <ul class="dropdown-menu tips">
-					    <li><a id="paidtipsterslink" href="/tipsters?category=paid">PAID TIPSTERS</a></li>
-					    <li><a id="freetipsterslink" href="/tipsters?category=free">FREE TIPSTERS</a></li>
+					    <li><a id="paidtipsterslink" href="${pageContext.request.contextPath}/tipsters?category=paid">PAID TIPSTERS</a></li>
+					    <li><a id="freetipsterslink" href="${pageContext.request.contextPath}/tipsters?category=free">FREE TIPSTERS</a></li>
                      </ul>
                      
                 </li>   
 			
 			
 			<li class="nav-item">
-			  <a id="pasttipslink" class="nav-link" href="/tips">PAST TIPS</a>
+			  <a id="pasttipslink" class="nav-link" href="${pageContext.request.contextPath}/tips">PAST TIPS</a>
 			</li>
 	
 			<c:if test="${sessionScope.username !=null && sessionScope.tipster_name==null}">
 			<li class="nav-item">
-			  <a id="clientprofilelink" class="text-warning nav-link" href="/myactivetips">PROFILE</a>
+			  <a id="clientprofilelink" class="text-warning nav-link" href="${pageContext.request.contextPath}/myactivetips">PROFILE</a>
 			</li>
 			<li class="nav-item">
-			  <a class="text-warning nav-link" id="addtipster" data-toggle="modal" data-target="#tipprofilediv" href="#">ADD TIPSTER</a>	
+			  <a class="text-warning nav-link" id="addtipster" data-toggle="modal" data-target="#tipprofilediv" href="${pageContext.request.contextPath}#">ADD TIPSTER</a>	
 			</li>
 			</c:if>
 			
 			
 			<c:if test="${sessionScope.tipster_name !=null}">
 			<li class="nav-item">
-			  <a id="tipsterprofilelink" class="text-warning nav-link" href="/tipsterpersonal/activetips">My Tips</a>
+			  <a id="tipsterprofilelink" class="text-warning nav-link" href="${pageContext.request.contextPath}/tipsterpersonal/activetips">My Tips</a>
 			</li>
 			<li class="nav-item">
-			  <a id="posttiplink" class="text-warning nav-link" href="/matches">Post Tip</a>
+			  <a id="posttiplink" class="text-warning nav-link" href="${pageContext.request.contextPath}/matches">Post Tip</a>
 			
 			</li>
 			</c:if> 
@@ -219,21 +219,21 @@
 
 <div class="row justify-content-around mb-4 smallscreennav">
                                     
-                                <div class="col-xs-2"><a href="#"><i class="fa fa-search" style="color:black" aria-hidden="true"></i></a></div>
+                                <div class="col-xs-2"><a href="${pageContext.request.contextPath}#"><i class="fa fa-search" style="color:black" aria-hidden="true"></i></a></div>
 								  <div class="col-xs-2">
 								  <img src="/images/css/icons/settings.svg" class="rounded-circle settings" style="width:20px;height:20px;"/>
 								  </div>
 								  
 								  <c:if test="${sessionScope.username==null}">
-								  <div class="col-xs-2"><a href="#" data-toggle="modal" data-target="#logdiv"><i class="fa fa-user" style="color:black" aria-hidden="true"></i></a></div>
+								  <div class="col-xs-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#logdiv"><i class="fa fa-user" style="color:black" aria-hidden="true"></i></a></div>
 							      </c:if>
 							      <c:if test="${sessionScope.username!=null}">
 							      
 							      <c:if test="${sessionScope.user_type =='tipster'}">
-							       <div class="col-xs-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
+							       <div class="col-xs-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
 							      </c:if>
 							       <c:if test="${sessionScope.user_type !='tipster'}">
-							       <div class="col-xs-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/images/css/icons/user.svg'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
+							       <div class="col-xs-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/images/css/icons/user.svg'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
 							      </c:if>
 								  
 							      </c:if>
@@ -288,7 +288,7 @@
             
            <c:if test="${sessionScope.num_of_tipsters=='s_empty'}">
              <p class="text-dark">You have no Tipster profiles.</p>
-              <a id="getsports" class="text-warning nav-link" data-toggle="modal" data-target="#tipprofilediv" href="#">Create Tipster</a>
+              <a id="getsports" class="text-warning nav-link" data-toggle="modal" data-target="#tipprofilediv" href="${pageContext.request.contextPath}#">Create Tipster</a>
            </c:if> 
            
             
@@ -355,7 +355,7 @@
            
            
             <div class="bg-muted">
-              <a class="pull-right" href="/Logout">Sign out</a>
+              <a class="pull-right" href="${pageContext.request.contextPath}/Logout">Sign out</a>
            </div>
            
            
@@ -487,7 +487,7 @@
                  </button>
                 
                  
-                 <a href="/PasswordReset" class="ml-4 text-dark" style="text-decoration:underline">Forgot password</a>
+                 <a href="${pageContext.request.contextPath}/PasswordReset" class="ml-4 text-dark" style="text-decoration:underline">Forgot password</a>
                
                </form>
                </div>

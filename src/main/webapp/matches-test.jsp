@@ -25,12 +25,12 @@
 <script src="/moment-timezone-with-data.js"></script>
 <script src="/moment-data.js"></script>
 <script src="/bootstrap/js/bootstrap.bundle.js" ></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/nav.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
 <script src="/bootstrap/js/bootstrap-select.js"></script>
 <script src="/bootstrap/js/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="/bootstrap/css/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-multiselect.css" />
 <title>EAGLE TIP</title>
 <style>
 
@@ -369,13 +369,13 @@ window.setTimeout(function() {
 				  $(".selectedcurrency").html(currency.toUpperCase()+"<i class='fa fa-angle-down'></i>");
 				  $(".currency_selection").html("");
 					if($(".selectedcurrency").text().trim()!="USD"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 						}
 						if($(".selectedcurrency").text().trim()!="EUR"){
-							$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+							$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 							}
 						if($(".selectedcurrency").text().trim()!="GBP"){
-							$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+							$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 							}
 				  
 				  $(".currency_selection a").click(function(){
@@ -390,13 +390,13 @@ window.setTimeout(function() {
 					
 					  $(".currency_selection").html("");
 						if($(".selectedcurrency").text().trim()!="USD"){
-							$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+							$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 							}
 							if($(".selectedcurrency").text().trim()!="EUR"){
-								$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+								$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 								}
 							if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-								$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+								$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 								}
 					 $(".currency_selection a").click(function(){
 						  $.ajax({
@@ -424,13 +424,13 @@ window.setTimeout(function() {
 				  
 				  $(".odds_selection").html("");
 					if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 						}
 						if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-							$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+							$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 							}
 						if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-							$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+							$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 							}
 				  
 				  
@@ -444,13 +444,13 @@ window.setTimeout(function() {
 					$(".selectedodds").html(odds.toUpperCase()+"<i class='fa fa-angle-down'></i>");
 					  $(".odds_selection").html("");
 						if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-							$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+							$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 							}
 							if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-								$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+								$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 								}
 							if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-								$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+								$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 								}
 					  
 					  

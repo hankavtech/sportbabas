@@ -25,12 +25,12 @@
 <script src="/moment-timezone-with-data.js"></script>
 <script src="/moment-data.js"></script>
 <script src="/bootstrap/js/bootstrap.bundle.js" ></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/nav.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
 <script src="/bootstrap/js/bootstrap-select.js"></script>
 <script src="/bootstrap/js/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="/bootstrap/css/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-multiselect.css" />
 <style>
 
 html, body {
@@ -73,7 +73,7 @@ body {
 		<tr><td>Tournament:</td><td>${requestScope.tipdetails[0][18]}</td></tr>
 		<tr><td>Event:</td><td>  ${requestScope.tipdetails[0][5]} vs ${requestScope.tipdetails[0][6]}</td></tr>
 		<tr><td>Date: </td> <td class="timecolumn"> ${requestScope.tipdetails[0][7]}</td></tr>
-		<tr><td>Tipster:</td>   <td><a class="text-warning" href="/tipster/activetips?name=${requestScope.tipdetails[0][3]}">${requestScope.tipdetails[0][3]}</a></td></tr>
+		<tr><td>Tipster:</td>   <td><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${requestScope.tipdetails[0][3]}">${requestScope.tipdetails[0][3]}</a></td></tr>
 		<tr><td>Prediction: </td><td> ${requestScope.tipdetails[0][10]} ->  ${requestScope.tipdetails[0][11]}  ${requestScope.tipdetails[0][12]}</td></tr>
 		<tr><td>Bokmaker:</td><td>${requestScope.tipdetails[0][9]}</td></tr>
 		<tr><td>Odds:</td><td class="oddscolumn">${requestScope.tipdetails[0][13]}</td></tr>
@@ -97,14 +97,14 @@ body {
 		<tr><td>id:  </td><td>${requestScope.tipdetails[0][2]}</td></tr>
 		<tr><td>Event:</td><td>  ${requestScope.tipdetails[0][5]} vs ${requestScope.tipdetails[0][6]}</td></tr>
 		<tr><td>Date: </td> <td class="timecolumn"> ${requestScope.tipdetails[0][7]}</td></tr>
-		<tr><td>Tipster:</td>   <td><a class="text-warning" href="/tipster/activetips?name=${requestScope.tipdetails[0][3]}">${requestScope.tipdetails[0][3]}</a></td></tr>
+		<tr><td>Tipster:</td>   <td><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${requestScope.tipdetails[0][3]}">${requestScope.tipdetails[0][3]}</a></td></tr>
 		</tbody>
 		</table>
 		
 		</div>
 </div>
 <div class="row justify-content-center">
-<p>This is a Paid Tip. Please Subscribe <a href="/tipster/activetips?name=${requestScope.tipdetails[0][3]}">here</a></p>
+<p>This is a Paid Tip. Please Subscribe <a href="${pageContext.request.contextPath}/tipster/activetips?name=${requestScope.tipdetails[0][3]}">here</a></p>
 
 </div>
 </c:if>
@@ -121,7 +121,7 @@ body {
 		<tr><td>Tournament:</td><td style="color:#1c6545" class="font-weight-bold">${requestScope.tipdetails[0][18]}</td></tr>
 		<tr><td>Event:</td><td style="color:#1c6545" class="font-weight-bold">  ${requestScope.tipdetails[0][5]} vs ${requestScope.tipdetails[0][6]}</td></tr>
 		<tr><td>Date: </td> <td style="color:#1c6545" class="font-weight-bold timecolumn"> ${requestScope.tipdetails[0][7]}</td></tr>
-		<tr><td>Tipster:</td>   <td><a style="color:#1c6545;text-decoration:underline" class="font-weight-bold" href="/tipster/activetips?name=${requestScope.tipdetails[0][3]}">${requestScope.tipdetails[0][3]}</a></td></tr>
+		<tr><td>Tipster:</td>   <td><a style="color:#1c6545;text-decoration:underline" class="font-weight-bold" href="${pageContext.request.contextPath}/tipster/activetips?name=${requestScope.tipdetails[0][3]}">${requestScope.tipdetails[0][3]}</a></td></tr>
 		<tr><td>Prediction: </td><td style="color:#1c6545" class="font-weight-bold"> ${requestScope.tipdetails[0][10]} ->  ${requestScope.tipdetails[0][11]}  ${requestScope.tipdetails[0][12]}</td></tr>
 		<tr><td>Bokmaker:</td><td style="color:#1c6545" class="font-weight-bold">${requestScope.tipdetails[0][9]}</td></tr>
 		<tr><td>Odds:</td><td style="color:#1c6545" class="font-weight-bold oddscolumn">${requestScope.tipdetails[0][13]}</td></tr>
@@ -259,13 +259,13 @@ $(document).ready(function(){
 	  $(".selectedcurrency").html(currency.toUpperCase()+"<i class='fa fa-angle-down'></i>");
 	  $(".currency_selection").html("");
 		if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-			$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+			$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 			}
 			if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-				$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+				$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 				}
 			if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-				$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+				$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 				}
 	  
 	  $(".currency_selection a").click(function(){
@@ -293,13 +293,13 @@ $(document).ready(function(){
 		
 		  $(".currency_selection").html("");
 			if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-				$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+				$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 				}
 				if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 					}
 				if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 					}
 		 $(".currency_selection a").click(function(){
 			  $.ajax({
@@ -356,13 +356,13 @@ $(document).ready(function(){
 	  
 	  $(".odds_selection").html("");
 		if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-			$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+			$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 			}
 			if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-				$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+				$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 				}
 			if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-				$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+				$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 				}
 	  
 	  
@@ -388,13 +388,13 @@ $(document).ready(function(){
 		$(".selectedodds").html(odds+"<i class='fa fa-angle-down'></i>");
 		  $(".odds_selection").html("");
 			if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-				$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+				$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 				}
 				if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 					}
 				if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 					}
 		  
 		  

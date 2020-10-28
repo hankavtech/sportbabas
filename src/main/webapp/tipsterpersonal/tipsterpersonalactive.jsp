@@ -26,9 +26,9 @@
 <script src="/moment-data.js"></script>
 <script src="/bootstrap/js/bootstrap.bundle.js" ></script>
 <script src="/bootstrap/js/bootstrap-select.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/nav.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
 <style>
 
 
@@ -85,13 +85,13 @@ function showloader(){
  <div class="container mt-5">
  <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="home-tab" href="/tipsterpersonal/activetips" role="tab" aria-controls="home" aria-selected="true">Today's Tips</a>
+    <a class="nav-link active" id="home-tab" href="${pageContext.request.contextPath}/tipsterpersonal/activetips" role="tab" aria-controls="home" aria-selected="true">Today's Tips</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" href="/tipsterpersonal/earnings" role="tab" aria-controls="profile" aria-selected="false">Earnings</a>
+    <a class="nav-link" id="profile-tab" href="${pageContext.request.contextPath}/tipsterpersonal/earnings" role="tab" aria-controls="profile" aria-selected="false">Earnings</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="messages-tab" href="/tipsterpersonal/profile" role="tab" aria-controls="messages" aria-selected="false">Profile</a>
+    <a class="nav-link" id="messages-tab" href="${pageContext.request.contextPath}/tipsterpersonal/profile" role="tab" aria-controls="messages" aria-selected="false">Profile</a>
   </li>
 </ul>
 
@@ -176,7 +176,7 @@ function showloader(){
 </div>
 </div>
 <div class="text-right">
-<a class="text-primary" style="text-decoration:underline" href="/tipster/tips?page=1&name=${sessionScope.tipster_name}">See all tips</a>
+<a class="text-primary" style="text-decoration:underline" href="${pageContext.request.contextPath}/tipster/tips?page=1&name=${sessionScope.tipster_name}">See all tips</a>
 </div>
    
   
@@ -313,13 +313,13 @@ function getCookie(name) {
 		  $(".selectedcurrency").html(currency.toUpperCase()+"<i class='fa fa-angle-down'></i>");
 		  $(".currency_selection").html("");
 			if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-				$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+				$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 				}
 				if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 					}
 				if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 					}
 		  
 		  $(".currency_selection a").click(function(){
@@ -347,13 +347,13 @@ function getCookie(name) {
 			
 			  $(".currency_selection").html("");
 				if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 					}
 					if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 						}
 					if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 						}
 			 $(".currency_selection a").click(function(){
 				  $.ajax({
@@ -410,13 +410,13 @@ function getCookie(name) {
 		  
 		  $(".odds_selection").html("");
 			if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-				$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+				$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 				}
 				if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 					}
 				if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 					}
 		  
 		  
@@ -442,13 +442,13 @@ function getCookie(name) {
 			$(".selectedodds").html(odds+"<i class='fa fa-angle-down'></i>");
 			  $(".odds_selection").html("");
 				if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 					}
 					if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 						}
 					if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 						}
 			  
 			  

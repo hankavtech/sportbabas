@@ -945,7 +945,7 @@
         createOptgroup: function(group) {
             var label = $(group).attr("label");
             var value = $(group).attr("value");
-            var $li = $('<li class="multiselect-item multiselect-group"><a href="javascript:void(0);"><label><b></b></label></a></li>');
+            var $li = $('<li class="multiselect-item multiselect-group"><a href="${pageContext.request.contextPath}javascript:void(0);"><label><b></b></label></a></li>');
 
             var classes = this.options.optionClass(group);
             $li.addClass(classes);

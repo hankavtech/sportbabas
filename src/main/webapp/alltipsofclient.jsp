@@ -26,12 +26,12 @@
 <script src="/moment-timezone-with-data.js"></script>
 <script src="/moment-data.js"></script>
 <script src="/bootstrap/js/bootstrap.bundle.js" ></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/nav.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
 <script src="/bootstrap/js/bootstrap-select.js"></script>
 <script src="/bootstrap/js/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="/bootstrap/css/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-multiselect.css" />
 <style>
 
 html, body {
@@ -99,16 +99,16 @@ table td{
 <div class="container mt-5">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link" id="home-tab" href="/myactivetips" role="tab" aria-controls="home" aria-selected="false">Today's Tips</a>
+    <a class="nav-link" id="home-tab" href="${pageContext.request.contextPath}/myactivetips" role="tab" aria-controls="home" aria-selected="false">Today's Tips</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" href="/mysubscriptions" role="tab" aria-controls="profile" aria-selected="false">Subscriptions</a>
+    <a class="nav-link" id="profile-tab" href="${pageContext.request.contextPath}/mysubscriptions" role="tab" aria-controls="profile" aria-selected="false">Subscriptions</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="messages-tab" href="/Profile" role="tab" aria-controls="messages" aria-selected="false">Profile</a>
+    <a class="nav-link" id="messages-tab" href="${pageContext.request.contextPath}/Profile" role="tab" aria-controls="messages" aria-selected="false">Profile</a>
   </li>
   <li class="disabled">
-    <a class="nav-link disabled" id="settings-tab" href="/mytips" role="tab" aria-controls="settings" aria-selected="true">Latest Tips</a>
+    <a class="nav-link disabled" id="settings-tab" href="${pageContext.request.contextPath}/mytips" role="tab" aria-controls="settings" aria-selected="true">Latest Tips</a>
   </li>
 </ul>
 
@@ -210,15 +210,15 @@ table td{
 <div class="row justify-content-center mt-4 mb-4">  
 <div class="p-2">
 <div class="btn-group">
-<a class="btn btn-dark text-light" href="#" id="first">&laquo;&laquo;</a>
-<a class="btn btn-dark text-light" href="#" id="previous">&laquo;</a>
+<a class="btn btn-dark text-light" href="${pageContext.request.contextPath}#" id="first">&laquo;&laquo;</a>
+<a class="btn btn-dark text-light" href="${pageContext.request.contextPath}#" id="previous">&laquo;</a>
 </div>
 
 <div class="btn-group" id="pagination">
 </div>
 <div class="btn-group">
-<a class="btn btn-dark text-light" href="#" id="next">&raquo;</a>
-<a class="btn btn-dark text-light" href="#" id="last">&raquo;&raquo;</a>
+<a class="btn btn-dark text-light" href="${pageContext.request.contextPath}#" id="next">&raquo;</a>
+<a class="btn btn-dark text-light" href="${pageContext.request.contextPath}#" id="last">&raquo;&raquo;</a>
 </div>
 </div>
 </div>
@@ -410,13 +410,13 @@ console.log("page id is"+page);
 		  $(".selectedcurrency").html(currency.toUpperCase()+"<i class='fa fa-angle-down'></i>");
 		  $(".currency_selection").html("");
 			if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-				$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+				$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 				}
 				if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 					}
 				if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 					}
 		  
 		  $(".currency_selection a").click(function(){
@@ -444,13 +444,13 @@ console.log("page id is"+page);
 			
 			  $(".currency_selection").html("");
 				if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 					}
 					if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 						}
 					if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 						}
 			 $(".currency_selection a").click(function(){
 				  $.ajax({
@@ -507,13 +507,13 @@ console.log("page id is"+page);
 		  
 		  $(".odds_selection").html("");
 			if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-				$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+				$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 				}
 				if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 					}
 				if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 					}
 		  
 		  
@@ -539,13 +539,13 @@ console.log("page id is"+page);
 			$(".selectedodds").html(odds+"<i class='fa fa-angle-down'></i>");
 			  $(".odds_selection").html("");
 				if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 					}
 					if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 						}
 					if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 						}
 			  
 			  
