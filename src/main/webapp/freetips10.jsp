@@ -20,19 +20,19 @@
 <title>EAGLE TIP</title>
  <c:set var="url">${pageContext.request.requestURL}</c:set>
     <base href="${fn:substring(url, 0, fn:length(url) - fn:length(pageContext.request.requestURI))}${pageContext.request.contextPath}/" />
-<script src="/jquery.js"></script>
-<script src="/math.min.js"></script>
-<script src="/moment.js"></script>
-<script src="/moment-timezone.js"></script>
-<script src="/moment-timezone-with-data.js"></script>
-<script src="/moment-data.js"></script>
-<script src="/bootstrap.bundle.js" ></script>
+<script src="${pageContext.request.contextPath}/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/math.min.js"></script>
+<script src="${pageContext.request.contextPath}/moment.js"></script>
+<script src="${pageContext.request.contextPath}/moment-timezone.js"></script>
+<script src="${pageContext.request.contextPath}/moment-timezone-with-data.js"></script>
+<script src="${pageContext.request.contextPath}/moment-data.js"></script>
+<script src="${pageContext.request.contextPath}/bootstrap.bundle.js" ></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/bootstrap.min.css" />
-<link rel="stylesheet" href="/nav.css"/>
-<script src="/bootstrap-select.js"></script>
-<script src="/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
+<script src="${pageContext.request.contextPath}/bootstrap-select.js"></script>
+<script src="${pageContext.request.contextPath}/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-multiselect.css" />
 <style>
 
 html, body {
