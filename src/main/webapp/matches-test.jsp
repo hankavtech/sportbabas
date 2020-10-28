@@ -169,7 +169,7 @@ height:30px;
                       </div>
 		              
 		            </c:if>
-		<form method="POST" class="form" action="${pageContext.request.contextPath}TipsForm">
+		<form method="POST" class="form" action:"${pageContext.request.contextPath}TipsForm">
 					<div class="form-group">
 					<label>League:</label>
 					<select id="league" name="league" class="form-control text-dark" readonly>
@@ -401,7 +401,7 @@ window.setTimeout(function() {
 					 $(".currency_selection a").click(function(){
 						  $.ajax({
 							 method:"POST",
-							 action="${pageContext.request.contextPath}/UpdateUserCurrency",
+							 action:"${pageContext.request.contextPath}/UpdateUserCurrency",
 							 data:{currency:$(this).text(),pageredirect:window.location.href},
 							 success:function(){
 								 window.location.reload();
@@ -458,7 +458,7 @@ window.setTimeout(function() {
 					  $(".odds_selection a").click(function(){
 						  $.ajax({
 							 method:"POST",
-							 action="${pageContext.request.contextPath}/UpdateUserOdds",
+							 action:"${pageContext.request.contextPath}/UpdateUserOdds",
 							 data:{odds:$(this).text().trim(),pageredirect:window.location.href},
 							 success:function(){
 								 window.location.reload();
@@ -528,7 +528,7 @@ window.setTimeout(function() {
 					$(".timezone_selection a").click(function(){
 						  $.ajax({
 							 method:"POST",
-							 action="${pageContext.request.contextPath}/UpdateUserTimeZone",
+							 action:"${pageContext.request.contextPath}/UpdateUserTimeZone",
 							 data:{timezone:$(this).text(),pageredirect:window.location.href},
 							 success:function(){
 								 window.location.reload();
@@ -546,7 +546,7 @@ window.setTimeout(function() {
 								  $("#timezone-selector").change(function(e){
 									  $.ajax({
 											 method:"POST",
-											 action="${pageContext.request.contextPath}/UpdateUserTimeZone",
+											 action:"${pageContext.request.contextPath}/UpdateUserTimeZone",
 											 data:{timezone:$("#timezone-selector option:selected").attr("id"),pageredirect:window.location.href},
 											 success:function(){
 												 window.location.reload();
@@ -676,7 +676,7 @@ window.setTimeout(function() {
 			var password2=$("#password1").val();
 			 $.ajax({
 				 method:"POST",
-				 action="${pageContext.request.contextPath}/Login",
+				 action:"${pageContext.request.contextPath}/Login",
 				 data:{username:username2,password:password2},
 				 success:function(response){
 					 $("#spinner").hide();
@@ -709,7 +709,7 @@ window.setTimeout(function() {
 			
 			$.ajax({
 				 method:"POST",
-				 action="${pageContext.request.contextPath}/AddClickedUserToSession",
+				 action:"${pageContext.request.contextPath}/AddClickedUserToSession",
 				 data:{usertype:usertype,username:username,usersport:usersport},
 				 success:function(response){
 					 window.location.href = "/paidtips";
@@ -732,7 +732,7 @@ window.setTimeout(function() {
 
 		 $.ajax({
 				method:"GET",
-				action="${pageContext.request.contextPath}/GetCartItems",
+				action:"${pageContext.request.contextPath}/GetCartItems",
 				success:function(response){
 					items=0;
 					console.log("items is"+ items);
@@ -758,7 +758,7 @@ window.setTimeout(function() {
 							var nameofsub=$(button1).parent().parent().find("p.nametoremove").text();
 							$.ajax({
 								method:"POST",
-								action="${pageContext.request.contextPath}/DeleteCartItem",
+								action:"${pageContext.request.contextPath}/DeleteCartItem",
 								data:{
 									itemname:nameofsub
 								},
@@ -821,7 +821,7 @@ window.setTimeout(function() {
 			
 			$.ajax({
 				 method:"POST",
-				 action="${pageContext.request.contextPath}/AddClickedUserToSession",
+				 action:"${pageContext.request.contextPath}/AddClickedUserToSession",
 				 data:{usertype:usertype,username:username,usersport:usersport},
 				 success:function(response){
 					 window.location.reload();
@@ -844,7 +844,7 @@ window.setTimeout(function() {
 			var password2=$("#password1").val();
 			 $.ajax({
 				 method:"POST",
-				 action="${pageContext.request.contextPath}/Login",
+				 action:"${pageContext.request.contextPath}/Login",
 				 data:{username:username2,password:password2},
 				 success:function(response){
 					 $("#spinner").hide();
@@ -887,7 +887,7 @@ window.setTimeout(function() {
 	
 	$.ajax({
 	    method:"GET",
-	    action="${pageContext.request.contextPath}/GiveLeagues",
+	    action:"${pageContext.request.contextPath}/GiveLeagues",
 	    data:{sport:"${sessionScope.user_sport}"},
 		success:function(response){
 			marketresponse=response;
@@ -905,7 +905,7 @@ window.setTimeout(function() {
 			
 			  $.ajax({
 					 method:"get",
-					 action="${pageContext.request.contextPath}/GiveMatches",
+					 action:"${pageContext.request.contextPath}/GiveMatches",
 					 data:{league:selectedText,tournament:selectedTournament},
 					 success:function(response){
 						 console.log(response);
@@ -934,7 +934,7 @@ window.setTimeout(function() {
 	
 	$.ajax({
 		method:"GET",
-		action="${pageContext.request.contextPath}/GiveMarkets",
+		action:"${pageContext.request.contextPath}/GiveMarkets",
 		data:{sport:"${sessionScope.user_sport}"},
 		success:function(response){
 			/* var json=JSON.parse(response); */
@@ -975,7 +975,7 @@ window.setTimeout(function() {
 	    //call to get list of matches-test on change in league option value
 	    $.ajax({
 			 method:"get",
-			 action="${pageContext.request.contextPath}/GiveMatches",
+			 action:"${pageContext.request.contextPath}/GiveMatches",
 			 data:{league:selectedText,tournament:selectedTournament},
 			 success:function(response){
 				 $.each(response,function(index2,val){
@@ -1011,7 +1011,7 @@ window.setTimeout(function() {
 	    //call to get list of matches-test on change in league option value
 	    $.ajax({
 			 method:"get",
-			 action="${pageContext.request.contextPath}/GiveMatches",
+			 action:"${pageContext.request.contextPath}/GiveMatches",
 			 data:{league:selectedText,tournament:selectedTournament},
 			 success:function(response){
 				 
@@ -1113,7 +1113,7 @@ window.setTimeout(function() {
 	$.ajax({
 		method:"POST",
 		data:{sportname:$('#sportselect').val()},
-		action="${pageContext.request.contextPath}/CheckOneSportPerUser",
+		action:"${pageContext.request.contextPath}/CheckOneSportPerUser",
 		success:function(res){
 			console.log(res);
 			$('#sportselect').removeClass("is-invalid");
@@ -1144,7 +1144,7 @@ window.setTimeout(function() {
 
 		$.ajax({
 			method:"GET",
-			action="${pageContext.request.contextPath}/CheckOneSportPerUser",
+			action:"${pageContext.request.contextPath}/CheckOneSportPerUser",
 			success:function(res){
 		       $("#sportselect").html("");
 		        var sports=JSON.parse(res);
@@ -1169,7 +1169,7 @@ window.setTimeout(function() {
 		$.ajax({
 			method:"POST",
 			data:{tipstername:$('#tipstername').val()},
-			action="${pageContext.request.contextPath}/CheckForUniqueTipsterName",
+			action:"${pageContext.request.contextPath}/CheckForUniqueTipsterName",
 			success:function(res){
 				console.log(res);
 				$(this).removeClass("is-valid");

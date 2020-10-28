@@ -304,7 +304,7 @@ $(document).ready(function(){
 		 $(".currency_selection a").click(function(){
 			  $.ajax({
 				 method:"POST",
-				 action="${pageContext.request.contextPath}/UpdateUserCurrency",
+				 action:"${pageContext.request.contextPath}/UpdateUserCurrency",
 				 data:{currency:$(this).text(),pageredirect:window.location.href},
 				 success:function(){
 					 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -320,7 +320,7 @@ $(document).ready(function(){
 			$("#currency-selector").change(function(){
 				 $.ajax({
 					 method:"POST",
-					 action="${pageContext.request.contextPath}/UpdateUserCurrency",
+					 action:"${pageContext.request.contextPath}/UpdateUserCurrency",
 					 data:{currency:$("#currency-selector").val(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -402,7 +402,7 @@ $(document).ready(function(){
 		  $(".odds_selection a").click(function(){
 			  $.ajax({
 				 method:"POST",
-				 action="${pageContext.request.contextPath}/UpdateUserOdds",
+				 action:"${pageContext.request.contextPath}/UpdateUserOdds",
 				 data:{odds:$(this).text().trim().toUpperCase(),pageredirect:window.location.href},
 				 success:function(){
 					 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -417,7 +417,7 @@ $(document).ready(function(){
 				$("#odds-selector").change(function(){
 					 $.ajax({
 						 method:"POST",
-						 action="${pageContext.request.contextPath}/UpdateUserOdds",
+						 action:"${pageContext.request.contextPath}/UpdateUserOdds",
 						 data:{odds:$("#odds-selector").val().toUpperCase(),pageredirect:window.location.href},
 						 success:function(){
 							 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -498,7 +498,7 @@ $(document).ready(function(){
 		$(".timezone_selection a").click(function(){
 			  $.ajax({
 				 method:"POST",
-				 action="${pageContext.request.contextPath}/UpdateUserTimeZone",
+				 action:"${pageContext.request.contextPath}/UpdateUserTimeZone",
 				 data:{timezone:$(this).text(),pageredirect:window.location.href},
 				 success:function(){
 					 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -516,7 +516,7 @@ $(document).ready(function(){
 					  $("#timezone-selector").change(function(e){
 						  $.ajax({
 								 method:"POST",
-								 action="${pageContext.request.contextPath}/UpdateUserTimeZone",
+								 action:"${pageContext.request.contextPath}/UpdateUserTimeZone",
 								 data:{timezone:$("#timezone-selector option:selected").attr("id"),pageredirect:window.location.href},
 								 success:function(){
 									 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -629,7 +629,7 @@ $("#login").on("click",function(e){
 	var password2=$("#password1").val();
 	 $.ajax({
 		 method:"POST",
-		 action="${pageContext.request.contextPath}/Login",
+		 action:"${pageContext.request.contextPath}/Login",
 		 data:{username:username2,password:password2},
 		 success:function(response){
 			 $("#spinner").hide();
@@ -662,7 +662,7 @@ $(".profiles").on("click",function(e){
 	
 	$.ajax({
 		 method:"POST",
-		 action="${pageContext.request.contextPath}/AddClickedUserToSession",
+		 action:"${pageContext.request.contextPath}/AddClickedUserToSession",
 		 data:{usertype:usertype,username:username,usersport:usersport},
 		 success:function(response){
 			 window.location.href = "/paidtips";
@@ -678,7 +678,7 @@ $(".profiles").on("click",function(e){
 
 $.ajax({
 	method:"GET",
-	action="${pageContext.request.contextPath}/GetCartItems",
+	action:"${pageContext.request.contextPath}/GetCartItems",
 	success:function(response){
 		items=0;
 		console.log("items is"+ items);
@@ -704,7 +704,7 @@ $.ajax({
 				var nameofsub=$(button1).parent().parent().find("p.nametoremove").text();
 				$.ajax({
 					method:"POST",
-					action="${pageContext.request.contextPath}/DeleteCartItem",
+					action:"${pageContext.request.contextPath}/DeleteCartItem",
 					data:{
 						itemname:nameofsub
 					},
@@ -739,7 +739,7 @@ $(".add_to_cart").click(function(){
 	   var items2=items;
 		$.ajax({
 			method:"POST",
-			action="${pageContext.request.contextPath}/AddCartItem",
+			action:"${pageContext.request.contextPath}/AddCartItem",
 			data:{
 				itemname:name,
 				itemprice:"${requestScope.firstpagelist[1][0][5]}",
@@ -788,7 +788,7 @@ $(".add_to_cart").click(function(){
 							var button1=$(this);
 							$.ajax({
 								method:"POST",
-								action="${pageContext.request.contextPath}/DeleteCartItem",
+								action:"${pageContext.request.contextPath}/DeleteCartItem",
 								data:{
 									itemname:"${requestScope.firstpagelist[1][0][3]}",
 									itemprice:"${requestScope.firstpagelist[1][0][5]}",
@@ -851,7 +851,7 @@ $("#tipstername").blur(function() {
 	$.ajax({
 		method:"POST",
 		data:{tipstername:$('#tipstername').val()},
-		action="${pageContext.request.contextPath}/CheckForUniqueTipsterName",
+		action:"${pageContext.request.contextPath}/CheckForUniqueTipsterName",
 		success:function(res){
 			console.log(res);
 			$(this).removeClass("is-valid");
@@ -885,7 +885,7 @@ $("#username").blur(function() {
 	$.ajax({
 		method:"POST",
 		data:{username:$('#username').val()},
-		action="${pageContext.request.contextPath}/SendRegistrationErrors",
+		action:"${pageContext.request.contextPath}/SendRegistrationErrors",
 		success:function(res){
 			$("#username").removeClass("is-valid");
 			$("#username").removeClass("is-invalid");
@@ -920,7 +920,7 @@ $("#email").blur(function() {
 	$.ajax({
 		method:"POST",
 		data:{email:$('#email').val()},
-		action="${pageContext.request.contextPath}/SendRegistrationErrors",
+		action:"${pageContext.request.contextPath}/SendRegistrationErrors",
 		success:function(res){
 			$("#email").removeClass("is-valid");
 			$("#email").removeClass("is-invalid");
@@ -970,7 +970,7 @@ $("#addtipster,#getsports").click(function() {
 
 	$.ajax({
 		method:"GET",
-		action="${pageContext.request.contextPath}/CheckOneSportPerUser",
+		action:"${pageContext.request.contextPath}/CheckOneSportPerUser",
 		success:function(res){
 	       $("#sportselect").html("");
 	        var sports=JSON.parse(res);
