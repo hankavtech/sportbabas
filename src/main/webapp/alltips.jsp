@@ -149,7 +149,7 @@ body {
   <div class="container">
  <div class="row mb-3 mt-3">
   <div class="col-xs-12 col-sm-6 mb-4">
-    <form class="d-flex" method="POST" action="/tips?category=paid">
+    <form class="d-flex" method="POST" action="${pageContext.request.contextPath}/tips?category=paid">
     <label class="align-self-center">Filter by:</label>
     <select class="ml-2" id="sport-select" name="s1[]" multiple="multiple">
        <c:forEach items="${requestScope.sports}" var="sport">
@@ -210,7 +210,7 @@ body {
 
   <div class="row mt-3">
   <div class="col-xs-12 col-sm-6 mb-4">
-  <form class="d-flex" method="POST" action="/tips?category=free">
+  <form class="d-flex" method="POST" action="${pageContext.request.contextPath}/tips?category=free">
     <label class="align-self-center">Filter by:</label>
     <select class="ml-2" id="sport-select" name="s1[]" multiple="multiple">
        <c:forEach items="${requestScope.sports}" var="sport">

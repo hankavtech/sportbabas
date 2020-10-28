@@ -103,7 +103,7 @@ body {
 
 <div class="d-flex justify-content-center mt-4">
 
-<form method="post" class="form" id="changepass" action="/ChangePassword" autocomplete="on">
+<form method="post" class="form" id="changepass" action="${pageContext.request.contextPath}/ChangePassword" autocomplete="on">
      <img class="mb-3" src="/images/css/hockey.svg" style="width:50px;height:50px;margin-left:70px"/>
       <h4>Reset your password</h4>
       

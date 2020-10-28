@@ -99,7 +99,7 @@
 
 		
 		
-		  <form class="form mt-5" method="POST" action="/uploadFile" enctype="multipart/form-data">
+		  <form class="form mt-5" method="POST" action="${pageContext.request.contextPath}/uploadFile" enctype="multipart/form-data">
   <div class="form-group">
   <span class="mr-4"><img src="/images/sport/football.svg" style="width:30;height:30px"></span>
   </div>

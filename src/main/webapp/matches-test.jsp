@@ -169,7 +169,7 @@ height:30px;
                       </div>
 		              
 		            </c:if>
-		<form method="POST" class="form" action="TipsForm">
+		<form method="POST" class="form" action="${pageContext.request.contextPath}TipsForm">
 					<div class="form-group">
 					<label>League:</label>
 					<select id="league" name="league" class="form-control text-dark" readonly>

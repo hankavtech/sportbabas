@@ -389,7 +389,7 @@
            
            </div>
            <div class="modal-body">
-             <form method="POST" action="/RegisterNewTipster" class="form" id="tipsterform" enctype="multipart/form-data">
+             <form method="POST" action="${pageContext.request.contextPath}/RegisterNewTipster" class="form" id="tipsterform" enctype="multipart/form-data">
              
                <div class="form-group mb-4">
                   <label for="tipstername">Enter Tipster name</label>
@@ -493,7 +493,7 @@
                </div>
                
                <div id="registerform">
-               <form method="POST" action="/Register" id="signupmod" enctype="multipart/form-data">
+               <form method="POST" action="${pageContext.request.contextPath}/Register" id="signupmod" enctype="multipart/form-data">
                
                
                

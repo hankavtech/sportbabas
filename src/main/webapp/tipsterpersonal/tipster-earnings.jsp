@@ -94,7 +94,7 @@
 
  
  <h4 class="mb-1 mt-3"> Your registered paypal email: ${requestScope.paymentemail}</h4>
-  <form  method="POST" id="paymentemailform" class="form" action="/ChangePaypalEmail">
+  <form  method="POST" id="paymentemailform" class="form" action="${pageContext.request.contextPath}/ChangePaypalEmail">
   <div class="form-group mt-2">
   <span ><i class="fa fa-paypal fa-5x" aria-hidden="true"></i> <i class="fa fa-cc-paypal fa-5x" aria-hidden="true"></i></span>
   <input class="form-control mt-2" type="email" name="paymentemail" id="paymentemail" value="${requestScope.paymentemail}" placeholder="Enter you paypal email" required/>

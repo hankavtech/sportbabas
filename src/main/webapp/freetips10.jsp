@@ -224,7 +224,7 @@ body {
 			</div>
             
 			<div>
-			<form id="chatform" method="POST" action="/SingleChatSubmit">
+			<form id="chatform" method="POST" action="${pageContext.request.contextPath}/SingleChatSubmit">
 			<div class="form-group">
 			<textarea id="chatstring" name="chatstring"  class="form-control" placeholder="Enter your comment"></textarea>
 			</div>

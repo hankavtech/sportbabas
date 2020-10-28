@@ -20,19 +20,20 @@
 <meta charset="ISO-8859-1">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EAGLE TIP</title>
-<script src="${pageContext.request.contextPath}/jquery.js"></script>
-<script src="${pageContext.request.contextPath}/math.min.js"></script>
-<script src="${pageContext.request.contextPath}/moment.js"></script>
-<script src="${pageContext.request.contextPath}/moment-timezone.js"></script>
-<script src="${pageContext.request.contextPath}/moment-timezone-with-data.js"></script>
-<script src="${pageContext.request.contextPath}/moment-data.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap.bundle.min.js" ></script>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
+<script src="${ctx}/jquery.js"></script>
+<script src="${ctx}/math.min.js"></script>
+<script src="${ctx}/moment.js"></script>
+<script src="${ctx}/moment-timezone.js"></script>
+<script src="${ctx}/moment-timezone-with-data.js"></script>
+<script src="${ctx}/moment-data.js"></script>
+<script src="${ctx}/bootstrap.bundle.min.js" ></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap.min.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
-<script src="${pageContext.request.contextPath}/bootstrap-select.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="${ctx}/bootstrap.min.css" />
+<link rel="stylesheet" href="${ctx}/nav.css"/>
+<script src="${ctx}/bootstrap-select.js"></script>
+<script src="${ctx}/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="${ctx}/bootstrap-multiselect.css" />
 
 
  <style>
@@ -228,7 +229,7 @@ body {
 			</div>
             
 			<div>
-			<form id="chatform" method="POST" action="/SingleChatSubmit">
+			<form id="chatform" method="POST" action="${pageContext.request.contextPath}/SingleChatSubmit">
 			<div class="form-group">
 			<textarea id="chatstring" name="chatstring"  class="form-control" placeholder="Enter your comment"></textarea>
 			</div>
