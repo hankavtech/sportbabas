@@ -18,18 +18,18 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EAGLE TIP</title>
-<script src="${pageContext.request.contextPath}/jquery.js"></script>
-<script src="${pageContext.request.contextPath}/math.min.js"></script>
-<script src="${pageContext.request.contextPath}/moment.js"></script>
-<script src="${pageContext.request.contextPath}/moment-timezone.js"></script>
-<script src="${pageContext.request.contextPath}/moment-timezone-with-data.js"></script>
-<script src="${pageContext.request.contextPath}/moment-data.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap.bundle.min.js" ></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="/jquery.js"></script>
+<script src="/math.min.js"></script>
+<script src="/moment.js"></script>
+<script src="/moment-timezone.js"></script>
+<script src="/moment-timezone-with-data.js"></script>
+<script src="/moment-data.js"></script>
+<script src="/bootstrap.bundle.min.js" ></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap.min.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
-<script src="${pageContext.request.contextPath}/bootstrap-select.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap-multiselect.js"></script>
+<script src="/bootstrap-select.js"></script>
+<script src="/bootstrap-multiselect.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-multiselect.css" />
 <style>
 
@@ -100,7 +100,7 @@ body {
          type = "number" value = "${paidtipsters.profit / paidtipsters.tips}" />        
 <tr class="d1">
 <td><img style="width:15px;height:15px" src="/images/sport/${paidtipsters.sportname}.svg"/></td>
-<td><a class="text-warning" href="/tipster/activetips?name=${paidtipsters.name }">${paidtipsters.name}</a></td>
+<td><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${paidtipsters.name }">${paidtipsters.name}</a></td>
 
 <td><span <c:if test='${i > 0}'>class='text-success text-nowrap'</c:if> <c:if test='${i < 0}'>class='text-danger'</c:if>>${i} </span> &nbsp;</td>
 <td <c:if test='${yield > 0}'>class='text-success text-nowrap'</c:if> <c:if test='${yield < 0}'>class='text-danger'</c:if>>${yield} % &nbsp;</td>
@@ -137,7 +137,7 @@ body {
          type = "number" value = "${freetipsters.profit / freetipsters.tips}" />        
 <tr class="d1">
 <td><img style="width:15px;height:15px" src="/images/sport/${freetipsters.sportname}.svg"/></td>
-<td><a class="text-warning" href="/tipster/activetips?name=${freetipsters.name }">${freetipsters.name}</a></td>
+<td><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${freetipsters.name }">${freetipsters.name}</a></td>
 
 <td><span <c:if test='${i > 0}'>class='text-success text-nowrap'</c:if> <c:if test='${i < 0}'>class='text-danger'</c:if>>${i} </span> &nbsp;</td>
 <td <c:if test='${yield > 0}'>class='text-success text-nowrap'</c:if> <c:if test='${yield < 0}'>class='text-danger'</c:if>>${yield} % &nbsp;</td>
@@ -167,8 +167,8 @@ body {
 					   <tr class="d1">
 <td><img style="width:12px;height:12px" src="/images/sport/${freeactivetips.sportname}.svg"/></td>
 <td class="text-nowrap timecolumn" style="text-align:left">${freeactivetips.time}</td>
-<td class="text-nowrap"><a class="text-warning" href="/tip?id=${freeactivetips.tid}"> ${freeactivetips.team1} vs ${freeactivetips.team2}</a></td> 
-<td class="text-nowrap"><a class="text-warning" href="/tipster/activetips?name=${freeactivetips.tipstername}">${freeactivetips.tipstername}</a></td>
+<td class="text-nowrap"><a class="text-warning" href="${pageContext.request.contextPath}/tip?id=${freeactivetips.tid}"> ${freeactivetips.team1} vs ${freeactivetips.team2}</a></td> 
+<td class="text-nowrap"><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${freeactivetips.tipstername}">${freeactivetips.tipstername}</a></td>
 <td class="text-nowrap bookmakercolumn" style="text-align:left">${freeactivetips.bookmaker }</td>
 
 </tr>
@@ -196,8 +196,8 @@ body {
 
 <td><img style="width:15px;height:15px" src="/images/sport/${freefinishedtips.sportname}.svg"/></td>
 <td class="text-nowrap timecolumn" style="text-align:left">${freefinishedtips.time}</td>
-<td class="text-nowrap"><a class="text-warning" href="/tip?id=${freefinishedtips.tid}"> ${freefinishedtips.team1} vs ${freefinishedtips.team2}</a></td> 
-<td class="text-nowrap"><a class="text-warning" href="/tipster/activetips?name=${freefinishedtips.tipstername}">${freefinishedtips.tipstername}</a></td>
+<td class="text-nowrap"><a class="text-warning" href="${pageContext.request.contextPath}/tip?id=${freefinishedtips.tid}"> ${freefinishedtips.team1} vs ${freefinishedtips.team2}</a></td> 
+<td class="text-nowrap"><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${freefinishedtips.tipstername}">${freefinishedtips.tipstername}</a></td>
 <td class="text-nowrap bookmakercolumn" style="text-align:left">${freefinishedtips.bookmaker}</td>
 <td class="text-nowrap" style="text-align:center"><c:if test='${freefinishedtips.result=="won"}'><img src="/images/css/right.svg" style="width:20px;height:20px"/></c:if><c:if test='${freefinishedtips.result=="lost"}'><img src="/images/css/wrong.svg" style="width:20px;height:20px"/></c:if></td>
 
@@ -208,7 +208,7 @@ body {
 					   </table>
 					   </div>
 					   <div class="text-right">
-                       <a class="text-primary" style="text-decoration:underline" href="/tips?page=1&category=free">See all Free tips</a>
+                       <a class="text-primary" style="text-decoration:underline" href="${pageContext.request.contextPath}/tips?page=1&category=free">See all Free tips</a>
                        </div>
 					   </div>	   
 				   </div>
@@ -354,13 +354,13 @@ function getCookie(name) {
 		  $(".selectedcurrency").html(currency.toUpperCase()+"<i class='fa fa-angle-down'></i>");
 		  $(".currency_selection").html("");
 			if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-				$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+				$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 				}
 				if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 					}
 				if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 					}
 		  
 		  $(".currency_selection a").click(function(){
@@ -388,13 +388,13 @@ function getCookie(name) {
 			
 			  $(".currency_selection").html("");
 				if($(".selectedcurrency").text().trim().toUpperCase()!="USD"){
-					$(".currency_selection").append('<li style="vertical-align:center"><a href="#">USD</a></li>');
+					$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">USD</a></li>');
 					}
 					if($(".selectedcurrency").text().trim().toUpperCase()!="EUR"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">EUR</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">EUR</a></li>');
 						}
 					if($(".selectedcurrency").text().trim().toUpperCase()!="GBP"){
-						$(".currency_selection").append('<li style="vertical-align:center"><a href="#">GBP</a></li>');
+						$(".currency_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">GBP</a></li>');
 						}
 			 $(".currency_selection a").click(function(){
 				  $.ajax({
@@ -451,13 +451,13 @@ function getCookie(name) {
 		  
 		  $(".odds_selection").html("");
 			if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-				$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+				$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 				}
 				if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 					}
 				if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 					}
 		  
 		  
@@ -483,13 +483,13 @@ function getCookie(name) {
 			$(".selectedodds").html(odds+"<i class='fa fa-angle-down'></i>");
 			  $(".odds_selection").html("");
 				if($(".selectedodds").text().trim().toUpperCase()!="DECIMAL"){
-					$(".odds_selection").append('<li style="vertical-align:center"><a href="#">DECIMAL</a></li>');
+					$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">DECIMAL</a></li>');
 					}
 					if($(".selectedodds").text().trim().toUpperCase()!="FRACTIONAL"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">FRACTIONAL</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">FRACTIONAL</a></li>');
 						}
 					if($(".selectedodds").text().trim().toUpperCase()!="AMERICAN"){
-						$(".odds_selection").append('<li style="vertical-align:center"><a href="#">AMERICAN</a></li>');
+						$(".odds_selection").append('<li style="vertical-align:center"><a href="${pageContext.request.contextPath}#">AMERICAN</a></li>');
 						}
 			  
 			  
