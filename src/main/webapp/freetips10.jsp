@@ -18,8 +18,6 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EAGLE TIP</title>
- <c:set var="url">${pageContext.request.requestURL}</c:set>
-    <base href="${fn:substring(url, 0, fn:length(url) - fn:length(pageContext.request.requestURI))}${pageContext.request.contextPath}/" />
 <script src="${pageContext.request.contextPath}/jquery.js"></script>
 <script src="${pageContext.request.contextPath}/math.min.js"></script>
 <script src="${pageContext.request.contextPath}/moment.js"></script>

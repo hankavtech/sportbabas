@@ -77,7 +77,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>BuildMainPageForFreeTips</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/home</url-pattern>
   </servlet-mapping>
   <context-param>
     <param-name>sport</param-name>
