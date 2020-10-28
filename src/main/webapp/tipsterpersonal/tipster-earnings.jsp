@@ -19,16 +19,16 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EAGLE TIP</title>
-<script src="/sportbabas/jquery.js"></script>
-<script src="/sportbabas/bootstrap/js/bootstrap.bundle.js" ></script>
+<script src="/jquery.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.js" ></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="/sportbabas/moment.js"></script>
-<script src="/sportbabas/moment-timezone-with-data.js"></script>
-<script src="/sportbabas/moment-data.js"></script>
+<script src="/moment.js"></script>
+<script src="/moment-timezone-with-data.js"></script>
+<script src="/moment-data.js"></script>
 <script src="bootstrap/js/bootstrap.bundle.js"></script>
 <script src="bootstrap/js/bootstrap-select.js"></script>
-<link rel="stylesheet" href="/sportbabas/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/sportbabas/nav.css"/>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/nav.css"/>
 <style>
 
 
@@ -78,13 +78,13 @@
 <div class="container mt-5">
  <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link" id="home-tab" href="/sportbabas/tipsterpersonal/activetips" role="tab" aria-controls="home" aria-selected="false">Today's Tips</a>
+    <a class="nav-link" id="home-tab" href="/tipsterpersonal/activetips" role="tab" aria-controls="home" aria-selected="false">Today's Tips</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" id="profile-tab" href="/sportbabas/tipsterpersonal/earnings" role="tab" aria-controls="profile" aria-selected="true">Earnings</a>
+    <a class="nav-link active" id="profile-tab" href="/tipsterpersonal/earnings" role="tab" aria-controls="profile" aria-selected="true">Earnings</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="messages-tab" href="/sportbabas/tipsterpersonal/profile" role="tab" aria-controls="messages" aria-selected="false">Profile</a>
+    <a class="nav-link" id="messages-tab" href="/tipsterpersonal/profile" role="tab" aria-controls="messages" aria-selected="false">Profile</a>
   </li>
 </ul>
 <div class="tab-content">
@@ -94,7 +94,7 @@
 
  
  <h4 class="mb-1 mt-3"> Your registered paypal email: ${requestScope.paymentemail}</h4>
-  <form  method="POST" id="paymentemailform" class="form" action="/sportbabas/ChangePaypalEmail">
+  <form  method="POST" id="paymentemailform" class="form" action="/ChangePaypalEmail">
   <div class="form-group mt-2">
   <span ><i class="fa fa-paypal fa-5x" aria-hidden="true"></i> <i class="fa fa-cc-paypal fa-5x" aria-hidden="true"></i></span>
   <input class="form-control mt-2" type="email" name="paymentemail" id="paymentemail" value="${requestScope.paymentemail}" placeholder="Enter you paypal email" required/>
@@ -303,7 +303,7 @@ function getCookie(name) {
 			 $(".currency_selection a").click(function(){
 				  $.ajax({
 					 method:"POST",
-					 url:"/sportbabas/UpdateUserCurrency",
+					 url:"/UpdateUserCurrency",
 					 data:{currency:$(this).text(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -319,7 +319,7 @@ function getCookie(name) {
 				$("#currency-selector").change(function(){
 					 $.ajax({
 						 method:"POST",
-						 url:"/sportbabas/UpdateUserCurrency",
+						 url:"/UpdateUserCurrency",
 						 data:{currency:$("#currency-selector").val(),pageredirect:window.location.href},
 						 success:function(){
 							 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -419,7 +419,7 @@ function getCookie(name) {
 			  $(".odds_selection a").click(function(){
 				  $.ajax({
 					 method:"POST",
-					 url:"/sportbabas/UpdateUserOdds",
+					 url:"/UpdateUserOdds",
 					 data:{odds:$(this).text().trim().toUpperCase(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -434,7 +434,7 @@ function getCookie(name) {
 					$("#odds-selector").change(function(){
 						 $.ajax({
 							 method:"POST",
-							 url:"/sportbabas/UpdateUserOdds",
+							 url:"/UpdateUserOdds",
 							 data:{odds:$("#odds-selector").val().toUpperCase(),pageredirect:window.location.href},
 							 success:function(){
 								 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -515,7 +515,7 @@ function getCookie(name) {
 			$(".timezone_selection a").click(function(){
 				  $.ajax({
 					 method:"POST",
-					 url:"/sportbabas/UpdateUserTimeZone",
+					 url:"/UpdateUserTimeZone",
 					 data:{timezone:$(this).text(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -533,7 +533,7 @@ function getCookie(name) {
 						  $("#timezone-selector").change(function(e){
 							  $.ajax({
 									 method:"POST",
-									 url:"/sportbabas/UpdateUserTimeZone",
+									 url:"/UpdateUserTimeZone",
 									 data:{timezone:$("#timezone-selector option:selected").attr("id"),pageredirect:window.location.href},
 									 success:function(){
 										 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -576,7 +576,7 @@ function getCookie(name) {
 	
 	  $.ajax({
 			method:"GET",
-			url:"/sportbabas/GetCartItems",
+			url:"/GetCartItems",
 			success:function(response){
 				items=0;
 				console.log("items is"+ items);
@@ -590,7 +590,7 @@ function getCookie(name) {
 					else if(currency==='GBP'){
 						convcurrency=parseFloat(convcurrency*.79).toFixed(2);
 					}
-			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/sportbabas/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
+			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
 			   	});
 			 
 			   	$("#checkout_items1").html(items);
@@ -602,7 +602,7 @@ function getCookie(name) {
 						var nameofsub=$(button1).parent().parent().find("p.nametoremove").text();
 						$.ajax({
 							method:"POST",
-							url:"/sportbabas/DeleteCartItem",
+							url:"/DeleteCartItem",
 							data:{
 								itemname:nameofsub
 							},
@@ -699,7 +699,7 @@ $("#login").on("click",function(e){
 	var password2=$("#password1").val();
 	 $.ajax({
 		 method:"POST",
-		 url:"/sportbabas/Login",
+		 url:"/Login",
 		 data:{username:username2,password:password2},
 		 success:function(response){
 			 $("#spinner").hide();
@@ -732,10 +732,10 @@ $(".profiles").on("click",function(e){
 	
 	$.ajax({
 		 method:"POST",
-		 url:"/sportbabas/AddClickedUserToSession",
+		 url:"/AddClickedUserToSession",
 		 data:{usertype:usertype,username:username,usersport:usersport},
 		 success:function(response){
-			 window.location.href = "/sportbabas/paidtips";
+			 window.location.href = "/paidtips";
 			
 		 }
 		 
@@ -775,7 +775,7 @@ $("#addtipster,#getsports").click(function() {
 
 	$.ajax({
 		method:"GET",
-		url:"/sportbabas/CheckOneSportPerUser",
+		url:"/CheckOneSportPerUser",
 		success:function(res){
 	       $("#sportselect").html("");
 	        var sports=JSON.parse(res);
@@ -801,7 +801,7 @@ $("#tipstername").blur(function() {
 	$.ajax({
 		method:"POST",
 		data:{tipstername:$('#tipstername').val()},
-		url:"/sportbabas/CheckForUniqueTipsterName",
+		url:"/CheckForUniqueTipsterName",
 		success:function(res){
 			console.log(res);
 			$(this).removeClass("is-valid");
@@ -841,7 +841,7 @@ $("#checkout_button").click(function(e){
 		},3000);
 	}
 	else{
-		location.replace("/sportbabas/payment");
+		location.replace("/payment");
 	}
 });
 

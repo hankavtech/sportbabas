@@ -4,7 +4,7 @@
 		  <div class="d-none">
 		</div>
 		<div class="d-sm-none">		
-        <a class="navbar-brand"><img id="brandimage" style="width:80px;height:60px" class="img-responsive" src="/sportbabas/images/css/eagletip.png"/></a>
+        <a class="navbar-brand"><img id="brandimage" style="width:80px;height:60px" class="img-responsive" src="/images/css/eagletip.png"/></a>
         </div>	
 				<div class="collapse navbar-collapse" id="topcontent">
 							<ul class="navbar-nav" style="height:50px">
@@ -101,10 +101,10 @@
 								
 								
 								<c:if test="${sessionScope.user_type =='tipster'}">
-							       <li class="nav-item accountloggedin p-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/sportbabas/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/sportbabas/images/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
+							       <li class="nav-item accountloggedin p-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
 							      </c:if>
 							       <c:if test="${sessionScope.user_type !='tipster'}">
-							      <li class="nav-item accountloggedin p-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/sportbabas/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/sportbabas/user.svg'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
+							      <li class="nav-item accountloggedin p-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/user.svg'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
 							      </c:if>
 								
 								</c:if>
@@ -136,7 +136,7 @@
            <span class="navbar-toggler-icon"></span>
         </a>
         <div class="col-sm-1">
-        <a class="navbar-brand d-none d-md-inline-block"><img id="brandimage" class="img-responsive" src="/sportbabas/images/css/eagletip.png" style="height:60px;width:80px"/></a>
+        <a class="navbar-brand d-none d-md-inline-block"><img id="brandimage" class="img-responsive" src="/images/css/eagletip.png" style="height:60px;width:80px"/></a>
          </div>
          <!-- <div class="col-sm-1 justify-content-center align-self-center">
          <span class="navbar-text d-none d-sm-inline-block text-wrap text-md-nowrap"><b>HANKAV TECH</b></span>
@@ -147,13 +147,13 @@
 	
 			  
 			  <li class="nav-item dropdown">
-                <a id="toptipsterslink" class="dropdown-toggle text-nowrap" href="/sportbabas/paidtips" data-toggle="dropdown">Tips</a>
+                <a id="toptipsterslink" class="dropdown-toggle text-nowrap" href="/paidtips" data-toggle="dropdown">Tips</a>
 			  
 			  
 			  
 			         <ul class="dropdown-menu tips">
-					    <li><a id="paidtipslink" href="/sportbabas/paidtips">PAID TIPS</a></li>
-					    <li><a id="freetipslink" href="/sportbabas/freetips">FREE TIPS</a></li>
+					    <li><a id="paidtipslink" href="/paidtips">PAID TIPS</a></li>
+					    <li><a id="freetipslink" href="/freetips">FREE TIPS</a></li>
                      </ul>
                      
                 </li>     
@@ -172,25 +172,25 @@
 		
 			
 			  <li class="nav-item dropdown">
-                <a id="tipsterslink" class="dropdown-toggle text-nowrap" href="/sportbabas/tipsters" data-toggle="dropdown">Tipsters</a>
+                <a id="tipsterslink" class="dropdown-toggle text-nowrap" href="/tipsters" data-toggle="dropdown">Tipsters</a>
 			  
 			  
 			  
 			         <ul class="dropdown-menu tips">
-					    <li><a id="paidtipsterslink" href="/sportbabas/tipsters?category=paid">PAID TIPSTERS</a></li>
-					    <li><a id="freetipsterslink" href="/sportbabas/tipsters?category=free">FREE TIPSTERS</a></li>
+					    <li><a id="paidtipsterslink" href="/tipsters?category=paid">PAID TIPSTERS</a></li>
+					    <li><a id="freetipsterslink" href="/tipsters?category=free">FREE TIPSTERS</a></li>
                      </ul>
                      
                 </li>   
 			
 			
 			<li class="nav-item">
-			  <a id="pasttipslink" class="nav-link" href="/sportbabas/tips">PAST TIPS</a>
+			  <a id="pasttipslink" class="nav-link" href="/tips">PAST TIPS</a>
 			</li>
 	
 			<c:if test="${sessionScope.username !=null && sessionScope.tipster_name==null}">
 			<li class="nav-item">
-			  <a id="clientprofilelink" class="text-warning nav-link" href="/sportbabas/myactivetips">PROFILE</a>
+			  <a id="clientprofilelink" class="text-warning nav-link" href="/myactivetips">PROFILE</a>
 			</li>
 			<li class="nav-item">
 			  <a class="text-warning nav-link" id="addtipster" data-toggle="modal" data-target="#tipprofilediv" href="#">ADD TIPSTER</a>	
@@ -200,10 +200,10 @@
 			
 			<c:if test="${sessionScope.tipster_name !=null}">
 			<li class="nav-item">
-			  <a id="tipsterprofilelink" class="text-warning nav-link" href="/sportbabas/tipsterpersonal/activetips">My Tips</a>
+			  <a id="tipsterprofilelink" class="text-warning nav-link" href="/tipsterpersonal/activetips">My Tips</a>
 			</li>
 			<li class="nav-item">
-			  <a id="posttiplink" class="text-warning nav-link" href="/sportbabas/matches">Post Tip</a>
+			  <a id="posttiplink" class="text-warning nav-link" href="/matches">Post Tip</a>
 			
 			</li>
 			</c:if> 
@@ -221,7 +221,7 @@
                                     
                                 <div class="col-xs-2"><a href="#"><i class="fa fa-search" style="color:black" aria-hidden="true"></i></a></div>
 								  <div class="col-xs-2">
-								  <img src="/sportbabas/images/css/icons/settings.svg" class="rounded-circle settings" style="width:20px;height:20px;"/>
+								  <img src="/images/css/icons/settings.svg" class="rounded-circle settings" style="width:20px;height:20px;"/>
 								  </div>
 								  
 								  <c:if test="${sessionScope.username==null}">
@@ -230,10 +230,10 @@
 							      <c:if test="${sessionScope.username!=null}">
 							      
 							      <c:if test="${sessionScope.user_type =='tipster'}">
-							       <div class="col-xs-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/sportbabas/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/sportbabas/images/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
+							       <div class="col-xs-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
 							      </c:if>
 							       <c:if test="${sessionScope.user_type !='tipster'}">
-							       <div class="col-xs-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/sportbabas/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/sportbabas/images/css/icons/user.svg'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
+							       <div class="col-xs-2"><a href="#" data-toggle="modal" data-target="#loggedindiv"><img src="/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/images/css/icons/user.svg'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
 							      </c:if>
 								  
 							      </c:if>
@@ -268,11 +268,11 @@
                
                   <div class="row offset-xs-0 offset-md-3 justify-content-around">
                   <div class="col-xs-2">
-                  <img style="width:20px;height:20px" class="rounded-circle" src="/sportbabas/images/sport/${profile.value}.svg"/>
+                  <img style="width:20px;height:20px" class="rounded-circle" src="/images/sport/${profile.value}.svg"/>
                   </div>
                   
                    <div class="col-xs-4">
-                   <img src="/sportbabas/images/tipsters/${profile.key}.png" onerror="this.onerror=null;this.src='/sportbabas/images/tipsters/${profile.key}.jpg'" class="rounded-circle" style="width:40px;height:40px" aria-hidden="true">
+                   <img src="/images/tipsters/${profile.key}.png" onerror="this.onerror=null;this.src='/images/tipsters/${profile.key}.jpg'" class="rounded-circle" style="width:40px;height:40px" aria-hidden="true">
                    <p><c:out value="${profile.key}"/></p>
            
                  
@@ -311,7 +311,7 @@
              
                   
                    <div class="col-xs-4">
-                   <img style="width:40px;height:40px" src="/sportbabas/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/sportbabas/user.svg'"/>
+                   <img style="width:40px;height:40px" src="/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/user.svg'"/>
                    <p><c:out value="${sessionScope.username}"/></p>
                   </div>
                   <div class="col-xs-4">
@@ -330,11 +330,11 @@
                <c:if test="${sessionScope.tipster_name != profile.key}">
                     <div class="row offset-xs-0 offset-md-3 justify-content-around">
                   <div class="col-xs-2">
-                  <img style="width:20px;height:20px" class="rounded-circle" src="/sportbabas/images/sport/${profile.value}.svg" onerror="this.onerror=null;this.src='/sportbabas/images/sport/${profile.value}.png'"/>
+                  <img style="width:20px;height:20px" class="rounded-circle" src="/images/sport/${profile.value}.svg" onerror="this.onerror=null;this.src='/images/sport/${profile.value}.png'"/>
                   </div>
                   
                    <div class="col-xs-4">
-                   <img style="width:40px;height:40px" src="/sportbabas/images/tipsters/${profile.key}.jpg" onerror="this.onerror=null;this.src='/sportbabas/images/tipsters/${profile.key}.png'"/>
+                   <img style="width:40px;height:40px" src="/images/tipsters/${profile.key}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${profile.key}.png'"/>
                    <p><c:out value="${profile.key}"/></p>
            
                  
@@ -355,7 +355,7 @@
            
            
             <div class="bg-muted">
-              <a class="pull-right" href="/sportbabas/Logout">Sign out</a>
+              <a class="pull-right" href="/Logout">Sign out</a>
            </div>
            
            
@@ -389,7 +389,7 @@
            
            </div>
            <div class="modal-body">
-             <form method="POST" action="/sportbabas/RegisterNewTipster" class="form" id="tipsterform" enctype="multipart/form-data">
+             <form method="POST" action="/RegisterNewTipster" class="form" id="tipsterform" enctype="multipart/form-data">
              
                <div class="form-group mb-4">
                   <label for="tipstername">Enter Tipster name</label>
@@ -487,13 +487,13 @@
                  </button>
                 
                  
-                 <a href="/sportbabas/PasswordReset" class="ml-4 text-dark" style="text-decoration:underline">Forgot password</a>
+                 <a href="/PasswordReset" class="ml-4 text-dark" style="text-decoration:underline">Forgot password</a>
                
                </form>
                </div>
                
                <div id="registerform">
-               <form method="POST" action="/sportbabas/Register" id="signupmod" enctype="multipart/form-data">
+               <form method="POST" action="/Register" id="signupmod" enctype="multipart/form-data">
                
                
                
@@ -590,7 +590,7 @@
 				    
 				    </div>
 				    <div class='row justify-content-center'>
-				    <a id="checkout_button" class='btn btn-lg btn-success' href='/sportbabas/payment'>Checkout</a>
+				    <a id="checkout_button" class='btn btn-lg btn-success' href='/payment'>Checkout</a>
 				    </div>
                 
            

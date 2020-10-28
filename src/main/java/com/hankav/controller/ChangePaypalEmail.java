@@ -39,7 +39,7 @@ public class ChangePaypalEmail extends HttpServlet {
         tipster.setPaymentemail(paymentemail);
 		session.update(tipster);
 		session.getTransaction().commit();
-	    response.sendRedirect("/sportbabas/tipsterpersonal/earnings");	
+	    response.sendRedirect("/tipsterpersonal/earnings");	
 		
 	}
 

@@ -157,7 +157,7 @@ public class Register extends HttpServlet {
 				session.getTransaction().commit();
 
 				session.close();
-				response.sendRedirect("/sportbabas/paidtips");
+				response.sendRedirect("/paidtips");
 			}
 
 		} catch (Exception exception) {

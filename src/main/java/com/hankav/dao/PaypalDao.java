@@ -55,8 +55,8 @@ public class PaypalDao {
 
 		// Redirect URLs
 		RedirectUrls crunchifyRedirectUrls = new RedirectUrls();
-		crunchifyRedirectUrls.setCancelUrl("/sportbabas/tipsters");
-		crunchifyRedirectUrls.setReturnUrl("/sportbabas/PaypalReturnUrl");
+		crunchifyRedirectUrls.setCancelUrl("/tipsters");
+		crunchifyRedirectUrls.setReturnUrl("/PaypalReturnUrl");
 
 		// Set Payment Details Object
 		/*

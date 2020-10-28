@@ -29,7 +29,7 @@ public class PaypalController extends HttpServlet {
 		String username=(String) request.getSession().getAttribute("username");
 		List<Object[]>items=(List<Object[]>) request.getSession().getAttribute("cartitems");
 		if(username==null) {
-			request.getRequestDispatcher("/sportbabas/paidtips").forward(request,response);
+			request.getRequestDispatcher("/paidtips").forward(request,response);
 			return;
 		}
 		else {

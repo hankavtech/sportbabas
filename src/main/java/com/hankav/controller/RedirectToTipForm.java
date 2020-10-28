@@ -19,7 +19,7 @@ public class RedirectToTipForm extends HttpServlet {
 		// TODO Auto-generated method stub
 		String username=(String) request.getSession().getAttribute("username");
 		System.out.println(request.getHeader("referer").toString());
-		if(request.getHeader("referer").toString().equals("/sportbabas/matches")) {
+		if(request.getHeader("referer").toString().equals("/matches")) {
 		Cookie[]cookies=request.getCookies();
 		String tipstatus=null;
 		for(Cookie c:cookies) {

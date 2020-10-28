@@ -36,9 +36,9 @@ public class RegistrationEmailSender {
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
 			message.setSubject("Confirmation Email");
 			message.setContent(
-					"<img style='width:80px;height:60px' src='/sportbabas/images/css/eagletip.png'>"
+					"<img style='width:80px;height:60px' src='/images/css/eagletip.png'>"
 							+ "<h1>EAGLE<span style='color:orange'>TIP</span></h1>"
-							+ "<p>Thank you for registering with us.Please click on this <a href='/sportbabas/Confirmation?uuid="
+							+ "<p>Thank you for registering with us.Please click on this <a href='/Confirmation?uuid="
 							+ uuid + "&email=" + email + "'>link</a> in order to verify your email address.</p>"
 							+ "We want to notify that you will not receive any tips by email unless and until the verification process is complete."
 							+ "We look forward to have a successfull relationship with you.",

@@ -19,18 +19,18 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EAGLE TIP</title>
-<script src="/sportbabas/jquery.js"></script>
-<script src="/sportbabas/math.min.js"></script>
-<script src="/sportbabas/moment.js"></script>
-<script src="/sportbabas/moment-timezone-with-data.js"></script>
-<script src="/sportbabas/moment-data.js"></script>
-<script src="/sportbabas/bootstrap/js/bootstrap.bundle.js" ></script>
+<script src="/jquery.js"></script>
+<script src="/math.min.js"></script>
+<script src="/moment.js"></script>
+<script src="/moment-timezone-with-data.js"></script>
+<script src="/moment-data.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.js" ></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/sportbabas/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/sportbabas/nav.css"/>
-<script src="/sportbabas/bootstrap/js/bootstrap-select.js"></script>
-<script src="/sportbabas/bootstrap/js/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="/sportbabas/bootstrap/css/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/nav.css"/>
+<script src="/bootstrap/js/bootstrap-select.js"></script>
+<script src="/bootstrap/js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap-multiselect.css" />
 <style>
 
 
@@ -135,10 +135,10 @@ body {
 	
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link <c:if test='${requestScope.category=="paid"}'>active</c:if>" id="messages-tab" href="/sportbabas/tips?page=1&category=paid" role="tab" aria-controls="messages" aria-selected="false">Paid Tips</a>
+    <a class="nav-link <c:if test='${requestScope.category=="paid"}'>active</c:if>" id="messages-tab" href="/tips?page=1&category=paid" role="tab" aria-controls="messages" aria-selected="false">Paid Tips</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link <c:if test='${requestScope.category=="free"}'>active</c:if>" id="settings-tab" href="/sportbabas/tips?page=1&category=free" role="tab" aria-controls="settings" aria-selected="true">Free Tips</a>
+    <a class="nav-link <c:if test='${requestScope.category=="free"}'>active</c:if>" id="settings-tab" href="/tips?page=1&category=free" role="tab" aria-controls="settings" aria-selected="true">Free Tips</a>
   </li>
 </ul>
 
@@ -149,7 +149,7 @@ body {
   <div class="container">
  <div class="row mb-3 mt-3">
   <div class="col-xs-12 col-sm-6 mb-4">
-    <form class="d-flex" method="POST" action="/sportbabas/tips?category=paid">
+    <form class="d-flex" method="POST" action="/tips?category=paid">
     <label class="align-self-center">Filter by:</label>
     <select class="ml-2" id="sport-select" name="s1[]" multiple="multiple">
        <c:forEach items="${requestScope.sports}" var="sport">
@@ -210,7 +210,7 @@ body {
 
   <div class="row mt-3">
   <div class="col-xs-12 col-sm-6 mb-4">
-  <form class="d-flex" method="POST" action="/sportbabas/tips?category=free">
+  <form class="d-flex" method="POST" action="/tips?category=free">
     <label class="align-self-center">Filter by:</label>
     <select class="ml-2" id="sport-select" name="s1[]" multiple="multiple">
        <c:forEach items="${requestScope.sports}" var="sport">
@@ -388,7 +388,7 @@ $(document).ready(function(){
 
 	<c:forEach items="${requestScope.tips}" var="item1">
 	
-	$("#mytable tbody").append("<tr><td><img src='/sportbabas/images/sport/${item1[6]}.svg' style='width:20px;height:20px'/></td><td><a class='text-warning' href='/sportbabas/tip?id=${item1[0]}'>${item1[1]} vs ${item1[2]}</a></td><td><a class='text-warning' href='/sportbabas/tipster/activetips?name=${item1[15]}'>${item1[15]}</a></td><td class='timecolumn'>${item1[3]}</td><td>${item1[7]}</td><td>${item1[8]} ${item1[9]}</td><td class='oddscolumn'>${item1[10]}</td><td>${item1[11]}</td><td class='bookmakercolumn'>${item1[12]}</td><td><c:if test='${item1[13]=="won"}'><img src='/sportbabas/images/css/right.svg' style='width:20px;height:20px'/></c:if><c:if test='${item1[13]=="lost"}'><img src='/sportbabas/images/css/wrong.svg' style='width:20px;height:20px'/></c:if></td><td>${item1[14]}</td></tr>");
+	$("#mytable tbody").append("<tr><td><img src='/images/sport/${item1[6]}.svg' style='width:20px;height:20px'/></td><td><a class='text-warning' href='/tip?id=${item1[0]}'>${item1[1]} vs ${item1[2]}</a></td><td><a class='text-warning' href='/tipster/activetips?name=${item1[15]}'>${item1[15]}</a></td><td class='timecolumn'>${item1[3]}</td><td>${item1[7]}</td><td>${item1[8]} ${item1[9]}</td><td class='oddscolumn'>${item1[10]}</td><td>${item1[11]}</td><td class='bookmakercolumn'>${item1[12]}</td><td><c:if test='${item1[13]=="won"}'><img src='/images/css/right.svg' style='width:20px;height:20px'/></c:if><c:if test='${item1[13]=="lost"}'><img src='/images/css/wrong.svg' style='width:20px;height:20px'/></c:if></td><td>${item1[14]}</td></tr>");
 	</c:forEach>
 	
 	
@@ -475,7 +475,7 @@ $(document).ready(function(){
 			 $(".currency_selection a").click(function(){
 				  $.ajax({
 					 method:"POST",
-					 url:"/sportbabas/UpdateUserCurrency",
+					 url:"/UpdateUserCurrency",
 					 data:{currency:$(this).text(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -491,7 +491,7 @@ $(document).ready(function(){
 				$("#currency-selector").change(function(){
 					 $.ajax({
 						 method:"POST",
-						 url:"/sportbabas/UpdateUserCurrency",
+						 url:"/UpdateUserCurrency",
 						 data:{currency:$("#currency-selector").val(),pageredirect:window.location.href},
 						 success:function(){
 							 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -573,7 +573,7 @@ $(document).ready(function(){
 			  $(".odds_selection a").click(function(){
 				  $.ajax({
 					 method:"POST",
-					 url:"/sportbabas/UpdateUserOdds",
+					 url:"/UpdateUserOdds",
 					 data:{odds:$(this).text().trim().toUpperCase(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -588,7 +588,7 @@ $(document).ready(function(){
 					$("#odds-selector").change(function(){
 						 $.ajax({
 							 method:"POST",
-							 url:"/sportbabas/UpdateUserOdds",
+							 url:"/UpdateUserOdds",
 							 data:{odds:$("#odds-selector").val().toUpperCase(),pageredirect:window.location.href},
 							 success:function(){
 								 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -669,7 +669,7 @@ $(document).ready(function(){
 			$(".timezone_selection a").click(function(){
 				  $.ajax({
 					 method:"POST",
-					 url:"/sportbabas/UpdateUserTimeZone",
+					 url:"/UpdateUserTimeZone",
 					 data:{timezone:$(this).text(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -687,7 +687,7 @@ $(document).ready(function(){
 						  $("#timezone-selector").change(function(e){
 							  $.ajax({
 									 method:"POST",
-									 url:"/sportbabas/UpdateUserTimeZone",
+									 url:"/UpdateUserTimeZone",
 									 data:{timezone:$("#timezone-selector option:selected").attr("id"),pageredirect:window.location.href},
 									 success:function(){
 										 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -711,19 +711,19 @@ $(document).ready(function(){
 			$("#sym").addClass("fa fa-gbp");
 		}
 		if(months==1){
-			$("#selectedsubscription").html(""+months +" month for " + parseFloat(currencyvalue*months).toFixed(2)+ "<img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/>");	
+			$("#selectedsubscription").html(""+months +" month for " + parseFloat(currencyvalue*months).toFixed(2)+ "<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");	
 		}
 		else{
-			$("#selectedsubscription").html(""+months +" months for " + parseFloat(currencyvalue*months).toFixed(2) +"<img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/>");
+			$("#selectedsubscription").html(""+months +" months for " + parseFloat(currencyvalue*months).toFixed(2) +"<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");
 		}
 		$("#monthsselect").change(function(){
 		    months=$("#monthsselect").val();
 			console.log(months);
 			if(months==1){
-				$("#selectedsubscription").html(""+months +" month for " +  currencyvalue+ "<img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/>");	
+				$("#selectedsubscription").html(""+months +" month for " +  currencyvalue+ "<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");	
 			}
 			else{
-				$("#selectedsubscription").html(""+months +" months for " + parseFloat(currencyvalue*months).toFixed(2) + "<img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/>");
+				$("#selectedsubscription").html(""+months +" months for " + parseFloat(currencyvalue*months).toFixed(2) + "<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");
 			}
 			
 		});
@@ -762,7 +762,7 @@ $(document).ready(function(){
 	
 	  $.ajax({
 			method:"GET",
-			url:"/sportbabas/GetCartItems",
+			url:"/GetCartItems",
 			success:function(response){
 				items=0;
 				console.log("items is"+ items);
@@ -776,7 +776,7 @@ $(document).ready(function(){
 					else if(currency==='GBP'){
 						convcurrency=parseFloat(convcurrency*.79).toFixed(2);
 					}
-			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/sportbabas/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
+			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
 			   	});
 			 
 			   	$("#checkout_items1").html(items);
@@ -788,7 +788,7 @@ $(document).ready(function(){
 						var nameofsub=$(button1).parent().parent().find("p.nametoremove").text();
 						$.ajax({
 							method:"POST",
-							url:"/sportbabas/DeleteCartItem",
+							url:"/DeleteCartItem",
 							data:{
 								itemname:nameofsub
 							},
@@ -887,7 +887,7 @@ $("#login").on("click",function(e){
 	var password2=$("#password1").val();
 	 $.ajax({
 		 method:"POST",
-		 url:"/sportbabas/Login",
+		 url:"/Login",
 		 data:{username:username2,password:password2},
 		 success:function(response){
 			 $("#spinner").hide();
@@ -917,10 +917,10 @@ $(".profiles").on("click",function(e){
 	
 	$.ajax({
 		 method:"POST",
-		 url:"/sportbabas/AddClickedUserToSession",
+		 url:"/AddClickedUserToSession",
 		 data:{usertype:usertype,username:username,usersport:usersport},
 		 success:function(response){
-			 window.location.href = "/sportbabas/paidtips";
+			 window.location.href = "/paidtips";
 			
 		 }
 		 
@@ -935,10 +935,10 @@ $(".profiles").on("click",function(e){
 
  var value=${requestScope.tipsofcategory};
  max=Math.ceil(value/10)+1;
- $("#next").prop("href","/sportbabas/tips?page="+(current+1)+"&category="+selcat+sports+"");
- $("#previous").prop("href","/sportbabas/tips?page="+(current-1)+"&category="+selcat+sports+"");
- $("#first").prop("href","/sportbabas/tips?page="+1+"&category="+selcat+sports+"");
- $("#last").prop("href","/sportbabas/tips?page="+(max-1)+"&category="+selcat+sports+"");
+ $("#next").prop("href","/tips?page="+(current+1)+"&category="+selcat+sports+"");
+ $("#previous").prop("href","/tips?page="+(current-1)+"&category="+selcat+sports+"");
+ $("#first").prop("href","/tips?page="+1+"&category="+selcat+sports+"");
+ $("#last").prop("href","/tips?page="+(max-1)+"&category="+selcat+sports+"");
 
 	execute(current); 
 	
@@ -970,7 +970,7 @@ $(".profiles").on("click",function(e){
 
 		$.ajax({
 			method:"GET",
-			url:"/sportbabas/CheckOneSportPerUser",
+			url:"/CheckOneSportPerUser",
 			success:function(res){
 		       $("#sportselect").html("");
 		        var sports=JSON.parse(res);
@@ -996,7 +996,7 @@ $(".profiles").on("click",function(e){
 		$.ajax({
 			method:"POST",
 			data:{username:$('#username').val()},
-			url:"/sportbabas/SendRegistrationErrors",
+			url:"/SendRegistrationErrors",
 			success:function(res){
 				$("#username").removeClass("is-valid");
 				$("#username").removeClass("is-invalid");
@@ -1031,7 +1031,7 @@ $(".profiles").on("click",function(e){
 		$.ajax({
 			method:"POST",
 			data:{email:$('#email').val()},
-			url:"/sportbabas/SendRegistrationErrors",
+			url:"/SendRegistrationErrors",
 			success:function(res){
 				$("#email").removeClass("is-valid");
 				$("#email").removeClass("is-invalid");
@@ -1083,7 +1083,7 @@ $(".profiles").on("click",function(e){
 		$.ajax({
 			method:"POST",
 			data:{tipstername:$('#tipstername').val()},
-			url:"/sportbabas/CheckForUniqueTipsterName",
+			url:"/CheckForUniqueTipsterName",
 			success:function(res){
 				console.log(res);
 				$(this).removeClass("is-valid");
@@ -1124,7 +1124,7 @@ $(".profiles").on("click",function(e){
 			},3000);
 		}
 		else{
-			location.replace("/sportbabas/payment");
+			location.replace("/payment");
 		}
 	});
 
@@ -1133,7 +1133,7 @@ $(".profiles").on("click",function(e){
 	var bookmakercolumns=document.getElementsByClassName("bookmakercolumn");
 	var bookieurls={"1xbet":"https://1xbet.com","188bet":"https://www.188bet.com/","888sport":"https://www.888sport.com/","bet365":"https://www.bet365.com","betathome":"https://www.bet-at-home.com","betclick":"https://en.betclic.com","betdaq":"https://www.betdaq.com","betfairsports":"https://www.betfair.com/sport","betfred":"https://www.betfred.com","betrally":"https://www.betrally.com","betsafe":"https://www.betsafe.com/en","betvictor":"https://www.betvictor.com","betwaysports":"https://sports.betway.com/en/sports","boylesports":"http://www.boylesports.com","bwinsports":"https://sports.bwin.com/en/sports","dafabet":"https://www.dafabet.com/in","intertops":"https://intertops.eu","interwetten":"https://www.interwetten.com","ladbrokes":"https://www.ladbrokes.com/home/en","mansion88":"https://www.mansion88.com","matchbook":"https://www.matchbook.com","netbet":"https://sport.netbet.co.uk","paddypower":"https://www.paddypower.com/bet","parimatch":"https://www.parimatch.com","pinnaclesports":"https://www.pinnacle.com/en","sbobet":"https://www.sbobet.com","tipbet":"https://www.tipbet.com","totesport":"https://sports.tote.co.uk","unibet":"https://www.unibet.com","williamhillsports":"http://sports.williamhill.com"};
 	 for(var i=0;i<bookmakercolumns.length;i++){
-		 bookmakercolumns[i].innerHTML="<a href='"+bookieurls[bookmakercolumns[i].innerText.toLowerCase().trim()]+"' target='_blank'><img src='/sportbabas/images/bookmakers/"+bookmakercolumns[i].innerText.toLowerCase().trim()+".png' style='width:40px;height:20px'/></a>";
+		 bookmakercolumns[i].innerHTML="<a href='"+bookieurls[bookmakercolumns[i].innerText.toLowerCase().trim()]+"' target='_blank'><img src='/images/bookmakers/"+bookmakercolumns[i].innerText.toLowerCase().trim()+".png' style='width:40px;height:20px'/></a>";
 		  
 	}
 });
@@ -1163,7 +1163,7 @@ function execute(myval){
 				 
 				   
 				  for(var i=init;i<init+size;i++){
-					$("#pagination").append("<a id='"+i+"' class='btn btn-dark text-light' href='/sportbabas/tips?page="+i+"&category="+selcat+sports+"'>"+i+"</a>")
+					$("#pagination").append("<a id='"+i+"' class='btn btn-dark text-light' href='/tips?page="+i+"&category="+selcat+sports+"'>"+i+"</a>")
 					$("#pagination a[id='"+myval+"']").addClass("active");
 				}
 				  

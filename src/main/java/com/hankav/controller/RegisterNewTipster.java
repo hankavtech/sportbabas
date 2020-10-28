@@ -158,7 +158,7 @@ public class RegisterNewTipster extends HttpServlet {
 						.byUserName((String) request.getSession().getAttribute("username"));
 				request.getSession().setAttribute("num_of_tipsters", "not_empty");
 				request.getSession().setAttribute("tipstersmap", map);
-				response.sendRedirect("/sportbabas/paidtips");
+				response.sendRedirect("/paidtips");
 				session.close();
 			}
 

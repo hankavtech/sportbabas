@@ -20,15 +20,15 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EAGLE TIP</title>
-<script src="/sportbabas/jquery.js"></script>
-<script src="/sportbabas/math.min.js"></script>
-<script src="/sportbabas/moment.js"></script>
-<script src="/sportbabas/moment-timezone-with-data.js"></script>
-<script src="/sportbabas/moment-data.js"></script>
-<script src="/sportbabas/bootstrap/js/bootstrap.bundle.js" ></script>
-<link rel="stylesheet" href="/sportbabas/bootstrap/css/bootstrap.min.css" />
+<script src="/jquery.js"></script>
+<script src="/math.min.js"></script>
+<script src="/moment.js"></script>
+<script src="/moment-timezone-with-data.js"></script>
+<script src="/moment-data.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.js" ></script>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/sportbabas/nav.css"/>
+<link rel="stylesheet" href="/nav.css"/>
 <style>
 
 .tablestat th, .table td { 
@@ -88,13 +88,13 @@
 	    
 	    <div class="card bg-dark">
 	    <div class="card-block"> 
-	    <img class="image-fluid rounded-circle mb-2" style="width:100px;height:100px" src="/sportbabas/images/tipsters/${requestScope.topstats[0][3]}.jpg" onerror="this.onerror=null;this.src='/sportbabas/images/tipsters/${requestScope.topstats[0][3]}.png'" />
+	    <img class="image-fluid rounded-circle mb-2" style="width:100px;height:100px" src="/images/tipsters/${requestScope.topstats[0][3]}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${requestScope.topstats[0][3]}.png'" />
 	    <div></div>
-	    <img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/sportbabas/images/sport/${requestScope.topstats[0][4]}.svg" />
+	    <img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/${requestScope.topstats[0][4]}.svg" />
 	    <h5 class="text-nowrap" style="color:#14805E"><em>${requestScope.topstats[0][3]}</em></h5>
 	    </div>
 	    </div>
-        <span class="float-right"><a class="btn-btn-primary d-sm-none" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="true" aria-controls="multi1 multi2"><img src="/sportbabas/downarrow.svg" style="width:30px;height:30px"/></a></span>  
+        <span class="float-right"><a class="btn-btn-primary d-sm-none" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="true" aria-controls="multi1 multi2"><img src="/downarrow.svg" style="width:30px;height:30px"/></a></span>  
 	    </div>
 	    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
 	    <div class="collapse multi-collapse show" id="multi1">
@@ -121,7 +121,7 @@
 	    </div>
 	    
 	    
-	    <span class="float-right" style="color:red"><a class="btn-btn-primary d-none d-sm-block d-md-none" data-toggle="collapse" data-target="#multi2"><img src="/sportbabas/downarrow.svg" style="width:30px;height:30px"/></a></span>
+	    <span class="float-right" style="color:red"><a class="btn-btn-primary d-none d-sm-block d-md-none" data-toggle="collapse" data-target="#multi2"><img src="/downarrow.svg" style="width:30px;height:30px"/></a></span>
 	    </div>
 	    
 	    </div>
@@ -159,13 +159,13 @@
 	
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link" id="home-tab" href="/sportbabas/tipster/activetips?name=${requestScope.tipstername}" role="tab" aria-controls="home" aria-selected="false">Today's Tips</a>
+    <a class="nav-link" id="home-tab" href="/tipster/activetips?name=${requestScope.tipstername}" role="tab" aria-controls="home" aria-selected="false">Today's Tips</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" href="/sportbabas/tipster/stats?name=${requestScope.tipstername}" role="tab" aria-controls="profile" aria-selected="false">Stats</a>
+    <a class="nav-link" id="profile-tab" href="/tipster/stats?name=${requestScope.tipstername}" role="tab" aria-controls="profile" aria-selected="false">Stats</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" id="settings-tab" href="/sportbabas/tipster/tips?name=${requestScope.tipstername}" role="tab" aria-controls="settings" aria-selected="true">Latest Tips</a>
+    <a class="nav-link active" id="settings-tab" href="/tipster/tips?name=${requestScope.tipstername}" role="tab" aria-controls="settings" aria-selected="true">Latest Tips</a>
   </li>
 </ul>
 
@@ -323,7 +323,7 @@ $(document).ready(function(){
     $("#pagination").html("");
 	$("#mytable tbody").html("");
 	<c:forEach items="${requestScope.tips}" var="item1">
-	 $("#mytable tbody").append("<tr><td><img src='/sportbabas/images/sport/${item1[6]}.svg' style='width:20px;height:20px'/></td><td><a class='text-warning' href='/sportbabas/tip?id=${item1[0]}'>${item1[1]} vs ${item1[2]}</a></td><td class='timecolumn'>${item1[3]}</td><td>${item1[7]}</td><td>${item1[8]} ${item1[9]}</td><td class='oddscolumn'>${item1[10]}</td><td>${item1[11]}</td><td class='bookmakercolumn'>${item1[12]}</td><td><c:if test='${item1[13]=="won"}'><img src='/sportbabas/images/css/right.svg' style='width:20px;height:20px'/></c:if><c:if test='${item1[13]=="lost"}'><img src='/sportbabas/images/css/wrong.svg' style='width:20px;height:20px'/></c:if></td><td><span <c:if test='${item1[14] > 0}'>class='text-success'</c:if> <c:if test='${item1[14] < 0}'>class='text-danger'</c:if>>${item1[14]} </span> &nbsp;</td></tr>");
+	 $("#mytable tbody").append("<tr><td><img src='/images/sport/${item1[6]}.svg' style='width:20px;height:20px'/></td><td><a class='text-warning' href='/tip?id=${item1[0]}'>${item1[1]} vs ${item1[2]}</a></td><td class='timecolumn'>${item1[3]}</td><td>${item1[7]}</td><td>${item1[8]} ${item1[9]}</td><td class='oddscolumn'>${item1[10]}</td><td>${item1[11]}</td><td class='bookmakercolumn'>${item1[12]}</td><td><c:if test='${item1[13]=="won"}'><img src='/images/css/right.svg' style='width:20px;height:20px'/></c:if><c:if test='${item1[13]=="lost"}'><img src='/images/css/wrong.svg' style='width:20px;height:20px'/></c:if></td><td><span <c:if test='${item1[14] > 0}'>class='text-success'</c:if> <c:if test='${item1[14] < 0}'>class='text-danger'</c:if>>${item1[14]} </span> &nbsp;</td></tr>");
 	</c:forEach>
 	
 	
@@ -408,7 +408,7 @@ $(document).ready(function(){
 			 $(".currency_selection a").click(function(){
 				  $.ajax({
 					 method:"POST",
-					 url:"/sportbabas/UpdateUserCurrency",
+					 url:"/UpdateUserCurrency",
 					 data:{currency:$(this).text(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -424,7 +424,7 @@ $(document).ready(function(){
 				$("#currency-selector").change(function(){
 					 $.ajax({
 						 method:"POST",
-						 url:"/sportbabas/UpdateUserCurrency",
+						 url:"/UpdateUserCurrency",
 						 data:{currency:$("#currency-selector").val(),pageredirect:window.location.href},
 						 success:function(){
 							 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -506,7 +506,7 @@ $(document).ready(function(){
 			  $(".odds_selection a").click(function(){
 				  $.ajax({
 					 method:"POST",
-					 url:"/sportbabas/UpdateUserOdds",
+					 url:"/UpdateUserOdds",
 					 data:{odds:$(this).text().trim().toUpperCase(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -521,7 +521,7 @@ $(document).ready(function(){
 					$("#odds-selector").change(function(){
 						 $.ajax({
 							 method:"POST",
-							 url:"/sportbabas/UpdateUserOdds",
+							 url:"/UpdateUserOdds",
 							 data:{odds:$("#odds-selector").val().toUpperCase(),pageredirect:window.location.href},
 							 success:function(){
 								 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -602,7 +602,7 @@ $(document).ready(function(){
 			$(".timezone_selection a").click(function(){
 				  $.ajax({
 					 method:"POST",
-					 url:"/sportbabas/UpdateUserTimeZone",
+					 url:"/UpdateUserTimeZone",
 					 data:{timezone:$(this).text(),pageredirect:window.location.href},
 					 success:function(){
 						 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -620,7 +620,7 @@ $(document).ready(function(){
 						  $("#timezone-selector").change(function(e){
 							  $.ajax({
 									 method:"POST",
-									 url:"/sportbabas/UpdateUserTimeZone",
+									 url:"/UpdateUserTimeZone",
 									 data:{timezone:$("#timezone-selector option:selected").attr("id"),pageredirect:window.location.href},
 									 success:function(){
 										 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
@@ -644,19 +644,19 @@ $(document).ready(function(){
 			$("#sym").addClass("fa fa-gbp");
 		}
 		if(months==1){
-			$("#selectedsubscription").html(""+months +" month for " + parseFloat(currencyvalue*months).toFixed(2)+ "<img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/>");	
+			$("#selectedsubscription").html(""+months +" month for " + parseFloat(currencyvalue*months).toFixed(2)+ "<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");	
 		}
 		else{
-			$("#selectedsubscription").html(""+months +" months for " + parseFloat(currencyvalue*months).toFixed(2) +"<img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/>");
+			$("#selectedsubscription").html(""+months +" months for " + parseFloat(currencyvalue*months).toFixed(2) +"<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");
 		}
 		$("#monthsselect").change(function(){
 		    months=$("#monthsselect").val();
 			console.log(months);
 			if(months==1){
-				$("#selectedsubscription").html(""+months +" month for " +  currencyvalue+ "<img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/>");	
+				$("#selectedsubscription").html(""+months +" month for " +  currencyvalue+ "<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");	
 			}
 			else{
-				$("#selectedsubscription").html(""+months +" months for " + parseFloat(currencyvalue*months).toFixed(2) + "<img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/>");
+				$("#selectedsubscription").html(""+months +" months for " + parseFloat(currencyvalue*months).toFixed(2) + "<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");
 			}
 			
 		});
@@ -695,7 +695,7 @@ $(document).ready(function(){
 	
 	  $.ajax({
 			method:"GET",
-			url:"/sportbabas/GetCartItems",
+			url:"/GetCartItems",
 			success:function(response){
 				items=0;
 				console.log("items is"+ items);
@@ -709,7 +709,7 @@ $(document).ready(function(){
 					else if(currency==='GBP'){
 						convcurrency=parseFloat(convcurrency*.79).toFixed(2);
 					}
-			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/sportbabas/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
+			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
 			   	});
 			 
 			   	$("#checkout_items1").html(items);
@@ -721,7 +721,7 @@ $(document).ready(function(){
 						var nameofsub=$(button1).parent().parent().find("p.nametoremove").text();
 						$.ajax({
 							method:"POST",
-							url:"/sportbabas/DeleteCartItem",
+							url:"/DeleteCartItem",
 							data:{
 								itemname:nameofsub
 							},
@@ -820,7 +820,7 @@ $("#login").on("click",function(e){
 	var password2=$("#password1").val();
 	 $.ajax({
 		 method:"POST",
-		 url:"/sportbabas/Login",
+		 url:"/Login",
 		 data:{username:username2,password:password2},
 		 success:function(response){
 			 $("#spinner").hide();
@@ -850,10 +850,10 @@ $(".profiles").on("click",function(e){
 	
 	$.ajax({
 		 method:"POST",
-		 url:"/sportbabas/AddClickedUserToSession",
+		 url:"/AddClickedUserToSession",
 		 data:{usertype:usertype,username:username,usersport:usersport},
 		 success:function(response){
-			 window.location.href = "/sportbabas/paidtips";
+			 window.location.href = "/paidtips";
 			
 		 }
 		 
@@ -920,7 +920,7 @@ else if(w_width<=575){
 	   var items2=items;
 		$.ajax({
 			method:"POST",
-			url:"/sportbabas/AddCartItem",
+			url:"/AddCartItem",
 			data:{
 				itemname:name,
 				itemprice:"${requestScope.topstats[0][5]}",
@@ -961,7 +961,7 @@ else if(w_width<=575){
 					else if(currency==='GBP'){
 						convcurrency=parseFloat(convcurrency*.79).toFixed(2);
 					}
-					$("#cartitems").append("<div class='row justify-content-between'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/sportbabas/images/tipsters/"+res.name+".jpg'/><p class='text-nowrap text-left'>"+res.name+"</p></div><div class='col-xs-2'><p><b>"+res.months+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*parseInt(res.months)).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/sportbabas/images/css/currency/"+currency+".svg'/><button type='button' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
+					$("#cartitems").append("<div class='row justify-content-between'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/images/tipsters/"+res.name+".jpg'/><p class='text-nowrap text-left'>"+res.name+"</p></div><div class='col-xs-2'><p><b>"+res.months+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*parseInt(res.months)).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/><button type='button' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
 					console.log("item is added to div");
 					
 					
@@ -971,7 +971,7 @@ else if(w_width<=575){
 							var button1=$(this);
 							$.ajax({
 								method:"POST",
-								url:"/sportbabas/DeleteCartItem",
+								url:"/DeleteCartItem",
 								data:{
 									itemname:"${requestScope.topstats[0][3]}",
 									itemprice:"${requestScope.topstats[0][5]}",
@@ -1005,10 +1005,10 @@ else if(w_width<=575){
 
  var value=${requestScope.topstats[0][0]};
  max=Math.ceil(value/10)+1;
- $("#next").prop("href","/sportbabas/tipster/tips?page="+(current+1)+"&name=${requestScope.topstats[0][3]}");
- $("#previous").prop("href","/sportbabas/tipster/tips?page="+(current-1)+"&name=${requestScope.topstats[0][3]}");
- $("#first").prop("href","/sportbabas/tipster/tips?page="+1+"&name=${requestScope.topstats[0][3]}");
- $("#last").prop("href","/sportbabas/tipster/tips?page="+(max-1)+"&name=${requestScope.topstats[0][3]}");
+ $("#next").prop("href","/tipster/tips?page="+(current+1)+"&name=${requestScope.topstats[0][3]}");
+ $("#previous").prop("href","/tipster/tips?page="+(current-1)+"&name=${requestScope.topstats[0][3]}");
+ $("#first").prop("href","/tipster/tips?page="+1+"&name=${requestScope.topstats[0][3]}");
+ $("#last").prop("href","/tipster/tips?page="+(max-1)+"&name=${requestScope.topstats[0][3]}");
 
 	execute(current); 
 	
@@ -1042,7 +1042,7 @@ else if(w_width<=575){
 		$.ajax({
 			method:"POST",
 			data:{username:$('#username').val()},
-			url:"/sportbabas/SendRegistrationErrors",
+			url:"/SendRegistrationErrors",
 			success:function(res){
 				$("#username").removeClass("is-valid");
 				$("#username").removeClass("is-invalid");
@@ -1077,7 +1077,7 @@ else if(w_width<=575){
 		$.ajax({
 			method:"POST",
 			data:{email:$('#email').val()},
-			url:"/sportbabas/SendRegistrationErrors",
+			url:"/SendRegistrationErrors",
 			success:function(res){
 				$("#email").removeClass("is-valid");
 				$("#email").removeClass("is-invalid");
@@ -1126,7 +1126,7 @@ else if(w_width<=575){
 
 		$.ajax({
 			method:"GET",
-			url:"/sportbabas/CheckOneSportPerUser",
+			url:"/CheckOneSportPerUser",
 			success:function(res){
 		       $("#sportselect").html("");
 		        var sports=JSON.parse(res);
@@ -1151,7 +1151,7 @@ else if(w_width<=575){
 		$.ajax({
 			method:"POST",
 			data:{tipstername:$('#tipstername').val()},
-			url:"/sportbabas/CheckForUniqueTipsterName",
+			url:"/CheckForUniqueTipsterName",
 			success:function(res){
 				console.log(res);
 				$(this).removeClass("is-valid");
@@ -1187,7 +1187,7 @@ else if(w_width<=575){
 		if(sessionuser.trim()!=""){
 		$.ajax({
 	    	method:"POST",
-	    	url:"/sportbabas/CheckToDisableSubscribeButton",
+	    	url:"/CheckToDisableSubscribeButton",
 	    	data:{username:sessionuser,tipstername:"${requestScope.topstats[0][3]}",email:"${sessionScope.email}"},
 	    	success:function(res){
 	    		if(res.trim()=="disable"){
@@ -1215,7 +1215,7 @@ else if(w_width<=575){
 			if(!($(".subscribebutton").hasClass("subscribed"))){
     		    $.ajax({
     		    	method:"POST",
-    		    	url:"/sportbabas/SubscribeFreeTipster",
+    		    	url:"/SubscribeFreeTipster",
     		    	data:{username:sessionuser,tipstername:"${requestScope.topstats[0][3]}",email:"${sessionScope.email}"},
     		    	success:function(){
     		    		$("#subscribealert").html("<p class='text-success'>You have now subscribed to this tipster</p>");
@@ -1233,7 +1233,7 @@ else if(w_width<=575){
 			else{
 				  $.ajax({
 	    		    	method:"POST",
-	    		    	url:"/sportbabas/RemoveSubscribedFreeTipster",
+	    		    	url:"/RemoveSubscribedFreeTipster",
 	    		    	data:{username:sessionuser,tipstername:"${requestScope.topstats[0][3]}",email:"${sessionScope.email}"},
 	    		    	success:function(res){
 	    		    		console.log(res);
@@ -1273,14 +1273,14 @@ else if(w_width<=575){
 			},3000);
 		}
 		else{
-			location.replace("/sportbabas/payment");
+			location.replace("/payment");
 		}
 	});
 	
 	var bookmakercolumns=document.getElementsByClassName("bookmakercolumn");
 	var bookieurls={"1xbet":"https://1xbet.com","188bet":"https://www.188bet.com/","888sport":"https://www.888sport.com/","bet365":"https://www.bet365.com","betathome":"https://www.bet-at-home.com","betclick":"https://en.betclic.com","betdaq":"https://www.betdaq.com","betfairsports":"https://www.betfair.com/sport","betfred":"https://www.betfred.com","betrally":"https://www.betrally.com","betsafe":"https://www.betsafe.com/en","betvictor":"https://www.betvictor.com","betwaysports":"https://sports.betway.com/en/sports","boylesports":"http://www.boylesports.com","bwinsports":"https://sports.bwin.com/en/sports","dafabet":"https://www.dafabet.com/in","intertops":"https://intertops.eu","interwetten":"https://www.interwetten.com","ladbrokes":"https://www.ladbrokes.com/home/en","mansion88":"https://www.mansion88.com","matchbook":"https://www.matchbook.com","netbet":"https://sport.netbet.co.uk","paddypower":"https://www.paddypower.com/bet","parimatch":"https://www.parimatch.com","pinnaclesports":"https://www.pinnacle.com/en","sbobet":"https://www.sbobet.com","tipbet":"https://www.tipbet.com","totesport":"https://sports.tote.co.uk","unibet":"https://www.unibet.com","williamhillsports":"http://sports.williamhill.com"};
 	 for(var i=0;i<bookmakercolumns.length;i++){
-		 bookmakercolumns[i].innerHTML="<a href='"+bookieurls[bookmakercolumns[i].innerText.toLowerCase().trim()]+"' target='_blank'><img src='/sportbabas/images/bookmakers/"+bookmakercolumns[i].innerText.toLowerCase().trim()+".png' style='width:40px;height:20px'/></a>";
+		 bookmakercolumns[i].innerHTML="<a href='"+bookieurls[bookmakercolumns[i].innerText.toLowerCase().trim()]+"' target='_blank'><img src='/images/bookmakers/"+bookmakercolumns[i].innerText.toLowerCase().trim()+".png' style='width:40px;height:20px'/></a>";
 		  
 	}
 
@@ -1311,7 +1311,7 @@ function execute(myval){
 				 
 				   
 				  for(var i=init;i<init+size;i++){
-					$("#pagination").append("<a id='"+i+"' class='btn btn-dark text-light' href='/sportbabas/tipster/tips?page="+i+"&name=${requestScope.topstats[0][3]}'>"+i+"</a>")
+					$("#pagination").append("<a id='"+i+"' class='btn btn-dark text-light' href='/tipster/tips?page="+i+"&name=${requestScope.topstats[0][3]}'>"+i+"</a>")
 					$("#pagination a[id='"+myval+"']").addClass("active");
 				}
 				  

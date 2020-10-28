@@ -37,9 +37,9 @@ public class ForgotEmailSender {
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
 			message.setSubject("Password Reset");
 			message.setContent(
-					"<img style='width:80px;height:60px' src='/sportbabas/images/css/eagletip.png'>"
+					"<img style='width:80px;height:60px' src='/images/css/eagletip.png'>"
 							+ "<h1>EAGLE<span style='color:orange'>TIP</span></h1>"
-							+ "<p>We have a received a request to reset your password.Please click on this <a href='/sportbabas/ResetPassword?uuid="
+							+ "<p>We have a received a request to reset your password.Please click on this <a href='/ResetPassword?uuid="
 							+ uuid + "&email=" + email + "'>link</a> in order to reset your password.</p>",
 					"text/html");
 
