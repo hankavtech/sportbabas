@@ -109,7 +109,9 @@ public class Register extends HttpServlet {
 					if (!(ite.isFormField())) {
 
 						Tika t = new Tika();
+						System.out.println("i created tika");
 						String mimetype = t.detect(ite.getInputStream());
+						System.out.println("read mimetype");
 						if (mimetype.trim().equals("image/jpeg") || mimetype.trim().equals("image/png")) {
 							String fileName = null;
 							fileName = username;
@@ -127,6 +129,7 @@ public class Register extends HttpServlet {
 							File storeFile = new File(filePath);
 
 							// saves the file on disk
+							System.out.println("i want to write");
 							ite.write(storeFile);
 							System.out.println("message" + "Upload has been done successfully!");
 
