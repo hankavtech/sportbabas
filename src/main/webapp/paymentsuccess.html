@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EAGLE TIP</title>
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136763592-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136763592-1');
+</script>
+
+<body>
+
+<div class="container">
+<div class='row align-self-center'>
+<p class='text-success'>Thanks for your purchase. You will be redirected to main page in a few seconds while we work on your order.</p>
+</div>
+</div>
+<script>
+  setTimeout(function(){
+	  location.href='/sportbabas/paidtips';
+  },4000);
+  
+  
+  
+  var sessionuser="${sessionScope.username}";
+  $("#checkout_button").click(function(e){
+		e.preventDefault();
+		console.log(sessionuser);
+		if(sessionuser.trim()==""){
+			
+			$("#registeralert").css("display","block");
+			setTimeout(function(){
+				$("#registeralert").css("display","none");
+			},3000);
+		}
+		else{
+			location.replace("/sportbabas/payment");
+		}
+	});
+
+</script>
+</body>
+
+
+</html>
