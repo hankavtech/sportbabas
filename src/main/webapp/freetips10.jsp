@@ -24,13 +24,13 @@
 <script src="/moment-timezone.js"></script>
 <script src="/moment-timezone-with-data.js"></script>
 <script src="/moment-data.js"></script>
-<script src="/bootstrap/js/bootstrap.bundle.js" ></script>
+<script src="/bootstrap.bundle.js" ></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/bootstrap.min.css" />
 <link rel="stylesheet" href="/nav.css"/>
-<script src="/bootstrap/js/bootstrap-select.js"></script>
-<script src="/bootstrap/js/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="/bootstrap/css/bootstrap-multiselect.css" />
+<script src="/bootstrap-select.js"></script>
+<script src="/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="/bootstrap-multiselect.css" />
 <style>
 
 html, body {
