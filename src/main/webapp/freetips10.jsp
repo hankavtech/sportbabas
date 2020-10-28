@@ -18,19 +18,19 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EAGLE TIP</title>
-<script src="http://167.99.228.194:8080/sportbabas/jquery.js"></script>
-<script src="http://167.99.228.194:8080/sportbabas/math.min.js"></script>
-<script src="http://167.99.228.194:8080/sportbabas/moment.js"></script>
-<script src="http://167.99.228.194:8080/sportbabas/moment-timezone.js"></script>
-<script src="http://167.99.228.194:8080/sportbabas/moment-timezone-with-data.js"></script>
-<script src="http://167.99.228.194:8080/sportbabas/moment-data.js"></script>
-<script src="http://167.99.228.194:8080/sportbabas/bootstrap.bundle.js" ></script>
+<script src="http://167.99.228.194:8080/jquery.js"></script>
+<script src="http://167.99.228.194:8080/math.min.js"></script>
+<script src="http://167.99.228.194:8080/moment.js"></script>
+<script src="http://167.99.228.194:8080/moment-timezone.js"></script>
+<script src="http://167.99.228.194:8080/moment-timezone-with-data.js"></script>
+<script src="http://167.99.228.194:8080/moment-data.js"></script>
+<script src="http://167.99.228.194:8080/bootstrap.bundle.js" ></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://167.99.228.194:8080/sportbabas/bootstrap.min.css" />
-<link rel="stylesheet" href="http://167.99.228.194:8080/sportbabas/nav.css"/>
-<script src="http://167.99.228.194:8080/sportbabas/bootstrap-select.js"></script>
-<script src="http://167.99.228.194:8080/sportbabas/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="http://167.99.228.194:8080/sportbabas/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="http://167.99.228.194:8080/bootstrap.min.css" />
+<link rel="stylesheet" href="http://167.99.228.194:8080/nav.css"/>
+<script src="http://167.99.228.194:8080/bootstrap-select.js"></script>
+<script src="http://167.99.228.194:8080/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="http://167.99.228.194:8080/bootstrap-multiselect.css" />
 <style>
 
 html, body {
