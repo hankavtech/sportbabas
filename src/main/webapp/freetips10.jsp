@@ -18,19 +18,21 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EAGLE TIP</title>
-<script src="http://167.99.228.194:8080/jquery.js"></script>
-<script src="http://167.99.228.194:8080/math.min.js"></script>
-<script src="http://167.99.228.194:8080/moment.js"></script>
-<script src="http://167.99.228.194:8080/moment-timezone.js"></script>
-<script src="http://167.99.228.194:8080/moment-timezone-with-data.js"></script>
-<script src="http://167.99.228.194:8080/moment-data.js"></script>
-<script src="http://167.99.228.194:8080/bootstrap.bundle.js" ></script>
+ <c:set var="url">${pageContext.request.requestURL}</c:set>
+    <base href="${fn:substring(url, 0, fn:length(url) - fn:length(pageContext.request.requestURI))}${pageContext.request.contextPath}/" />
+<script src="/jquery.js"></script>
+<script src="/math.min.js"></script>
+<script src="/moment.js"></script>
+<script src="/moment-timezone.js"></script>
+<script src="/moment-timezone-with-data.js"></script>
+<script src="/moment-data.js"></script>
+<script src="/bootstrap.bundle.js" ></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://167.99.228.194:8080/bootstrap.min.css" />
-<link rel="stylesheet" href="http://167.99.228.194:8080/nav.css"/>
-<script src="http://167.99.228.194:8080/bootstrap-select.js"></script>
-<script src="http://167.99.228.194:8080/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="http://167.99.228.194:8080/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="/bootstrap.min.css" />
+<link rel="stylesheet" href="/nav.css"/>
+<script src="/bootstrap-select.js"></script>
+<script src="/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="/bootstrap-multiselect.css" />
 <style>
 
 html, body {
