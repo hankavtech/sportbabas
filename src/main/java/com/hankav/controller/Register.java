@@ -78,11 +78,15 @@ public class Register extends HttpServlet {
 		if (!uploadDir.exists()) {
 			uploadDir.mkdir();
 		}
+		
+		System.out.println("i finished upload path");
 
 		try {
 			// parses the request's content to extract file data
 			@SuppressWarnings("unchecked")
 			List<FileItem> formItems = upload.parseRequest(request);
+			
+			System.out.println("parse request");
 
 			if (formItems != null && formItems.size() > 0) {
 				// iterates over form's fields
@@ -98,6 +102,8 @@ public class Register extends HttpServlet {
 						}
 					}
 				}
+				
+				System.out.println("strring items");
 
 				for (FileItem ite : formItems) {
 					if (!(ite.isFormField())) {
