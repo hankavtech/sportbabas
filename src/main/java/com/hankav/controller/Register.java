@@ -145,8 +145,10 @@ public class Register extends HttpServlet {
 				user1.setRuuid(uuid);
 				session.save(user1);
 
-				RegistrationEmailSender sender = new RegistrationEmailSender();
-				sender.sendemail(email, uuid);
+				/*
+				 * RegistrationEmailSender sender = new RegistrationEmailSender();
+				 * sender.sendemail(email, uuid);
+				 */
 
 				request.getSession().setAttribute("username", username);
 				request.getSession().setAttribute("email", email);
@@ -157,7 +159,7 @@ public class Register extends HttpServlet {
 				session.getTransaction().commit();
 
 				session.close();
-				response.sendRedirect("/paidtips");
+				response.sendRedirect("/sportbabas/paidtips");
 			}
 
 		} catch (Exception exception) {
