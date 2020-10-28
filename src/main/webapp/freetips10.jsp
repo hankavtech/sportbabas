@@ -18,19 +18,19 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EAGLE TIP</title>
-<script src="/jquery.js"></script>
-<script src="/math.min.js"></script>
-<script src="/moment.js"></script>
-<script src="/moment-timezone.js"></script>
-<script src="/moment-timezone-with-data.js"></script>
-<script src="/moment-data.js"></script>
-<script src="/bootstrap.bundle.js" ></script>
+<script src="sportbabas/jquery.js"></script>
+<script src="sportbabas/math.min.js"></script>
+<script src="sportbabas/moment.js"></script>
+<script src="sportbabas/moment-timezone.js"></script>
+<script src="sportbabas/moment-timezone-with-data.js"></script>
+<script src="sportbabas/moment-data.js"></script>
+<script src="sportbabas/bootstrap.bundle.js" ></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/bootstrap.min.css" />
-<link rel="stylesheet" href="/nav.css"/>
-<script src="/bootstrap-select.js"></script>
-<script src="/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="sportbabas/bootstrap.min.css" />
+<link rel="stylesheet" href="sportbabas/nav.css"/>
+<script src="sportbabas/bootstrap-select.js"></script>
+<script src="sportbabas/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="sportbabas/bootstrap-multiselect.css" />
 <style>
 
 html, body {
