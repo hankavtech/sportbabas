@@ -25,7 +25,7 @@
 <script src="/moment-timezone-with-data.js"></script>
 <script src="/moment-data.js"></script>
 <script src="/bootstrap.bundle.min.js" ></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap.min.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
 <script src="/bootstrap-select.js"></script>
