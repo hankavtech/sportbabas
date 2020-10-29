@@ -17,7 +17,7 @@
 </script>
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EAGLE TIP</title>
+<title>Sport Babas</title>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <script src="${ctx}/jquery.js"></script>
 <script src="${ctx}/math.min.js"></script>
