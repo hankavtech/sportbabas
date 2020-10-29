@@ -9,12 +9,11 @@
      font-size:8px;
      }
      
-     a.dropdown-toggle:onhover{
-     }
-     
-     ul.tips{
+     a.dropdown-toggle:hover  ul.tips{
         display:block !important;
      }
+     
+    
      
      
      #brandimage{
