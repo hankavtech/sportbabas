@@ -24,12 +24,16 @@
 <script src="${ctx}/jquery.js"></script>
 <script src="${ctx}/math.min.js"></script>
 <script src="${ctx}/moment.js"></script>
+<script src="${ctx}/moment-timezone.js"></script>
 <script src="${ctx}/moment-timezone-with-data.js"></script>
 <script src="${ctx}/moment-data.js"></script>
-<script src="${ctx}/bootstrap.bundle.js" ></script>
-<link rel="stylesheet" href="${ctx}/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<script src="${ctx}/bootstrap.bundle.min.js" ></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="${ctx}/bootstrap.min.css" />
 <link rel="stylesheet" href="${ctx}/nav.css"/>
+<script src="${ctx}/bootstrap-select.js"></script>
+<script src="${ctx}/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="${ctx}/bootstrap-multiselect.css" />
 <style>
 
 html, body {
