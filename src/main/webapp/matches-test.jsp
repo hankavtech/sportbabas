@@ -18,20 +18,23 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EAGLE TIP</title>
-<script src="/jquery.js"></script>
-<script src="/math.min.js"></script>
-<script src="/moment.js"></script>
-<script src="/moment-timezone-with-data.js"></script>
-<script src="/moment-data.js"></script>
-<script src="/bootstrap/js/bootstrap.bundle.js" ></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath}https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/nav.css"/>
-<script src="/bootstrap/js/bootstrap-select.js"></script>
-<script src="/bootstrap/js/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-multiselect.css" />
-<title>EAGLE TIP</title>
+
+<title>Sport Babas</title>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
+<script src="${ctx}/jquery.js"></script>
+<script src="${ctx}/math.min.js"></script>
+<script src="${ctx}/moment.js"></script>
+<script src="${ctx}/moment-timezone.js"></script>
+<script src="${ctx}/moment-timezone-with-data.js"></script>
+<script src="${ctx}/moment-data.js"></script>
+<script src="${ctx}/bootstrap.bundle.min.js" ></script>
+<script src="${ctx}/bootstrap-select.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="${ctx}/bootstrap.min.css" />
+<link rel="stylesheet" href="${ctx}/nav.css"/>
+<script src="${ctx}/bootstrap-select.js"></script>
+<script src="${ctx}/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="${ctx}/bootstrap-multiselect.css" />
 <style>
 
 
