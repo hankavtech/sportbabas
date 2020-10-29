@@ -22,8 +22,8 @@
 					</div>
 				
 			</div>
-			<div class="d-flex justify-content-center" style="height:30px;">
-						<div class="cr" style="font-size:8px">Copyright©2019 hankav org.All Rights Reserved.</div>
+			<div class="d-flex justify-content-center mt-1" style="height:30px;">
+						<div class="cr text-center" style="font-size:8px">Copyright©2019 hankav org.All Rights Reserved.</div>
 			</div>
 </footer>
 </div>
