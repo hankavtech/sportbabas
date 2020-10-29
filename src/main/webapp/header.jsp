@@ -4,7 +4,7 @@
 		  <div class="d-none">
 		</div>
 		<div class="d-sm-none">		
-        <a class="navbar-brand"><img id="brandimage" style="width:80px;height:60px" class="img-responsive" src="${pageContext.request.contextPath}/images/sportbabas.png"/></a>
+        <a class="navbar-brand"><img id="brandimage" style="width:80px;height:60px" class="img-responsive" src="${pageContext.request.contextPath}/images/sportbabas.svg"/></a>
         </div>	
 				<div class="collapse navbar-collapse" id="topcontent">
 							<ul class="navbar-nav" style="height:50px">
@@ -136,7 +136,7 @@
            <span class="navbar-toggler-icon"></span>
         </a>
         <div class="col-sm-1">
-        <a class="navbar-brand d-none d-md-inline-block"><img id="brandimage" class="img-responsive" src="${pageContext.request.contextPath}/images/sportbabas.png" style="height:60px;width:80px"/></a>
+        <a class="navbar-brand d-none d-md-inline-block"><img id="brandimage" class="img-responsive" src="${pageContext.request.contextPath}/images/sportbabas.svg" style="height:60px;width:80px"/></a>
          </div>
         
         <div id="content" class="col collapse navbar-collapse mr-0">
