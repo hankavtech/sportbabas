@@ -1,7 +1,7 @@
 <div class="container-fluid" style="
     padding-bottom: 0px !important;
-    margin-top: -200px;
-    margin-bottom: 0px !important;
+    margin-top: 100px;
+    height:100px;
 ">
 <footer id="footer" class="footer">
 		<div>
