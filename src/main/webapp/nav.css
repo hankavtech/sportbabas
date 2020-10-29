@@ -113,11 +113,6 @@ cursor:pointer;
 }
 
 
-
-.footer_nav_container
-{
-	height: 130px;
-}
 .cr
 {
 	margin-right: 48px;
@@ -146,10 +141,7 @@ cursor:pointer;
 {
 	color: #fe4c50;
 }
-.footer_social
-{
-	height: 130px;
-}
+
 .footer_social ul li
 {
 	display: inline-block;
