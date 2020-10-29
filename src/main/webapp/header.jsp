@@ -4,7 +4,7 @@
 		  <div class="d-none">
 		</div>
 		<div class="d-sm-none">		
-        <a class="navbar-brand"><img id="brandimage" style="width:80px;height:60px" class="img-responsive" src="${pageContext.request.contextPath}/images/sportbabas.svg"/></a>
+        <a class="navbar-brand"><img id="brandimage" style="width:70px;height:50px" class="img-responsive" src="${pageContext.request.contextPath}/images/sportbabas.svg"/></a>
         </div>	
 				<div class="collapse navbar-collapse" id="topcontent">
 							<ul class="navbar-nav" style="height:50px">
@@ -136,7 +136,7 @@
            <span class="navbar-toggler-icon"></span>
         </a>
         <div class="col-sm-1">
-        <a class="navbar-brand d-none d-md-inline-block"><img id="brandimage" class="img-responsive" src="${pageContext.request.contextPath}/images/sportbabas.svg" style="height:60px;width:80px"/></a>
+        <a class="navbar-brand d-none d-md-inline-block"><img id="brandimage" class="img-responsive" src="${pageContext.request.contextPath}/images/sportbabas.svg" style="height:50px;width:60px"/></a>
          </div>
         
         <div id="content" class="col collapse navbar-collapse mr-0">
@@ -218,7 +218,7 @@
                                     
                                 <div class="col-xs-2"><a href="${pageContext.request.contextPath}#"><i class="fa fa-search" style="color:black" aria-hidden="true"></i></a></div>
 								  <div class="col-xs-2">
-								  <img src="${pageContext.request.contextPath}/images/settings.svg" class="rounded-circle settings" style="width:20px;height:20px;"/>
+								  <img src="${pageContext.request.contextPath}/images/settings.svg" class="rounded-circle settings" style="width:17px;height:17px;"/>
 								  </div>
 								  
 								  <c:if test="${sessionScope.username==null}">
