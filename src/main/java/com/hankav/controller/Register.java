@@ -124,7 +124,7 @@ public class Register extends HttpServlet {
 							 * System.out.println("i am portable net graph"); }
 							 */
 							/* String filePath = uploadPath + File.separator + fileName + "." + ext; */
-							String filePath = "/opt/tomcat/webapps/sportbabas/images/" + fileName + "." + ext;
+							String filePath = "/opt/tomcat/images/" + fileName + "." + ext;
 
 							File storeFile = new File(filePath);
 
