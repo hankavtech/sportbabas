@@ -10,11 +10,12 @@
      }
      
      a.dropdown-toggle:onhover{
-      ul.tips{
-        display:block !important;
-      }
-     
      }
+     
+     ul.tips{
+        display:block !important;
+     }
+     
      
      #brandimage{
 
@@ -84,11 +85,15 @@
        width:30px;
 
       }
-      /*   .navbar_user{
-       display:block;
-       text:center;
-     } */
-     
+      
+      .footer_nav_container{
+        height:50px;
+      
+      }
+      
+      .footer_social{
+        height:30px;
+      }
      
     
 }
