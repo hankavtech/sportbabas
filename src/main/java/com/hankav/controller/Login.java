@@ -27,7 +27,7 @@ import com.hankav.model.User;
 /**
  * Servlet implementation class Login
  */
-@WebServlet("/sportbabas/Login")
+@WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String hashedpass;
