@@ -53,7 +53,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>Login</servlet-name>
-    <url-pattern>/Login</url-pattern>
+    <url-pattern>sportbabas/Login</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>Logout</servlet-name>

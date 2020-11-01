@@ -24,7 +24,7 @@ import com.hankav.model.User;
 /**
  * Servlet implementation class UpdateCartItems
  */
-@WebServlet("/AddCartItem")
+@WebServlet("sportbabas/AddCartItem")
 public class AddCartItem extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
