@@ -21,7 +21,7 @@
                         
         
         <property name="java-output-path" value="/prodeagletip/target/classes"/>
-        <property name="context-root" value="sportbabas"/>
+        <property name="context-root" value="eagletip"/>
                                             
     
     
