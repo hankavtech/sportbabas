@@ -35,7 +35,7 @@ public class BuildMainPageForFreeTips extends HttpServlet {
 			e.printStackTrace();
 		}
 		try {
-			freefinishedtips = freefinishedtips = new GiveCountTenTips().getLast10FinishedTips(1, "free");
+			freefinishedtips = new GiveCountTenTips().getLast10FinishedTips(1, "free");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

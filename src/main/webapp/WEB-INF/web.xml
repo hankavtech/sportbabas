@@ -71,14 +71,6 @@
     <servlet-name>GetAllTipsterTipsForHisPersonalPage</servlet-name>
     <url-pattern>/tipster/tips</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <servlet-name>BuildMainPageForFreeTips</servlet-name>
-    <servlet-class>com.hankav.controller.BuildMainPageForFreeTips</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>BuildMainPageForFreeTips</servlet-name>
-    <url-pattern>/home</url-pattern>
-  </servlet-mapping>
   <context-param>
     <param-name>sport</param-name>
     <param-value>images/sport</param-value>
