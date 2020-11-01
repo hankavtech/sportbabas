@@ -796,7 +796,8 @@ $("#login").on("click",function(e){
 				 $("#password1").addClass("is-invalid");
 			 }
 			 else if(response="loggedin"){
-				 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
+				 console.log(response);
+				 //window.location.replace(window.location.pathname + window.location.search + window.location.hash);
 			 }
 		 }
 		 
