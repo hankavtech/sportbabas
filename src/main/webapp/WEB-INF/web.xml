@@ -91,4 +91,8 @@
     <param-name>sport</param-name>
     <param-value>images/sport</param-value>
   </context-param>
+  <context-param>
+    <param-name>/images/users/</param-name>
+    <param-value>/var/lib/sbresources/</param-value>
+  </context-param>
 </web-app>

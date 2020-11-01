@@ -788,16 +788,16 @@ $("#login").on("click",function(e){
 		 action:"/sportbabas/Login",
 		 data:{username:username2,password:password2},
 		 success:function(response){
-// 			 $("#spinner").hide();
+ 			 $("#spinner").hide();
 			 if(response=="nouser"){
 				 $("#email1").addClass("is-invalid");
 			 }
 			 else if(response=="passerror"){
 				 $("#password1").addClass("is-invalid");
 			 }
-			 else if(response="loggedin"){
+			 else if(response=="loggedin"){
 				 console.log(response);
-				 //window.location.replace(window.location.pathname + window.location.search + window.location.hash);
+				 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
 			 }
 		 }
 		 
