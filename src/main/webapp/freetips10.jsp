@@ -789,6 +789,7 @@ $("#login").on("click",function(e){
 		 data:{username:username2,password:password2},
 		 success:function(response){
  			 $("#spinner").hide();
+ 			 console.log(response);
 			 if(response=="nouser"){
 				 console.log("no such user");
 				 $("#email1").addClass("is-invalid");
