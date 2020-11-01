@@ -101,7 +101,7 @@
 								
 								
 								<c:if test="${sessionScope.user_type =='tipster'}">
-							       <li class="nav-item accountloggedin p-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="${pageContext.request.contextPath}/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
+							       <li class="nav-item accountloggedin p-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="${pageContext.request.contextPath}/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
 							      </c:if>
 							       <c:if test="${sessionScope.user_type !='tipster'}">
 							      <li class="nav-item accountloggedin p-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="${pageContext.request.contextPath}/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/user.svg'" class="rounded-circle" style="width:40px;height:35px" aria-hidden="true"/></a></li>
@@ -227,7 +227,7 @@
 							      <c:if test="${sessionScope.username!=null}">
 							      
 							      <c:if test="${sessionScope.user_type =='tipster'}">
-							       <div class="col-xs-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="${pageContext.request.contextPath}/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
+							       <div class="col-xs-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="${pageContext.request.contextPath}/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
 							      </c:if>
 							       <c:if test="${sessionScope.user_type !='tipster'}">
 							       <div class="col-xs-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="${pageContext.request.contextPath}/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/images/css/icons/user.svg'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
@@ -269,7 +269,7 @@
                   </div>
                   
                    <div class="col-xs-4">
-                   <img src="${pageContext.request.contextPath}/tipsters/${profile.key}.png" onerror="this.onerror=null;this.src='/tipsters/${profile.key}.jpg'" class="rounded-circle" style="width:40px;height:40px" aria-hidden="true">
+                   <img src="${pageContext.request.contextPath}/tipsters/${profile.key}.png" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/tipsters/${profile.key}.jpg'" class="rounded-circle" style="width:40px;height:40px" aria-hidden="true">
                    <p><c:out value="${profile.key}"/></p>
            
                  
