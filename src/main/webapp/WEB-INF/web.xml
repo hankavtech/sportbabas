@@ -78,7 +78,11 @@
     <param-value>images/sport</param-value>
   </context-param>
   <context-param>
-    <param-name>/images/users/</param-name>
-    <param-value>/var/lib/sbresources/images/users/</param-value>
+    <param-name>images/users/</param-name>
+    <param-value>var/lib/sbresources/images/users/</param-value>
+  </context-param>
+   <context-param>
+    <param-name>images/tipsters/</param-name>
+    <param-value>var/lib/sbresources/images/tipsters/</param-value>
   </context-param>
 </web-app>
