@@ -34,7 +34,7 @@ public class GiveActiveTipsOfTipster extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("activetipsoftipster",tips);
-		request.getRequestDispatcher("tipsterpersonal.jsp").forward(request,response);
+		request.getRequestDispatcher("/sportbabas/tipsterpersonal.jsp").forward(request,response);
 		
 	}
 

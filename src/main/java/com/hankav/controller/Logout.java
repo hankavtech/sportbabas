@@ -14,7 +14,7 @@ public class Logout extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.getSession().invalidate();
-		response.sendRedirect("paidtips");
+		response.sendRedirect("/sportbabas/paidtips");
 
 	}
 

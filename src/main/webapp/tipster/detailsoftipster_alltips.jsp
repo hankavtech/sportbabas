@@ -853,7 +853,7 @@ $(".profiles").on("click",function(e){
 		 url:"${pageContext.request.contextPath}/AddClickedUserToSession",
 		 data:{usertype:usertype,username:username,usersport:usersport},
 		 success:function(response){
-			 window.location.href = "/paidtips";
+			 window.location.href = "${pageContext.request.contextPath}/paidtips";
 			
 		 }
 		 

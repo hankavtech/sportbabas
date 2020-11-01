@@ -39,7 +39,7 @@ public class Confirmation extends HttpServlet {
 			session.update(user);
 			session.getTransaction().commit();
 			session.close();
-			response.sendRedirect("confirmationsuccess.html");
+			response.sendRedirect("/sportbabas/confirmationsuccess.html");
 			return;
 		}
 		response.getWriter().println("link not valid");

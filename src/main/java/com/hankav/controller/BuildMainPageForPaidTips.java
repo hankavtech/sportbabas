@@ -45,7 +45,7 @@ public class BuildMainPageForPaidTips extends HttpServlet {
 		request.setAttribute("topfreetipsters", lfreemap);
 		request.setAttribute("freeactivetips", freeactivetips);
 		request.setAttribute("freefinishedtips", freefinishedtips);
-		request.getRequestDispatcher("paidtips10.jsp").forward(request, response);
+		request.getRequestDispatcher("/sportbabas/paidtips10.jsp").forward(request, response);
 	}
 
 	/**

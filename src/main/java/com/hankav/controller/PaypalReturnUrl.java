@@ -150,7 +150,7 @@ public class PaypalReturnUrl extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		response.sendRedirect("/paymentsuccess.html");
+		response.sendRedirect("/sportbabas/paymentsuccess.html");
 
 	}
 

@@ -35,7 +35,7 @@ public class GetStats extends HttpServlet {
 		for (Tipster tipster : tipsters) {
 			System.out.print("the twins" + statmap.get(tipster).get("l5ids").toString());
 		}
-		response.sendRedirect("tipstersstats.jsp");
+		response.sendRedirect("/sportbabas/tipstersstats.jsp");
 	}
 
 	/**

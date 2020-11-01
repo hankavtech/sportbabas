@@ -17,7 +17,7 @@ public class AllTipstersPage extends HttpServlet {
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("tipsters.jsp").forward(request,response);
+		request.getRequestDispatcher("/sportbabas/tipsters.jsp").forward(request,response);
 	}
 
 	/**

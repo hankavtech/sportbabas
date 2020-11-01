@@ -615,7 +615,7 @@ $(".profiles").on("click",function(e){
 		 url:"${pageContext.request.contextPath}/AddClickedUserToSession",
 		 data:{usertype:usertype,username:username,usersport:usersport},
 		 success:function(response){
-			 window.location.href = "/paidtips";
+			 window.location.href = "${pageContext.request.contextPath}/paidtips";
 			
 		 }
 		 
@@ -865,7 +865,7 @@ $("#repassword").keyup(function(){
 			 if(res.trim()==='done'){
 				 $("#notifymessage").text("Submitted successfully. You will be redirected to main page");
 				 setTimeout(function(){
-					 window.location.href="${pageContext.request.contextPath}paidtips";
+					 window.location.href="${pageContext.request.contextPath}/paidtips";
 				 },2000);
 			 }
 		 }

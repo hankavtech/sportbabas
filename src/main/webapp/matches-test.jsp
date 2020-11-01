@@ -715,7 +715,7 @@ window.setTimeout(function() {
 				 url:"${pageContext.request.contextPath}/AddClickedUserToSession",
 				 data:{usertype:usertype,username:username,usersport:usersport},
 				 success:function(response){
-					 window.location.href = "/paidtips";
+					 window.location.href = "${pageContext.request.contextPath}/paidtips";
 					
 				 }
 				 
@@ -813,29 +813,6 @@ window.setTimeout(function() {
 	});
 		
 
-		$(".profiles").on("click",function(e){
-			var usertype=$(this).attr("data-usertype");
-			var usersport=$(this).attr("data-sport");
-			var username=$(this).attr("data-name");
-			console.log(usertype);
-			console.log(usersport);
-			console.log(username);
-			
-			
-			$.ajax({
-				 method:"POST",
-				 url:"${pageContext.request.contextPath}/AddClickedUserToSession",
-				 data:{usertype:usertype,username:username,usersport:usersport},
-				 success:function(response){
-					 window.location.reload();
-					
-				 }
-				 
-			});
-			
-			
-			
-		});
 		
 		
 		

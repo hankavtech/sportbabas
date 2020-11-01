@@ -28,7 +28,7 @@ public class GetTipsterProfile extends HttpServlet {
 			response.getWriter().println("Please Switch to Tipster account");
 			return;
 		}
-		request.getRequestDispatcher("tipster_self_profile.jsp").forward(request, response);
+		request.getRequestDispatcher("/sportbabas/tipster_self_profile.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

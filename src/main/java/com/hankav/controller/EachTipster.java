@@ -17,7 +17,7 @@ public class EachTipster extends HttpServlet {
 		String name=request.getParameter("name");
 		/*request.getRequestDispatcher("tipsters.jsp").forward(request,response);*/
 		if(name==null||name.equals("")) {
-		response.sendRedirect("tipsters.jsp");
+		response.sendRedirect("/sportbabas/tipsters.jsp");
 		}
 		else {
 			
