@@ -265,11 +265,11 @@
                
                   <div class="row offset-xs-0 offset-md-3 justify-content-around">
                   <div class="col-xs-2">
-                  <img style="width:20px;height:20px" class="rounded-circle" src="/images/sport/${profile.value}.svg"/>
+                  <img style="width:20px;height:20px" class="rounded-circle" src="${pageContext.request.contextPath}/images/sport/${profile.value}.svg"/>
                   </div>
                   
                    <div class="col-xs-4">
-                   <img src="/images/tipsters/${profile.key}.png" onerror="this.onerror=null;this.src='/images/tipsters/${profile.key}.jpg'" class="rounded-circle" style="width:40px;height:40px" aria-hidden="true">
+                   <img src="/var/lib/sbresources/images/tipsters/${profile.key}.png" onerror="this.onerror=null;this.src='/var/lib/sbresources/images/tipsters/${profile.key}.jpg'" class="rounded-circle" style="width:40px;height:40px" aria-hidden="true">
                    <p><c:out value="${profile.key}"/></p>
            
                  
@@ -308,7 +308,7 @@
              
                   
                    <div class="col-xs-4">
-                   <img style="width:40px;height:40px" src="/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/user.svg'"/>
+                   <img style="width:40px;height:40px" src="/var/lib/sbresources/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/user.svg'"/>
                    <p><c:out value="${sessionScope.username}"/></p>
                   </div>
                   <div class="col-xs-4">
@@ -327,11 +327,11 @@
                <c:if test="${sessionScope.tipster_name != profile.key}">
                     <div class="row offset-xs-0 offset-md-3 justify-content-around">
                   <div class="col-xs-2">
-                  <img style="width:20px;height:20px" class="rounded-circle" src="/images/sport/${profile.value}.svg" onerror="this.onerror=null;this.src='/images/sport/${profile.value}.png'"/>
+                  <img style="width:20px;height:20px" class="rounded-circle" src="${pageContext.request.contextPath}/images/sport/${profile.value}.svg" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/images/sport/${profile.value}.png'"/>
                   </div>
                   
                    <div class="col-xs-4">
-                   <img style="width:40px;height:40px" src="/images/tipsters/${profile.key}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${profile.key}.png'"/>
+                   <img style="width:40px;height:40px" src="/var/lib/sbresources/images/tipsters/${profile.key}.jpg" onerror="this.onerror=null;this.src='/var/lib/sbresources/images/tipsters/${profile.key}.png'"/>
                    <p><c:out value="${profile.key}"/></p>
            
                  
