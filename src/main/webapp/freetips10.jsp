@@ -785,7 +785,7 @@ $("#login").on("click",function(e){
 	var password2=$("#password1").val();
 	 $.ajax({
 		 method:"POST",
-		 action:"${pageContext.request.contextPath}/Login",
+		 action:"/Login",
 		 data:{username:username2,password:password2},
 		 success:function(response){
  			 $("#spinner").hide();
