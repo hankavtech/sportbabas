@@ -17,7 +17,6 @@ import com.hankav.dao.getTipsterRatings;
 /**
  * Servlet implementation class buildRankingContent
  */
-@WebServlet("sportbabas/freetips")
 public class BuildMainPageForFreeTips extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

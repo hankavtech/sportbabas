@@ -55,6 +55,17 @@
     <servlet-name>Login</servlet-name>
     <url-pattern>sportbabas/Login</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BuildMainPageForFreeTips</servlet-name>
+    <servlet-class>com.hankav.controller.BuildMainPageForFreeTips</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BuildMainPageForFreeTips</servlet-name>
+    <url-pattern>/freetips</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <servlet-name>Logout</servlet-name>
     <servlet-class>com.hankav.controller.Logout</servlet-class>
