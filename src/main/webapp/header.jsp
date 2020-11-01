@@ -587,7 +587,7 @@
 				    
 				    </div>
 				    <div class='row justify-content-center'>
-				    <a id="checkout_button" class='btn btn-lg btn-success' href='/payment'>Checkout</a>
+				    <a id="checkout_button" class='btn btn-lg btn-success' href='${pageContext.request.contextPath}/payment'>Checkout</a>
 				    </div>
                 
            
