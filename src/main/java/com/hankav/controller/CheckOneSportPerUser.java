@@ -24,7 +24,7 @@ import com.hankav.model.Tipster;
 /**
  * Servlet implementation class CheckOneSportPerUser
  */
-@WebServlet("/sportbabas/CheckOneSportPerUser")
+@WebServlet("/CheckOneSportPerUser")
 public class CheckOneSportPerUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
