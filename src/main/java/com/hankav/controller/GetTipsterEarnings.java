@@ -45,7 +45,7 @@ public class GetTipsterEarnings extends HttpServlet {
 		}
         request.setAttribute("monthlypays",monthlypayments);
         
-		request.getRequestDispatcher("/sportbabas/tipster-earnings.jsp").forward(request,response);
+		request.getRequestDispatcher("tipster-earnings.jsp").forward(request,response);
 	}
 
 	

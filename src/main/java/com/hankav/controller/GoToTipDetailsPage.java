@@ -24,7 +24,7 @@ public class GoToTipDetailsPage extends HttpServlet {
 		GetTipDetails tip=new GetTipDetails();
 		List<Object[]>tipdetails=tip.byId(tip_id);
 		request.setAttribute("tipdetails",tipdetails);
-		request.getRequestDispatcher("/sportbabas/tipdetail.jsp").forward(request,response);
+		request.getRequestDispatcher("tipdetail.jsp").forward(request,response);
 	}
 
 	/**

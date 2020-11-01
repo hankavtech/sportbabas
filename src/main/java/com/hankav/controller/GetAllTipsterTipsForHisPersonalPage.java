@@ -54,7 +54,7 @@ public class GetAllTipsterTipsForHisPersonalPage extends HttpServlet {
 		request.setAttribute("tips", tips);
 		request.setAttribute("tipstername", tipster_name);
 		System.out.println(new Gson().toJson(topstats));
-		request.getRequestDispatcher("/sportbabas/tipster/detailsoftipster_alltips.jsp").forward(request, response);
+		request.getRequestDispatcher("/tipster/detailsoftipster_alltips.jsp").forward(request, response);
 
 	}
 

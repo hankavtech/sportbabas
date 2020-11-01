@@ -21,7 +21,7 @@ public class ProfilePageOfClient extends HttpServlet {
         	return;
         }
         
-		request.getRequestDispatcher("/sportbabas/clientprofile.jsp").forward(request,response);
+		request.getRequestDispatcher("clientprofile.jsp").forward(request,response);
 	}
 
 	

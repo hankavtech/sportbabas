@@ -34,7 +34,7 @@ public class LatestTipsOfClient extends HttpServlet {
 				e.printStackTrace();
 			}
 			request.setAttribute("activeuserlist",tips);
-		request.getRequestDispatcher("/sportbabas/recenttipsofclient.jsp").forward(request,response);
+		request.getRequestDispatcher("recenttipsofclient.jsp").forward(request,response);
 	}
 
 	/**

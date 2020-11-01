@@ -44,7 +44,7 @@ public class RedirectToTipForm extends HttpServlet {
 		System.out.println(request.getSession().getAttribute("username"));
 		System.out.println(request.getSession().getAttribute("num_of_tipsters"));
 		System.out.println(request.getSession().getAttribute("user_type"));
-		request.getRequestDispatcher("/sportbabas/matches-test.jsp").forward(request,response);
+		request.getRequestDispatcher("matches-test.jsp").forward(request,response);
 		
 	}
 

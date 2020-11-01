@@ -68,7 +68,7 @@ public class GiveSubscriptionsList extends HttpServlet {
 		}
 		session.close();
 		request.setAttribute("subscriptions", subs);
-		request.getRequestDispatcher("/sportbabas/clientsubscriptions.jsp").forward(request, response);
+		request.getRequestDispatcher("clientsubscriptions.jsp").forward(request, response);
 
 	}
 

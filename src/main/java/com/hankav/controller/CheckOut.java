@@ -31,7 +31,7 @@ public class CheckOut extends HttpServlet {
 		String username=(String) request.getSession().getAttribute("username");
 		List<Object[]>items=(List<Object[]>) request.getSession().getAttribute("cartitems");
 		if(username==null) {
-			request.getRequestDispatcher("/sportbabas/register").forward(request,response);
+			request.getRequestDispatcher("register.jsp").forward(request,response);
 			return;
 		}
 		else {

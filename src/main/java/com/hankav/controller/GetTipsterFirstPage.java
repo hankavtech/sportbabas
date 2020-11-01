@@ -38,7 +38,7 @@ public class GetTipsterFirstPage extends HttpServlet {
 
 		}
 		request.setAttribute("tipstername", name);
-		request.getRequestDispatcher("/sportbabas/details_oftipster.jsp").forward(request, response);
+		request.getRequestDispatcher("details_oftipster.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

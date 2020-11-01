@@ -33,7 +33,7 @@ public class AddClickedUserToSession extends HttpServlet {
 			request.getSession().setAttribute("username", username);
 			request.getSession().setAttribute("tipster_name", null);
 		}
-		request.getRequestDispatcher("/sportbabas/matches-test.jsp").forward(request, response);
+		request.getRequestDispatcher("matches-test.jsp").forward(request, response);
 	}
 
 	/**

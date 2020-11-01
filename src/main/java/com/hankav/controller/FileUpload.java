@@ -124,10 +124,10 @@ public class FileUpload extends HttpServlet {
 		}
 		// redirects client to message page
 		if (usertype.equalsIgnoreCase("tipster")) {
-			response.sendRedirect("/sportbabas/tipsterpersonal/profile");
+			response.sendRedirect("/tipsterpersonal/profile");
 			return;
 		} else {
-			response.sendRedirect("/sportbabas/Profile");
+			response.sendRedirect("/Profile");
 		}
 	}
 

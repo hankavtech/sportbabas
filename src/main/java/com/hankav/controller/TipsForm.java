@@ -80,12 +80,12 @@ public class TipsForm extends HttpServlet {
 		if (poststatus.equalsIgnoreCase("failed")) {
 			Cookie ck = new Cookie("tipstatus", "failed");
 			response.addCookie(ck);
-			response.sendRedirect("/matches");
+			response.sendRedirect("/sportbabas/matches");
 			return;
 		}
 		Cookie ck = new Cookie("tipstatus", "success");
 		response.addCookie(ck);
-		response.sendRedirect("/matches");
+		response.sendRedirect("/sportbabas/matches");
 	}
 
 }

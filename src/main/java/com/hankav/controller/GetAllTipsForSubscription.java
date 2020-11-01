@@ -122,7 +122,7 @@ public class GetAllTipsForSubscription extends HttpServlet {
 		session.getTransaction().commit();
 		session.close();
 
-		request.getRequestDispatcher("/sportbabas/alltipsofclient.jsp").forward(request, response);
+		request.getRequestDispatcher("alltipsofclient.jsp").forward(request, response);
 
 	}
 

@@ -39,7 +39,7 @@ public class ResetPassword extends HttpServlet {
 		session.close();
 		if(flink==null) {
 			request.setAttribute("resetstatus","failure");
-			request.getRequestDispatcher("/sportbabas/resetpassword.jsp").forward(request, response);
+			request.getRequestDispatcher("resetpassword.jsp").forward(request, response);
 			return;
 		}
 		if(flink.trim().equals(uuid.trim())) {
@@ -52,7 +52,7 @@ public class ResetPassword extends HttpServlet {
 		}
 		
 		request.setAttribute("email",email);
-		request.getRequestDispatcher("/sportbabas/resetpassword.jsp").forward(request, response);
+		request.getRequestDispatcher("resetpassword.jsp").forward(request, response);
 		
 	}
 

@@ -40,7 +40,7 @@ public class GetPersonalTipsterActiveTips extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("firstpagelist", list);
-		request.getRequestDispatcher("/sportbabas/tipsterpersonalactive.jsp").forward(request, response);
+		request.getRequestDispatcher("tipsterpersonalactive.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

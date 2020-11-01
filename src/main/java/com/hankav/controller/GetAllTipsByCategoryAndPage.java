@@ -61,7 +61,7 @@ public class GetAllTipsByCategoryAndPage extends HttpServlet {
 		request.setAttribute("category", category);
 		request.setAttribute("tips", tips);
 		request.setAttribute("tipsofcategory", tipsofcategory);
-		request.getRequestDispatcher("/sportbabas/alltips.jsp").forward(request, response);
+		request.getRequestDispatcher("alltips.jsp").forward(request, response);
 
 	}
 
