@@ -56,15 +56,6 @@
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
   
-  <servlet>
-    <servlet-name>BuildMainPageForFreeTips</servlet-name>
-    <servlet-class>com.hankav.controller.BuildMainPageForFreeTips</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>BuildMainPageForFreeTips</servlet-name>
-    <url-pattern>/</url-pattern>
-  </servlet-mapping>
-  
   
   <servlet>
     <servlet-name>Logout</servlet-name>
