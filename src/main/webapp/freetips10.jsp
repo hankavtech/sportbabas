@@ -777,7 +777,7 @@ $("#signindropdown").on("click",function(e){
 });
 
 $("#login").on("click",function(e){
-	
+	console.log("herrt");
 	$("#email1").removeClass("is-invalid");
 	$("#password1").removeClass("is-invalid");
 	$("#spinner").show();
