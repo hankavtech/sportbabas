@@ -660,7 +660,7 @@ function getCookie(name) {
 	
 	 $.ajax({
 			method:"GET",
-			url:"{pageContext.request.contextPath}/GetCartItems",
+			url:"${pageContext.request.contextPath}/GetCartItems",
 			success:function(response){
 				items=0;
 				console.log("items is"+ items);
