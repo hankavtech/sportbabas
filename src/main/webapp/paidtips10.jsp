@@ -1015,8 +1015,6 @@ $("#addtipster,#getsports").click(function() {
 		success:function(res){
 	       $("#sportselect").html("");
 	        var sports=JSON.parse(res);
-	        console.log(sports);
-	        console.log(sports);
 	        for(var i=0;i<sports.length;i++){
 	        	console.log(sports[i]);
 	        	$("#sportselect").append("<option style='width:15px;height:15px;' value='"+sports[i]+"'>"+sports[i]+"</option>");
