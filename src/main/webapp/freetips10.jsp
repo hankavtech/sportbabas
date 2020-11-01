@@ -777,18 +777,18 @@ $("#signindropdown").on("click",function(e){
 });
 
 $("#login").on("click",function(e){
+	e.preventDefault();
 	$("#email1").removeClass("is-invalid");
 	$("#password1").removeClass("is-invalid");
-	e.preventDefault();	
 	$("#spinner").show();
 	var username2=$("#email1").val();
 	var password2=$("#password1").val();
 	 $.ajax({
 		 method:"POST",
-		 action:"${pageContext.request.contextPath}/Login",
+		 action:"/sportbabas/Login",
 		 data:{username:username2,password:password2},
 		 success:function(response){
-			 $("#spinner").hide();
+// 			 $("#spinner").hide();
 			 if(response=="nouser"){
 				 $("#email1").addClass("is-invalid");
 			 }
