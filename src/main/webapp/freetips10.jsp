@@ -785,14 +785,16 @@ $("#login").on("click",function(e){
 	var password2=$("#password1").val();
 	 $.ajax({
 		 method:"POST",
-		 action:"/sportbabas/Login",
+		 action:"/Login",
 		 data:{username:username2,password:password2},
 		 success:function(response){
  			 $("#spinner").hide();
 			 if(response=="nouser"){
+				 console.log("no such user");
 				 $("#email1").addClass("is-invalid");
 			 }
 			 else if(response=="passerror"){
+				 console.log("password wrong");
 				 $("#password1").addClass("is-invalid");
 			 }
 			 else if(response=="loggedin"){
