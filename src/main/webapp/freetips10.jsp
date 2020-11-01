@@ -801,7 +801,7 @@ $("#login").on("click",function(e){
 			 }
 			 else if(response=="loggedin"){
 				 console.log(response);
-				 //window.location.replace(window.location.pathname + window.location.search + window.location.hash);
+				 window.location.replace(window.location.pathname + window.location.search + window.location.hash);
 			 }
 		 }
 		 
