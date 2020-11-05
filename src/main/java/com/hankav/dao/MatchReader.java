@@ -54,10 +54,10 @@ public class MatchReader {
 				/* match.setMatch_sport(nsport); */
 				match.setLeague(list.get(1));
 				match.setTournament(list.get(2));
-				match.setMatch_date(sdf.parse(list.get(3)));
-				match.setMatch_id(list.get(4));
-				match.setTeam1(list.get(5));
-				match.setTeam2(list.get(6));
+				match.setMatch_date(sdf.parse(list.get(0)));
+				match.setMatch_id(list.get(3));
+				match.setTeam1(list.get(4));
+				match.setTeam2(list.get(5));
 				list.clear();
 				session.save(match);
 
