@@ -50,7 +50,7 @@ public class MatchReader {
 				 * criteria.add(Restrictions.eq("name",list.get(0))); Sport nsport=(Sport)
 				 * criteria.uniqueResult();
 				 */
-				match.setMatch_sport(new GetSportByProperty().byName(list.get(0), session));
+				match.setMatch_sport(new GetSportByProperty().byName(sportname, session));
 				/* match.setMatch_sport(nsport); */
 				match.setLeague(list.get(1));
 				match.setTournament(list.get(2));

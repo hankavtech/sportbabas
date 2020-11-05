@@ -17,7 +17,7 @@
  <group>ScheduleMatchesUpdater_TRIGGER</group>
  <job-name>ScheduleMatchesUpdaterJob</job-name>
  <job-group>ScheduleMatchesUpdater_GROUP</job-group>
- <cron-expression>0 45 06 * * ?</cron-expression>
+ <cron-expression>0 05 07 * * ?</cron-expression>
  </cron>
 </trigger>
 </schedule>
