@@ -134,7 +134,7 @@ table td{
 	    
 	    <div class="card bg-dark">
 	    <div class="card-block"> 
-	    <img class="image-fluid rounded-circle mb-2" style="width:100px;height:100px" src="${pageContext.request.contextPath}/images/${requestScope.tipstername}.jpg" onerror="this.onerror=null;this.src='/images/${requestScope.tipstername}.png'"/>
+	    <img class="image-fluid rounded-circle mb-2" style="width:100px;height:100px" src="${pageContext.request.contextPath}/images/${requestScope.tipstername}.jpg" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/images/${requestScope.tipstername}.png'"/>
 	    <div></div>
 	    <img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="${pageContext.request.contextPath}/images/sport/${requestScope.sportname}.svg" />
 	    <h5 class="text-info text-nowrap"><a href='/tipster/activetips?name=${requestScope.tipstername}'>${requestScope.tipstername}</a></h5>
@@ -254,7 +254,7 @@ table td{
 <td class="oddscolumn">${tip[9]}</td>
 <td>${tip[8]}</td>
 <td class="bookmakercolumn">${tip[10]}</td>
-<td><c:if test='${tip[12]=="won"}'><img src='/images/css/right.svg' style='width:20px;height:20px'/></c:if><c:if test='${tip[12]=="lost"}'><img src='/images/css/wrong.svg' style='width:20px;height:20px'/></c:if></td> 
+<td><c:if test='${tip[12]=="won"}'><img src='${pageContext.request.contextPath}/images/css/right.svg' style='width:20px;height:20px'/></c:if><c:if test='${tip[12]=="lost"}'><img src='${pageContext.request.contextPath}/images/css/wrong.svg' style='width:20px;height:20px'/></c:if></td> 
 <td><span <c:if test='${tip[11] > 0}'>class='text-success'</c:if> <c:if test='${tip[11] < 0}'>class='text-danger'</c:if>>${tip[11]} </span> &nbsp;</td>
 </tr>
 </c:forEach>
@@ -370,7 +370,7 @@ console.log("page id is"+page);
 		$("#mytable tbody").html("");
 		<c:forEach items="${requestScope.tipsofsubscription}" var="item1">
 		  console.log("${item1[0]}");
-		 $("#mytable tbody").append("<tr><td><img src='/images/sport/${item1[2]}.svg' style='width:20px;height:20px'/></td><td><a class='text-warning' href='/tip?id=${item1[12]}'>${item1[0]} vs ${item1[1]}</a></td><td class='timecolumn'>${item1[3]}</td><td>${item1[5]}</td><td>${item1[6]} ${item1[7]}</td><td class='oddscolumn'>${item1[8]}</td><td>${item1[9]}</td><td>${item1[4]}</td><td>${item1[10]}</td><td>${item1[11]}</td></tr>");
+		 $("#mytable tbody").append("<tr><td><img src='${pageContext.request.contextPath}/images/sport/${item1[2]}.svg' style='width:20px;height:20px'/></td><td><a class='text-warning' href='/tip?id=${item1[12]}'>${item1[0]} vs ${item1[1]}</a></td><td class='timecolumn'>${item1[3]}</td><td>${item1[5]}</td><td>${item1[6]} ${item1[7]}</td><td class='oddscolumn'>${item1[8]}</td><td>${item1[9]}</td><td>${item1[4]}</td><td>${item1[10]}</td><td>${item1[11]}</td></tr>");
 		</c:forEach>
 	 
 	 
@@ -692,7 +692,7 @@ console.log("page id is"+page);
 			currencyvalue=parseFloat(currencyvalue*.79).toFixed(2);
 			$("#sym").addClass("fa fa-gbp");
 		}
-			$("#selectedsubscription").html(""+months +" month for " + parseFloat(currencyvalue*months).toFixed(2)+ "<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");	
+			$("#selectedsubscription").html(""+months +" month for " + parseFloat(currencyvalue*months).toFixed(2)+ "<img style='width:20px;height:20px' src='${pageContext.request.contextPath}/images/css/currency/"+currency+".svg'/>");	
 		
 	
 			var oddscolumns=document.getElementsByClassName("oddscolumn");
@@ -745,7 +745,7 @@ console.log("page id is"+page);
 					else if(currency==='GBP'){
 						convcurrency=parseFloat(convcurrency*.79).toFixed(2);
 					}
-			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
+			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='${pageContext.request.contextPath}/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='${pageContext.request.contextPath}/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
 			   	});
 			 
 			   	$("#checkout_items1").html(items);
@@ -1131,7 +1131,7 @@ $("#checkout_button").click(function(e){
 var bookmakercolumns=document.getElementsByClassName("bookmakercolumn");
 var bookieurls={"1xbet":"https://1xbet.com","188bet":"https://www.188bet.com/","888sport":"https://www.888sport.com/","bet365":"https://www.bet365.com","betathome":"https://www.bet-at-home.com","betclick":"https://en.betclic.com","betdaq":"https://www.betdaq.com","betfairsports":"https://www.betfair.com/sport","betfred":"https://www.betfred.com","betrally":"https://www.betrally.com","betsafe":"https://www.betsafe.com/en","betvictor":"https://www.betvictor.com","betwaysports":"https://sports.betway.com/en/sports","boylesports":"http://www.boylesports.com","bwinsports":"https://sports.bwin.com/en/sports","dafabet":"https://www.dafabet.com/in","intertops":"https://intertops.eu","interwetten":"https://www.interwetten.com","ladbrokes":"https://www.ladbrokes.com/home/en","mansion88":"https://www.mansion88.com","matchbook":"https://www.matchbook.com","netbet":"https://sport.netbet.co.uk","paddypower":"https://www.paddypower.com/bet","parimatch":"https://www.parimatch.com","pinnaclesports":"https://www.pinnacle.com/en","sbobet":"https://www.sbobet.com","tipbet":"https://www.tipbet.com","totesport":"https://sports.tote.co.uk","unibet":"https://www.unibet.com","williamhillsports":"http://sports.williamhill.com"};
  for(var i=0;i<bookmakercolumns.length;i++){
-	 bookmakercolumns[i].innerHTML="<a href='"+bookieurls[bookmakercolumns[i].innerText.toLowerCase().trim()]+"' target='_blank'><img src='/images/bookmakers/"+bookmakercolumns[i].innerText.toLowerCase().trim()+".png' style='width:40px;height:20px'/></a>";
+	 bookmakercolumns[i].innerHTML="<a href='"+bookieurls[bookmakercolumns[i].innerText.toLowerCase().trim()]+"' target='_blank'><img src='${pageContext.request.contextPath}/images/bookmakers/"+bookmakercolumns[i].innerText.toLowerCase().trim()+".png' style='width:40px;height:20px'/></a>";
 	  
 }
 

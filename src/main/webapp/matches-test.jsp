@@ -151,7 +151,7 @@ height:30px;
 
   <div class="row justify-content-left offset-1 mb-4 pt-3">
     <img class="mt-2 rounded-circle mr-4" src="${pageContext.request.contextPath}/images/sport/${sessionScope.user_sport}.svg" style="width:30px;height:30px"/>
-    <img class="rounded-circle mr-2"  src="${pageContext.request.contextPath}/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'" style="width:50px;height:50px"/>
+    <img class="rounded-circle mr-2"  src="${pageContext.request.contextPath}/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/images/tipsters/${sessionScope.tipster_name}.png'" style="width:50px;height:50px"/>
     <p class="mt-3">${sessionScope.tipster_name}</p>
   </div>
   <div class="row justify-content-center">
@@ -749,7 +749,7 @@ window.setTimeout(function() {
 						else if(currency.toUpperCase()==='GBP'){
 							convcurrency=parseFloat(convcurrency*.79).toFixed(2);
 						}
-				   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
+				   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='${pageContext.request.contextPath}/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='${pageContext.request.contextPath}/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
 				   	});
 				 
 				   	$("#checkout_items1").html(items);

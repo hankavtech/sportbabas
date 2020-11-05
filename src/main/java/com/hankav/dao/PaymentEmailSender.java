@@ -39,13 +39,13 @@ public class PaymentEmailSender {
 			message.setRecipient(Message.RecipientType.TO, new InternetAddress(email));
 			message.setSubject("" + product + " Order Confirmation");
 			message.setContent("<table>"
-					+ "<tr><td><img style='width:80px;height:60px' src='/images/css/eagletip.png'></td></tr>"
+					+ "<tr><td><img style='width:80px;height:60px' src='${pageContext.request.contextPath}/images/css/eagletip.png'></td></tr>"
 					+ "<tr><td><h1>EAGLE<span style='color:green'>TIP</span></h1></td></tr>" + "<tr><p>Hi " + user
 					+ ", we've received your order #" + orderid + ".</p></tr>"
 					+ "<tr><p>Please make sure that you have verified your email during registration if you haven't.</p></tr>"
 					+ "<tr><p>You can see all your active tips in your profile page instantaneously</p></tr>"
 					+ "<tr><td> <h2>Item ordered<br></h2></td</tr>"
-					+ "<tr><td><img style='width:50px;height:50px' src='/images/tipsters/"
+					+ "<tr><td><img style='width:50px;height:50px' src='${pageContext.request.contextPath}/images/tipsters/"
 					+ product + ".jpg'><a href='/tipster/activetips?name="
 					+ product.replace("+", "%20") + "'>" + product + "</a></td><td><table><tr><p>Subscription plan: "
 					+ plan + " month</p></tr><tr><p>Start date:" + start + "</p></tr><tr><p>End date:" + end

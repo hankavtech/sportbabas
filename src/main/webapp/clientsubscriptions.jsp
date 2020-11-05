@@ -265,7 +265,7 @@ console.log("sub is "+sub);
 		$("#mytable tbody").html("");
 		<c:forEach items="${requestScope.tipsofsubscription}" var="item1">
 		  console.log("${item1[0]}");
-		 $("#mytable tbody").append("<tr><td><img src='/${initParam["sport"]}/${item1[2]}.svg' style='width:20px;height:20px'/></td><td><a class='text-warning' href='/tip?id=${item1[12]}'>${item1[0]} vs ${item1[1]}</a></td><td class='timecolumn'>${item1[3]}</td><td>${item1[5]}</td><td>${item1[6]} ${item1[7]}</td><td class='oddscolumn'>${item1[8]}</td><td>${item1[9]}</td><td>${item1[4]}</td><td>${item1[10]}</td><td>${item1[11]}</td></tr>");
+		 $("#mytable tbody").append("<tr><td><img src='${pageContext.request.contextPath}/${initParam["sport"]}/${item1[2]}.svg' style='width:20px;height:20px'/></td><td><a class='text-warning' href='/tip?id=${item1[12]}'>${item1[0]} vs ${item1[1]}</a></td><td class='timecolumn'>${item1[3]}</td><td>${item1[5]}</td><td>${item1[6]} ${item1[7]}</td><td class='oddscolumn'>${item1[8]}</td><td>${item1[9]}</td><td>${item1[4]}</td><td>${item1[10]}</td><td>${item1[11]}</td></tr>");
 		</c:forEach>
 	 
 	 
@@ -587,7 +587,7 @@ console.log("sub is "+sub);
 			currencyvalue=parseFloat(currencyvalue*.79).toFixed(2);
 			$("#sym").addClass("fa fa-gbp");
 		}
-			$("#selectedsubscription").html(""+months +" month for " + parseFloat(currencyvalue*months).toFixed(2)+ "<img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/>");	
+			$("#selectedsubscription").html(""+months +" month for " + parseFloat(currencyvalue*months).toFixed(2)+ "<img style='width:20px;height:20px' src='${pageContext.request.contextPath}/images/css/currency/"+currency+".svg'/>");	
 		
 	
 			var oddscolumns=document.getElementsByClassName("oddscolumn");
@@ -655,7 +655,7 @@ console.log("sub is "+sub);
 					else if(currency==='GBP'){
 						convcurrency=parseFloat(convcurrency*.79).toFixed(2);
 					}
-			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
+			   		$("#cartitems").append("<div class='row justify-content-around'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='${pageContext.request.contextPath}/images/tipsters/"+value[0]+".jpg'/><p class='nametoremove text-nowrap text-left'>"+value[0]+"</p></div><div class='col-xs-2'><p><b>"+value[2]+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*value[2]).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='${pageContext.request.contextPath}/images/css/currency/"+currency+".svg'/><button type='button' style='margin-left:10px' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
 			   	});
 			 
 			   	$("#checkout_items1").html(items);
@@ -939,7 +939,7 @@ else if(w_width<=575){
 					else if(currency==='GBP'){
 						convcurrency=parseFloat(convcurrency*.79).toFixed(2);
 					}
-					$("#cartitems").append("<div class='row justify-content-between'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='/"+res.name+".jpg'/><p class='text-nowrap text-left'>"+res.name+"</p></div><div class='col-xs-2'><p><b>"+res.months+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*parseInt(res.months)).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='/images/css/currency/"+currency+".svg'/><button type='button' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
+					$("#cartitems").append("<div class='row justify-content-between'><div class='col-xs-4'><img style='width:30px;height:30px' class='image-fluid rounded-circle mb-2' src='${pageContext.request.contextPath}/"+res.name+".jpg'/><p class='text-nowrap text-left'>"+res.name+"</p></div><div class='col-xs-2'><p><b>"+res.months+" month subscription</b></p></div><div class='col-xs-2'><span><b>"+parseFloat(convcurrency*parseInt(res.months)).toFixed(2)+"</b> </span> <img style='width:20px;height:20px' src='${pageContext.request.contextPath}/images/css/currency/"+currency+".svg'/><button type='button' id='removesubscription' class='close' aria-label='Close'><span style='color:red;' aria-hidden='true'>&times;</span></button></div></div>");
 					console.log("item is added to div");
 					
 					

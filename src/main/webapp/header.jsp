@@ -230,7 +230,7 @@
 							       <div class="col-xs-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="${pageContext.request.contextPath}/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/tipsters/${sessionScope.tipster_name}.png'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
 							      </c:if>
 							       <c:if test="${sessionScope.user_type !='tipster'}">
-							       <div class="col-xs-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="${pageContext.request.contextPath}/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/images/css/icons/user.svg'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
+							       <div class="col-xs-2"><a href="${pageContext.request.contextPath}#" data-toggle="modal" data-target="#loggedindiv"><img src="${pageContext.request.contextPath}/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/images/css/icons/user.svg'" class="rounded-circle" style="width:30px;height:25px" aria-hidden="true"/></a></div>
 							      </c:if>
 								  
 							      </c:if>

@@ -56,7 +56,7 @@ public class EmailCon {
 				message.setRecipients(Message.RecipientType.BCC, recipientAddresses);
 				message.setSubject("" + team1 + " vs " + team2 + "");
 				message.setContent("<table>"
-						+ "<tr><td><img style='width:80px;height:60px' class='img-responsive' src='/images/css/eagletip.png'></td></tr>"
+						+ "<tr><td><img style='width:80px;height:60px' class='img-responsive' src='${pageContext.request.contextPath}/images/css/eagletip.png'></td></tr>"
 						+ "<tr><td><h1>EAGLE<span style='color:green'>TIP</span></h1></td></tr>"
 						+ "<tr><td style='font-weight:bold'><a href='/tipster/activetips?name="
 						+ tipster + "'>" + tipster + "</a></td></tr>"
