@@ -99,13 +99,13 @@
 
   
   <div class="container text-center mt-4">
-  <img class="img-rounded" style="width:80px;height:80px" src="/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'"/>
+  <img class="img-rounded" style="width:80px;height:80px" src="${pageContext.request.contextPath}/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'"/>
 
 		
 		
 		  <form class="form mt-5" method="POST" action="${pageContext.request.contextPath}/uploadFile" enctype="multipart/form-data">
   <div class="form-group">
-  <span class="mr-4"><img src="/images/sport/football.svg" style="width:30;height:30px"></span>
+  <span class="mr-4"><img src="${pageContext.request.contextPath}/images/sport/football.svg" style="width:30;height:30px"></span>
   </div>
   <div class="form-group">
   <input type="text" class="form-control" name="tipstername" id="tipstername" disabled="disabled" value="${sessionScope.tipster_name}"/> 

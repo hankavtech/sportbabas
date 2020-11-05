@@ -118,7 +118,7 @@ body {
   </div>
   <div class="tab-pane active p-5" id="messages" role="tabpanel" aria-labelledby="messages-tab">
 
-  <img style="width:40px;height:40px" src="/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/images/users/${sessionScope.username}.png'"/>
+  <img style="width:40px;height:40px" src="${pageContext.request.contextPath}/images/users/${sessionScope.username}.jpg" onerror="this.onerror=null;this.src='/images/users/${sessionScope.username}.png'"/>
   <form class="form mt-5 mb-5" method="POST" action="${pageContext.request.contextPath}/uploadFile" enctype="multipart/form-data">
   <div class="form-group">
   <input type="text" class="inline-block" name="tipstername" id="tipstername" disabled="disabled" value="${sessionScope.username}"/> 

@@ -127,7 +127,7 @@ body {
    <div class="card bg-dark text-info mb-2 d-table">
       <div class="card-header">
         <p class='text-nowrap'># ${item[12]}</p>
-        <p class="text-nowrap"><img src="/images/sport/${item[5]}.svg" style="width:20px;height:20px"/> <img class="ml-2" src="/images/tipsters/${item[11]}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${item[11]}.png'" style="width:30px;height:30px"/></p>
+        <p class="text-nowrap"><img src="${pageContext.request.contextPath}/images/sport/${item[5]}.svg" style="width:20px;height:20px"/> <img class="ml-2" src="${pageContext.request.contextPath}/images/tipsters/${item[11]}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${item[11]}.png'" style="width:30px;height:30px"/></p>
         <p><a class='text-warning' href='/tipster/activetips?name=${item[11]}'>${item[11]}</a></p>
         <p>League: ${item[4]}  ${item[3]}</p>
         <p>Event: <span class="ml-2 mb-2">${item[0]} vs ${item[1]}</span></p>

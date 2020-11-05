@@ -100,7 +100,7 @@ body {
 <fmt:parseNumber var = "yield" integerOnly = "true" 
          type = "number" value = "${paidtipsters.profit / paidtipsters.tips}" />        
 <tr class="d1">
-<td><img style="width:15px;height:15px" src="/images/sport/${paidtipsters.sportname}.svg"/></td>
+<td><img style="width:15px;height:15px" src="${pageContext.request.contextPath}/images/sport/${paidtipsters.sportname}.svg"/></td>
 <td><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${paidtipsters.name }">${paidtipsters.name}</a></td>
 
 <td><span <c:if test='${i > 0}'>class='text-success text-nowrap'</c:if> <c:if test='${i < 0}'>class='text-danger'</c:if>>${i} </span> &nbsp;</td>
@@ -137,7 +137,7 @@ body {
 <fmt:parseNumber var = "yield" integerOnly = "true" 
          type = "number" value = "${freetipsters.profit / freetipsters.tips}" />        
 <tr class="d1">
-<td><img style="width:15px;height:15px" src="/images/sport/${freetipsters.sportname}.svg"/></td>
+<td><img style="width:15px;height:15px" src="${pageContext.request.contextPath}/images/sport/${freetipsters.sportname}.svg"/></td>
 <td><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${freetipsters.name }">${freetipsters.name}</a></td>
 
 <td><span <c:if test='${i > 0}'>class='text-success text-nowrap'</c:if> <c:if test='${i < 0}'>class='text-danger'</c:if>>${i} </span> &nbsp;</td>
@@ -166,7 +166,7 @@ body {
 					   <tbody>
 					   <c:forEach items="${requestScope.freeactivetips}" var="freeactivetips">
 					   <tr class="d1">
-<td><img style="width:12px;height:12px" src="/images/sport/${freeactivetips.sportname}.svg"/></td>
+<td><img style="width:12px;height:12px" src="${pageContext.request.contextPath}/images/sport/${freeactivetips.sportname}.svg"/></td>
 <td class="text-nowrap timecolumn" style="text-align:left">${freeactivetips.time}</td>
 <td class="text-nowrap"><a class="text-warning" href="${pageContext.request.contextPath}/tip?id=${freeactivetips.tid}"> ${freeactivetips.team1} vs ${freeactivetips.team2}</a></td> 
 <td class="text-nowrap"><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${freeactivetips.tipstername}">${freeactivetips.tipstername}</a></td>
@@ -195,12 +195,12 @@ body {
 
 <tr class="d1">
 
-<td><img style="width:15px;height:15px" src="/images/sport/${freefinishedtips.sportname}.svg"/></td>
+<td><img style="width:15px;height:15px" src="${pageContext.request.contextPath}/images/sport/${freefinishedtips.sportname}.svg"/></td>
 <td class="text-nowrap timecolumn" style="text-align:left">${freefinishedtips.time}</td>
 <td class="text-nowrap"><a class="text-warning" href="${pageContext.request.contextPath}/tip?id=${freefinishedtips.tid}"> ${freefinishedtips.team1} vs ${freefinishedtips.team2}</a></td> 
 <td class="text-nowrap"><a class="text-warning" href="${pageContext.request.contextPath}/tipster/activetips?name=${freefinishedtips.tipstername}">${freefinishedtips.tipstername}</a></td>
 <td class="text-nowrap bookmakercolumn" style="text-align:left">${freefinishedtips.bookmaker}</td>
-<td class="text-nowrap" style="text-align:center"><c:if test='${freefinishedtips.result=="won"}'><img src="/images/css/right.svg" style="width:20px;height:20px"/></c:if><c:if test='${freefinishedtips.result=="lost"}'><img src="/images/css/wrong.svg" style="width:20px;height:20px"/></c:if></td>
+<td class="text-nowrap" style="text-align:center"><c:if test='${freefinishedtips.result=="won"}'><img src="${pageContext.request.contextPath}/images/css/right.svg" style="width:20px;height:20px"/></c:if><c:if test='${freefinishedtips.result=="lost"}'><img src="${pageContext.request.contextPath}/images/css/wrong.svg" style="width:20px;height:20px"/></c:if></td>
 
 </tr>
 

@@ -67,7 +67,7 @@ body {
 
 <div class="row justify-content-center">
 		<div id="tip-detail-div">
-		<img src="/images/sport/${requestScope.tipdetails[0][8]}.svg" style="width:30px;height:30px" class="rounded-circle"/>
+		<img src="${pageContext.request.contextPath}/images/sport/${requestScope.tipdetails[0][8]}.svg" style="width:30px;height:30px" class="rounded-circle"/>
 		<table class="table table-striped">
 		<tbody>
 		<tr><td>id:  </td><td>${requestScope.tipdetails[0][2]}</td></tr>
@@ -92,7 +92,7 @@ body {
 <c:if test="${requestScope.tipdetails[0][1] =='waiting'}">
 <div class="row justify-content-center">
 		<div id="tip-detail-div">
-		<img style="width:30px;height:30px" src="/images/sport/${requestScope.tipdetails[0][8]}.svg" class="rounded-circle"/>
+		<img style="width:30px;height:30px" src="${pageContext.request.contextPath}/images/sport/${requestScope.tipdetails[0][8]}.svg" class="rounded-circle"/>
 		<table class="table table-striped mt-4 pl-5">
 		<tbody>
 		
@@ -114,7 +114,7 @@ body {
 <c:if test="${requestScope.tipdetails[0][0] =='free'}">
 <div class="row justify-content-center">
 		<div id="tip-detail-div">
-		<img style="width:30px;height:30px" src="/images/sport/${requestScope.tipdetails[0][8]}.svg" class="rounded-circle"/>
+		<img style="width:30px;height:30px" src="${pageContext.request.contextPath}/images/sport/${requestScope.tipdetails[0][8]}.svg" class="rounded-circle"/>
 		<table class="table table-striped mt-4 pl-5">
 		<tbody>
 		

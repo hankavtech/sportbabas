@@ -83,7 +83,7 @@ body {
 <div class="d-flex justify-content-center mt-4">
 
 <form class="form" id="forgotpass" action="${pageContext.request.contextPath}/ForgotPassword" method="post">
-     <img class="mb-3" src="/images/css/hockey.svg" style="width:50px;height:50px;margin-left:70px"/>
+     <img class="mb-3" src="${pageContext.request.contextPath}/images/css/hockey.svg" style="width:50px;height:50px;margin-left:70px"/>
       <h4>Reset your password</h4>
       
     <div class="form-group">

@@ -93,13 +93,13 @@
 	    
 	    <div class="card bg-dark">
 	    <div class="card-block"> 
-	    <img class="image-fluid rounded-circle mb-2" style="width:100px;height:100px" src="/images/tipsters/${requestScope.topstats[0][3]}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${requestScope.topstats[0][3]}.png'" />
+	    <img class="image-fluid rounded-circle mb-2" style="width:100px;height:100px" src="${pageContext.request.contextPath}/images/tipsters/${requestScope.topstats[0][3]}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${requestScope.topstats[0][3]}.png'" />
 	    <div></div>
-	    <img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/${requestScope.topstats[0][4]}.svg" />
+	    <img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="${pageContext.request.contextPath}/images/sport/${requestScope.topstats[0][4]}.svg" />
 	    <h5 class="text-nowrap" style="color:#14805E"><em>${requestScope.topstats[0][3]}</em></h5>
 	    </div>
 	    </div>
-        <span class="float-right"><a class="btn-btn-primary d-sm-none" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="true" aria-controls="multi1 multi2"><img src="/downarrow.svg" style="width:30px;height:30px"/></a></span>  
+        <span class="float-right"><a class="btn-btn-primary d-sm-none" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="true" aria-controls="multi1 multi2"><img src="${pageContext.request.contextPath}/downarrow.svg" style="width:30px;height:30px"/></a></span>  
 	    </div>
 	    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
 	    <div class="collapse multi-collapse show" id="multi1">
@@ -126,7 +126,7 @@
 	    </div>
 	    
 	    
-	    <span class="float-right" style="color:red"><a class="btn-btn-primary d-none d-sm-block d-md-none" data-toggle="collapse" data-target="#multi2"><img src="/downarrow.svg" style="width:30px;height:30px"/></a></span>
+	    <span class="float-right" style="color:red"><a class="btn-btn-primary d-none d-sm-block d-md-none" data-toggle="collapse" data-target="#multi2"><img src="${pageContext.request.contextPath}/downarrow.svg" style="width:30px;height:30px"/></a></span>
 	    </div>
 	    
 	    </div>

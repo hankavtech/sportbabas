@@ -150,8 +150,8 @@ height:30px;
 
 
   <div class="row justify-content-left offset-1 mb-4 pt-3">
-    <img class="mt-2 rounded-circle mr-4" src="/images/sport/${sessionScope.user_sport}.svg" style="width:30px;height:30px"/>
-    <img class="rounded-circle mr-2"  src="/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'" style="width:50px;height:50px"/>
+    <img class="mt-2 rounded-circle mr-4" src="${pageContext.request.contextPath}/images/sport/${sessionScope.user_sport}.svg" style="width:30px;height:30px"/>
+    <img class="rounded-circle mr-2"  src="${pageContext.request.contextPath}/images/tipsters/${sessionScope.tipster_name}.jpg" onerror="this.onerror=null;this.src='/images/tipsters/${sessionScope.tipster_name}.png'" style="width:50px;height:50px"/>
     <p class="mt-3">${sessionScope.tipster_name}</p>
   </div>
   <div class="row justify-content-center">

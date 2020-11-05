@@ -134,16 +134,16 @@ table td{
 	    
 	    <div class="card bg-dark">
 	    <div class="card-block"> 
-	    <img class="image-fluid rounded-circle mb-2" style="width:100px;height:100px" src="/images/${requestScope.tipstername}.jpg" onerror="this.onerror=null;this.src='/images/${requestScope.tipstername}.png'"/>
+	    <img class="image-fluid rounded-circle mb-2" style="width:100px;height:100px" src="${pageContext.request.contextPath}/images/${requestScope.tipstername}.jpg" onerror="this.onerror=null;this.src='/images/${requestScope.tipstername}.png'"/>
 	    <div></div>
-	    <img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="/images/sport/${requestScope.sportname}.svg" />
+	    <img class="image-fluid rounded-circle mb-2" style="width:20px;height:20px" src="${pageContext.request.contextPath}/images/sport/${requestScope.sportname}.svg" />
 	    <h5 class="text-info text-nowrap"><a href='/tipster/activetips?name=${requestScope.tipstername}'>${requestScope.tipstername}</a></h5>
 	    </div>
 	    </div>
 	   
 	    
 	    
-	    <span class="float-right"><a class="btn-btn-primary d-sm-none" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="true" aria-controls="multi1 multi2"><img src="/downarrow.svg" style="width:30px;height:30px"/></a></span>  
+	    <span class="float-right"><a class="btn-btn-primary d-sm-none" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="true" aria-controls="multi1 multi2"><img src="${pageContext.request.contextPath}/downarrow.svg" style="width:30px;height:30px"/></a></span>  
 	    </div>
 	    <div class="col-xs-12 col-sm-6 col-md-4 text-center">
 	    <div class="collapse multi-collapse show" id="multi1">
@@ -172,7 +172,7 @@ table td{
 	    
 	    
 	    </div>
-	    <span class="float-right"><a class="btn-btn-primary d-none d-sm-block d-md-none" data-toggle="collapse" data-target="#multi2"><img src="/downarrow.svg" style="width:30px;height:30px"/></a></span>
+	    <span class="float-right"><a class="btn-btn-primary d-none d-sm-block d-md-none" data-toggle="collapse" data-target="#multi2"><img src="${pageContext.request.contextPath}/downarrow.svg" style="width:30px;height:30px"/></a></span>
 	    </div>
 	    
 	    </div>
@@ -246,7 +246,7 @@ table td{
 <tbody>
 <c:forEach items="${requestScope.tips}" var="tip">
 <tr>
-<td><img style="width:15px;height:15px" src="/images/sport/${tip[1]}.svg"/></td>
+<td><img style="width:15px;height:15px" src="${pageContext.request.contextPath}/images/sport/${tip[1]}.svg"/></td>
 <td><a class='text-warning' href='/tip?id=${tip[0]}'>${tip[2]} vs ${tip[3]}</a></td>
 <td class="timecolumn">${tip[4]}</td>
 <td>${tip[5]}</td>
