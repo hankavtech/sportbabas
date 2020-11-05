@@ -16,7 +16,7 @@ public class ScheduleMatchesUpdater implements Job {
 	public void execute(JobExecutionContext pArg0) throws JobExecutionException {
 		Logger log = Logger.getLogger(ScheduleGetFootballResults.class);
 		log.info("The matches updater triggered");
-		for (int i = 1; i <= 5; i++) {
+		for (int i = 1; i <= 6; i++) {
 			String sport = null;
 			if (i == 1) {
 				sport = "football";
@@ -28,6 +28,9 @@ public class ScheduleMatchesUpdater implements Job {
 				sport = "hockey";
 			} else if (i == 5) {
 				sport = "cricket";
+			}
+			else if (i == 6) {
+				sport = "baseball";
 			}
 
 			MatchReader reader = new MatchReader();

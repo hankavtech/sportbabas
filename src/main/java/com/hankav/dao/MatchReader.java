@@ -24,7 +24,7 @@ public class MatchReader {
 		SessionFactory factory = HibSessionFactory.getFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		FileReader reader = new FileReader("/var/lib/sbresources/matchesscraper/" + sportname + "matches.txt");
 		BufferedReader br = new BufferedReader(reader);
 
