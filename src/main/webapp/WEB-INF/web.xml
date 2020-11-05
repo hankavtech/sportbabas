@@ -7,6 +7,12 @@
 
   <display-name>Archetype Created Web Application</display-name>
   
+  <listener>
+    <listener-class>
+	 org.quartz.ee.servlet.QuartzInitializerListener
+	 </listener-class>
+  </listener>
+  
   <servlet>
     <servlet-name>GiveLeagues</servlet-name>
     <servlet-class>com.hankav.controller.GiveLeagues</servlet-class>
