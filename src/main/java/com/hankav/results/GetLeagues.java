@@ -24,9 +24,9 @@ public class GetLeagues {
 
 	public String bySport(String sport) throws ParseException {
 
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		sdf.setTimeZone(TimeZone.getTimeZone("GMT+00:00"));
-		SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date datenow = sdf1.parse(sdf.format(new Date()));
 
 		SessionFactory factory = HibSessionFactory.getFactory();
